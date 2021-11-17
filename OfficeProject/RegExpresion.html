@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+    <style>
+        h1{
+            color: crimson;
+        }
+        h2
+        {
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Regular Expresion</h1>
+    <h2>RegExe Pattern [1-9]</h2>
+    <p id="id1"></p>
+    <h2>RegExe Pattern [abc]</h2>
+    <p id="id2"></p>
+
+    <h2>RegExe Pattern[x|y]</h2>
+    <p>find any of the alternative suprat with | </p>
+    <p id="id3"></p>
+
+    <h2>Match charecter \d</h2>
+    <p id="id4"></p>
+  
+    <h2>Spacile charecter find</h2>
+     <p id="id5"></p>
+
+     <h2>multiple matching</h2>
+     <p>spacial charecter</p>
+     <p id="id6"></p>
+
+     <h2>white space \s</h2>
+     <p id="id7"></p>
+
+     
+     <h2>white space \b</h2>
+     <p id="id8"></p>
+<script>
+        let text=" hello 3 java 3 Script 4,6";
+        let result=text.match(/[3-7]/g);
+        document.getElementById("id1").innerHTML=result;
+
+        let text1=" hello 3 java 3 Script 4,6";
+        let result1=text1.match(/[a-z]/gi);
+        document.getElementById("id2").innerHTML=result1;
+        
+        let text2=" hello 3 java 3 Script 4,6 ,red ,blue ,white, green ,yellow,pink, grey";
+        let result2=text2.match(/(java|blue|white|grey)/g);
+        document.getElementById("id3").innerHTML=result2;
+
+        let text3=" hello 3 java 3 Script 4,6 ,red ,blue ,white, green ,yellow,pink, grey";
+        let result3=text3.match(/[\d]g/);
+        document.getElementById("id4").innerHTML=result3;
+ 
+        let text4=" hello 3 java ! Script @,# ,red ,blue &,white,@ green ,yellow,pink, grey";
+        let result4=text4.match(/(!|@|#|&)/g);
+        document.getElementById("id5").innerHTML=result4;
+        
+        let text5=" hello 3 java ! Script @,# ,red ,blue &,white,@ green ,yellow,pink, grey";
+        let result5=text5.match(/^ |!|@|#|& $/g);
+        document.getElementById("id6").innerHTML=result5;
+
+
+        let text6=" hello 3 java ! Script @,# ,red ,blue &,white,@ green ,yellow,pink, grey";
+        let result6=text6.match(/\s/g);
+        document.getElementById("id7").innerHTML=result6;
+       
+        let text7=" hello 3 java ! Script @,# ,red ,blued &,whited,@ green ,yellow,pink, gredy";
+        let result7=text7.match(/\bed/g);
+        document.getElementById("id8").innerHTML=result7;
+       
+
+    </script>
+</body>
+</html>
