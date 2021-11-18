@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curd Oparation</title>
+      
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" >
+     <!-- Dexies file -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.0-rc.3/dexie.min.js" ></script>
+    <!-- main-js file -->
+    <script src="http://127.0.0.1:5500/11-11-21/CurdOp/main.js" type="module"></script>
+     <!-- Css file -->
+     <link rel="stylesheet" href="http://127.0.0.1:5500/11-11-21/CurdOp/style1.css">
+ 
+</head>
+<body>
+     <!-- custom JavaScript Main.js -->
+    
+    
+    <table >
+        <form>
+        <tr><td>EId</td><td><input type="text" id="eid" name="eid"></td></tr>
+        <tr><td>Ename</td><td><input type="text" id="ename" name="ename"></td></tr>  
+        <tr><td>Edep</td><td><input type="text" id="edep" name="edep"></td> </tr>
+        <tr><td>Esal</td><td><input type="text" id="esal" name="esal"></td></tr>
+        <tr><td>Eaddr </td><td><input type="text" id="eaddr" name="eaddr"></td></tr>    
+        <tr><td>Ephon </td><td><input type="text" id="ephone" name="ephone"></td></tr>        
+        <tr><td>Eemail</td><td><input type="text" id="email" name="email"></td></tr>
+      </form>
+    </table>
+        <br>
+       <div>
+        <tr style="margin-left: 150px;"><td><button type="button"  id="creatbtn">Create</button>
+               <button type="button"  id="readbtn">Read</button>
+               <button type="button"   id="updatebtn">Update</button>
+               <button type="button"  id="deletebtn">Delete</button></td>
+            </tr> 
+        </div>
+            <br>
+            <table width:150px>
+                <tr>
+              <th>Eid</th>
+              <th>Ename</th>
+              <th>Edep</th>
+              <th>Esal</th>
+              <th>Eaddr</th>
+              <th>Ephone</th>
+              <th>Eemail</th>
+              <th colspan="3">Edit</th>
+              <th colspan="3" >Delete</th>
+            </tr>
+
+            <tr>
+                <td>A101</td>
+                <td>Radha Misra</td>
+                <td>CSIt</td>
+                <td>45767</td>
+                <td>Hydrabad</td>
+                <td>444445784</td>
+                <td>r@gmail.com</td>
+                <td colspan="3"><i class="fas fa-edit faedit"></i></td>
+                <td colspan="2"><i class="fas fa-trash fadel"></i></td>
+            </tr>
+
+            <tr>
+                <td>A102</td>
+                <td>kat</td>
+                <td>it</td>
+                <td>45967</td>
+                <td>Delhi</td>
+                <td>911115784</td>
+                <td>K@gmail.com</td>
+                <td colspan="3"><i class="fas fa-edit faedit"></i></td>
+                <td><i class="fas fa-trash fadel"></i></td>
+            </tr>
+
+          </table>
+       
+</body>
+</html>

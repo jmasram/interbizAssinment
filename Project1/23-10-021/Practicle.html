@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body{
+            margin: 10px;
+        }
+        header{
+            
+            border: 2px  solid black;
+            padding-left: 800px ;
+            
+        }
+        nav{
+           padding:5px;
+            border: 2px solid black;
+            background-color: lightgrey;
+        }
+        main{
+            float: left;
+            border: 2px solid red;
+            width: 775px ;
+            height: 715px ;
+            background-image: url("C:\Users\IBZ\JMasram\Sea.jpg");
+            
+        }
+        aside{
+            
+            float: left;
+           height: 715px;
+            border: 2px solid ;
+            background-color: rgb(146, 178, 32);
+        }
+        footer{
+            position:absolute;
+           bottom: 0px;
+           width: 100%;
+           background-color: gray;
+           padding: 20px;
+           text-align: center;
+        }
+        a.link{
+            cursor: wait;
+        }
+        footer a.visited{
+            color: red;
+        }
+        footer a.highlight:hover{
+            font-size: 22px;
+            color: hotpink;
+           
+        }
+        footer a.active{
+            color: royalblue;
+        }
+        img{
+            width: 100px;
+          height: 100px; 
+          color: mediumblue;
+          padding : 40px;
+          margin-left: 80px;
+        }
+        div:hover{
+            color: rgb(211, 15, 25);
+        }
+
+        @media only screen and(orientation:landscape)
+        {
+            body{
+                background-position: auto; 
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JMasram</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">HTML</a>
+        <a href="#">Css</a>
+        <a href="#">JavaScript</a>
+    </nav>
+    <div>
+    <main>
+      <p  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <p  >  Rem inventore deleniti architecto ipsa labore?
+       <p> Quas inventore aliquam unde repellat, laborum, mollitia ipsa 
+        reprehenderit hic est tempora harum quam incidunt quod.
+    </p> 
+    </main>
+   <aside>
+       <b>Cloud..</b>
+    <i class="fas fa-cloud" style="font-size:24px;"></i>
+    <i class="fas fa-cloud" style="font-size:36px;"></i>
+    <i class="fas fa-cloud" style="font-size:48px;color:red;"></i>
+    <i class="fas fa-cloud" style="font-size:60px;color:lightblue;"></i><br>
+    
+     <img src="C:\Users\IBZ\JMasram\23-11-021\Icon.jpg" alt="Icon.jpg"><br>
+     <link rel="stylesheet" href="wwww.google.com" >
+       <pre>Lorem ipsum dolor sit, 
+           amet consectetur adipisicing
+            elit. Vitae deleniti labore
+             nostrum dolorem, 
+            laborum ipsum deserunt
+            laudantium fugit explicabo 
+            adipisci dolorum,
+             perspiciatis natus.
+            Laboriosam, qui dolores accusantium
+             quasi aperiam 
+            laborum.</pre>
+
+   </aside>
+</div>
+    <footer>
+        <h1>Footer</h1>
+        <a class="highlight" href="https://www.google.com/">https://www.google.com/</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="id1"></p>
+    <script>
+      var num=[30,42,2,9,10,90,80];
+      var text="";
+      num.forEach(fun);
+      function fun(value, index,array)
+      {
+          text+=value +" ";
+      }  
+      document.getElementById("id1").innerHTML=text;
+    console.log(text);
+    </script>
+
+    <input type="date" name="date" id="currentDate">
+
+    <script>
+            var birthDateStr = '19840831',
+             parts = birthDateStr.match(/(\d{4})(\d{2})(\d{2})/),
+            dateObj = new Date(parts[1], parts[2]-1, parts[3]); // months 0-based!
+
+            
+          console.getAge(dateObj);
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+
+<body>
+
+    <h1>Radio Button</h1>
+    <form>
+        Male<input type="radio" name="Gender" value="male"><br>
+        Female<input type="radio" name="Gender" value="female"><br>
+        <input type="submit">
+    </form>
+    <h2>Registration Form</h2>
+    <form action="#">
+        <label for="fName" Name="fname">FirstName : </label>
+        <input type="text" id="fName" name="fname" required />
+        <label for="lName" name="lName">LastName:</label>
+        <input type=" text" id="lName" name="lName"><br>
+        <br>
+        <tr>
+            
+            <td>
+                <label for="date" name="date">DOB</label>
+                <input type="date" id="date" name="date" max="2020-01-01" min="1990-01-01">
+            </td>
+        </tr>
+
+        <label for="gender" name="gender"> Gender</label>
+        <input type="radio" id="gender" name="gender">Female
+        <input type="radio" id="gender" name="gender">Male
+        <br>
+        <br>
+
+        <label for="course">Choose Course</label>
+        <select name="course" id="course">
+            <option value="MCA">MCA</option>
+            <option value="BTECH">BTECH</option>
+            <option value="BCA">BCA</option>
+        </select>
+        <br>
+        <br>
+        <label for="addre" name="addr"><b>Address</b> </label>
+        <textarea name="addr" id="addr" cols="5" rows="2"></textarea>
+        <br>
+        <br>
+        <label for="mobno" name="mobno">MOBILE NUMBER</label>
+        <input type="tel" name="mobno" placeholder="916-886-8683" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <br>
+        <br>
+        <label for="email" name="email">Email</label>
+        <input type="email" name="email" placeholder="k@.com"
+            pattern=" /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{3,20})(.[a-z]{2,8})?$/">
+        <br>
+        <br>
+        <label for="img">Image</label>
+        <input type="file" name="image" id="img"><br>
+        <br>
+        <input type="submit" name="submit Aplication" onclick="alert('Sucessfully Registration')">
+        <input type="reset">
+    </form>
+
+    <h2>The output Element</h2>
+    <p>The output element represents the result of a calculation.</p>
+
+    <form action="#" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        0
+        <input type="range" id="a" name="a" value="50">
+        100 +
+        <input type="number" id="b" name="b" value="50">
+        =
+        <output name="x" for="a b"></output>
+        <br><br>
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>

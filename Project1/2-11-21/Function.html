@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javaScript Function</h1>
+    <p id="id1"></p>
+    <script>
+        function fun1(p1, p2,p3)
+        {
+            return p1*p2*p3;
+        }
+        document.getElementById("id1").innerHTML=fun1(2,34.5,6);
+    </script>
+     
+     <br>
+     <br>
+
+    <h2>javaScript Object</h2>
+    <p id="id2"></p>
+    <script>
+        const car = { brand:"Toyoto",
+                  color:"red",
+                   wight:450,
+                fullProp : function() {return this.color +" "+ this.wight;} 
+                };
+                  document.getElementById("id2").innerHTML = car.fullProp();
+    </script>
+     <br>
+     <br>
+       <h3> Event Listener</h3>
+     <button id="btn">Click</button>
+     <p id="btn"></p>
+     <script>
+         
+         var x=document.getElementById("btn");
+         x.addEventListener("click", fun2);
+         x.addEventListener("mouseout",fun3);
+         function fun2() 
+        {
+            document.getElementById("btn").innerHTML+="Cliked  <br>";
+        }  
+        function fun3() 
+        {
+            document.getElementById("btn").style="display:none";
+        }  
+     </script>
+    <br><br>
+    <h2> String</h2>
+      <button onclick="this.innerHTML=Date()">This is?</button>
+
+
+     
+    
+
+</body>
+</html>

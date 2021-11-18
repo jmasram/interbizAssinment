@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Class&Objects</h1>
+    <p id="id1"></p>
+    <script>
+        class Student{
+        
+             constructor(name,year){
+                 this.name1=name;
+                 this.year1=year;
+             }
+            fun()
+            {
+               return console.log(`Hello java Script. i am ${this.name1}.my DOB ${this.year1}. my  age ${this.age1}`);
+            }
+        }
+        class Boidata extends Student{
+            constructor(name,year,age,cls){
+                super();
+                this.name1=name;
+                this.year1=year;
+                this.age1=age;
+                this.cls1=cls;
+            }
+
+            boidata()
+            {
+                return console.log(`Hello java Script. i am ${this.name1}.my DOB ${this.year1}. my  age ${this.age1} . my classes ${prompt(this.cls)}`);
+            }
+        }
+        const  obj1= new Student("radha",2005);
+        const  obj34= new Student("rani",2008);
+        const obj2 =new Boidata("Rakesh",2010,14);
+        
+        obj1.fun();
+        obj2.fun();
+        obj3.fun();
+        obj2.boidata();
+        document.getElementById("id1").innerHTML=obj1.name1 +" "+obj1.year1;
+    </script>
+</body>
+</html>

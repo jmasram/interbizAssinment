@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Function</h1>
+  <p id="id1"></p>
+  <script>
+      var hello;
+      hello=function()
+      {
+          return "hello";
+      }
+      document.getElementById("id1").innerHTML=hello();
+  </script>
+
+  <h2>Arrow function</h2>
+  <p id="id2"></p>
+  <script>
+      var hello;
+      hello= () =>{
+          return "hello java script";
+      }
+      
+      document.getElementById("id2").innerHTML=hello();
+
+  </script>
+  <h2>Arrow function in single line</h2>
+   <p id="id3"></p>
+   <script>
+    var hello;
+    hello= () => "hello java script";
+    document.getElementById("id3").innerHTML=hello();
+    </script>
+
+    
+   <h2>Arrow function in with parameter</h2>
+    <p id="id4"></p>
+     <script>
+    var hello;
+    hello = (val,numbers) => "hello java script" + val;
+     document.getElementById("id4").innerHTML=hello(" Universal");
+    </script>
+
+    <h1>map() function</h1>
+    <p id="id5"></p>
+
+    <script>
+        var num=[10,20,30,40,50];
+        var num2=num.map(fun1);
+        document.getElementById("id5").innerHTML=num2;
+        function fun1(num)
+        {
+            return num+1;
+        }
+    </script>
+
+   <p id="id6"></p>
+
+    <script>
+    var num=[{name:"Raj",lastname:"singh"},
+    {name:"Raj",lastname:"singh"},
+    {name:"Raj",lastname:"singh"}];
+    
+
+    document.getElementById("id6").innerHTML=num.map(fun1);
+    function fun1(item)
+    {
+        return [item.name,item.lastname].join(" ");
+    }
+</script>
+
+
+  <h2>Repeated Numbers</h2>
+  <p id="id7"></p>
+
+  <script>
+      var num=[10,20,30,40,50,10,10,20];
+      var num2=num.map(fun1,val);
+      const counts={};
+      document.getElementById("id7").innerHTML=num2;
+      function fun1(num,val)
+      {
+         map[val]=(map(val)||0)+1;
+         return map;
+      }
+  </script>
+
+  <h2>Join() Function also Using Prompt</h2>
+  <p id="id8"></p>
+  <script>
+      const text=prompt("Writen ane text");
+     document.getElementById("id8").innerHTML=text;
+  </script>
+</body>
+</html>

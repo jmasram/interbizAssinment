@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <body>
+    
+    <p id="id1"></p>
+    <h2>The XMLHttpRequest Object</h2>
+       
+        
+     <script>
+        const xhttp = new XMLHttpRequest();
+         xhttp.onload = function() {
+        const xmlDoc = this.responseXML;
+        const x = xmlDoc.getElementsByTagName("ARTIST");
+        //  let txt="";
+        //  for (let i = 0; i < x.length; i++) {
+        //        txt = txt + x[i].childNodes[0].nodeValue + "<br>";
+        //  }
+         document.getElementById("id1").innerHTML = x;
+        }
+         xhttp.open("GET", "C:\Users\IBZ\JMasram\10-11-21\XmlFile.xml");
+         xhttp.send();
+     </script>
+        
+  
+        
+  </body>
+</html>

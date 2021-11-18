@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script object notetion(JSON)</h1>
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <script>
+        let text='{ "emp" : [{ "firstName":"John" , "lastName":"Doe" },{ "firstName":"Anna" , "lastName":"Smith" },{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+        let text2=JSON.parse(text);
+        document.getElementById("id1").innerHTML=text2.emp[1].firstName;
+          
+        let text3={name:"jallll",lname:"hhhh" ,age:3};
+        let text4=JSON.stringify(text3);
+
+        document.getElementById("id2").innerHTML=text4;
+    </script>
+</body>
+</html>

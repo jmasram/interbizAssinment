@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Array of Object</h2>
+    <p>const cars=[car1,car2,car3] :here cars is object which is store object.  </p>
+    <p>Example=[car1,car2,car3]</p>  
+
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <p id="id3"></p>
+
+    <h2>Sorting Array</h2>
+    <p id="id4"></p>
+
+    
+    <h2>Map Array</h2>
+    <p>method creates a new array by performing a function on each array element</p>
+    <p id="id5"></p>
+
+    <h2>filter Array</h2>
+    <p id="id6"></p>
+    <script>
+        const car1=["BMW1","Audi1","Farari1"];
+        const car2=["BMW2","Audi2","Farari2"];
+        const car3=["BMW3","Audi3","Farari3"];
+        const cars=[car1,car2,car3];
+        document.getElementById("id1").innerHTML=cars[1][0];
+
+        const car4=["BMW4","Audi4","Farari4"];
+        document.getElementById("id2").innerHTML=car4.join("---");
+        document.getElementById("id3").innerHTML=car4.pop() +" "+car4;
+
+        var arr1 = [6,7,9,20,3,1];
+        var arrli=" ";
+        arr1.forEach(fun);
+        function fun(value,index,array){
+            arrli=arr1+" ";
+        }
+          document.getElementById("id4").innerHTML=arrli;
+        
+        //  map array
+          arr1.map(fun);
+          function fun(value){
+            arrli=arr1+" ";
+            }
+          document.getElementById("id5").innerHTML=arrli;
+
+          //filter array
+           var result=arr1.filter(fun1);
+
+          function fun1(value, index, array){
+            return value > 7;
+            }
+          document.getElementById("id6").innerHTML = result;
+
+        //   reduce array
+           
+    </script>
+</body>
+</html>

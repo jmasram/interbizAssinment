@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+    color: blue;
+    box-shadow: 3px;
+}
+div{
+    margin-left:750px;
+     width: 400px;
+      height: 100px;
+      
+    }
+
+    button{
+        background-color: rgb(56, 166, 199);
+        cursor: pointer;
+        font-size: 20px;
+    }
+    #dob{
+        cursor: pointer;
+    }

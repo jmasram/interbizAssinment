@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="demo"></p>
+    <script>
+        const days= ["monday","tuesday","wedsday","thrusday","friday","sturday","sunday"];
+         let dlength=days.length;
+         let text="<ul>";
+        for(let i=0; i < dlength; i++)
+        {
+            text +="<li>" +days[i]+"</li>";
+        }
+        
+        text +="</ul>";
+        document.getElementById("demo").innerHTML = text;
+    </script>
+<!--    
+   <p id="id1"></p>
+    <script>
+          const days= ["monday","tuesday","wedsday","thrusday","friday","sturday","sunday"];
+
+          for(let i=0; i<days.length;i++)
+          {
+               var text =days[i];
+          }
+          document.getElementById("id1").innerHTML=text;
+    </script>
+
+
+<p id="demo2"></p> -->
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+numbers.forEach(myFunction);
+document.getElementById("demo2").innerHTML = txt;
+
+function myFunction(value) {
+  txt += value + "<br>"; 
+}
+</script>
+
+<h2>Compare of S and Object</h2>
+<p id="id2"></p>
+<script>
+    let x= "hello";
+    let y= new String("hello");
+    document.getElementById("id2").innerHTML= x==y;
+</script>
+
+<h2>Compare of Object String</h2>
+<p id="id3"></p>
+<script>
+    let a= new String("hello");
+    let b= new String("hello");
+    document.getElementById("id3").innerHTML= a==b;
+</script>
+
+<p id="id3"></p>
+<p id="id4"></p>
+<script>
+let text1 = "Jaleshwari";
+const myArr = text1.split("");
+
+text1 = "";
+for (let i = 0; i < myArr.length; i++) {
+  text1 += myArr[i] + "<br>"
+}
+document.getElementById("id4").innerHTML = text1;
+</script>
+
+</body>
+</html>

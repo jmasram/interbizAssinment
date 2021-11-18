@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Using call() method</h1>
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <script>
+        const person ={ fullname: function() {return this.fname +" "+this.lname}}
+
+        const person1={fname:"Jaleshwari" ,lname:"masram", age:25}
+        const person2={fname:"sonali",lname:"mishra" ,age:25}
+       
+       
+        document.getElementById("id1").innerHTML=person.fullname.call(person1);
+        document.getElementById("id2").innerHTML=person.fullname.call(person2);
+    </script>
+
+     <h2>JavaScript Number Methods</h2>
+
+      <p>The toString() method converts a number to a string.</p>
+
+      <p id="id3"></p>
+      <script>
+      let x = 123;
+      document.getElementById("id3").innerHTML =
+       x.toString() + "<br>" +
+       (123).toString() + "<br>" +
+      (100 + 23).toString();
+</script>
+
+   <p id="id4"></p>
+
+  <script>
+  let x1 = 9.456;
+   document.getElementById("id4").innerHTML =
+  x1.toFixed(0) + "<br>" +
+  x1.toFixed(2) + "<br>" +
+  x1.toFixed(4) + "<br>" +
+  x1.toFixed(6);
+    
+  </script>
+
+</body>
+</html>

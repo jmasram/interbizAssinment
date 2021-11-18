@@ -1,0 +1,12 @@
+ <title>curd Oparation</title>
+
+  //Font Aowesome
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" >
+     
+      
+     <!-- Dexies file -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.0-rc.3/dexie.min.js" ></script>
+    <!-- main-js file -->
+    <script src="http://127.0.0.1:5500/11-11-21/CurdOp/main.js" type="Module"></script>
+     <link rel="stylesheet" href="http://127.0.0.1:5500/11-11-21/CurdOp/style1.css">
+ 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        a.ext1:hover,a.ext1:active{
+            color:red;
+        }
+        a.ext2:hover,a.ext2:active{background-color: blueviolet;}
+        a.ext3:hover,a.ext3:active{
+         font-family: 'Courier New', Courier, monospace;
+         cursor: wait;
+        }
+        input:checked{
+            height: 30px;
+            width: 30px;
+        }
+        ::selection {color:hotpink;
+                  background-image: yellow;
+                  cursor:crosshair;
+        }
+        p::selection {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <a class="ext1" href="https://www.w3schools.com/">This is w3schools</a><br>
+    <a class="ext2" href="https://www.w3schools.com/">This is w3schools2</a> <br>
+    <a  class="ext3" href="https://www.w3schools.com/">This is w3schools3</a><br>
+
+    <form>
+        <input type="radio" name="gender" value="male" checked="checked">Male <br>
+        <input type="radio" name="gender" value="female" checked="checked"> Female <br>
+        <input type="checkbox" name="x" value="Papaya" checked="checked">I have Papaya <br>
+        <input type="checkbox" name="y" value="Anar" checked="checked">I have Anar <br>
+        <input type="checkbox" name="z" value="Anar" checked="checked">I have Anar <br>
+    </form>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptatem 
+        quaerat quisquam placeat ratione quibusdam tempora tempore quas fugit
+         beatae et, deleniti quasi, omnis provident esse accusantium earum velit mollitia.</p>
+         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti labore exercitationem 
+             vitae optio temporibus velit accusamus qui a consequatur, et commodi expedita quisquam 
+             ea earum blanditiis facilis voluptatum voluptatem fuga!</p>
+</body>
+</html>

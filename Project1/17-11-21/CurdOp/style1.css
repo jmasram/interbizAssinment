@@ -1,0 +1,38 @@
+
+
+/* button create delete update read */
+#creatbtn{
+    padding: 10px;
+    background-color: green;
+    cursor: pointer;
+}
+#readbtn{
+    padding: 10px;
+    background-color:yellow;
+    cursor: pointer;
+}
+#updatebtn{
+    padding: 10px;
+     background-color: lightblue;
+     cursor: pointer;
+}
+#deletebtn{
+    padding: 10px;
+    background-color: red;
+    cursor: pointer;
+}
+#resetbtn{
+    padding: 10px;
+    background-color: rgb(88, 82, 82);
+    cursor: pointer;
+}
+/* fontawosome edit and delete  */
+.faedit
+{
+    color:blue;
+    cursor: pointer;
+}
+.fadel{
+    color:red;
+    cursor: pointer;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curd Oparation</title>
+      
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" >
+     <!-- Dexies file -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.0-rc.3/dexie.min.js" ></script>
+    <!-- main-js file -->
+    <script src="http://127.0.0.1:5500/17-11-21/CurdOp/main.js" type="module"></script>
+     <!-- Css file -->
+     <link rel="stylesheet" href="style1.css">
+ 
+</head>
+<body>
+     <!-- custom JavaScript Main.js -->
+    
+    
+    <table >
+        <form>
+        <tr><td>EId</td><td><input type="text" id="eid" name="eid" value=""></td></tr>
+        <tr><td>Ename</td><td><input type="text" id="ename" name="ename" required></td></tr>  
+        <tr><td>Edep</td><td><input type="text" id="edep" name="edep"></td> </tr>
+        <tr><td>Esal</td><td><input type="text" id="esal" name="esal" onkeyup="validateForm()" pattern=/^[0-9]*$/></td></tr>
+        <tr><td>Eaddr </td><td><input type="text" id="eaddr" name="eaddr"></td></tr>    
+        <tr><td>Ephon </td><td><input type="tel" id="ephone" name="ephone" placeholder="91-2222-3333" onkeyup="validateForm()"></td></tr>        
+        <tr><td>Eemail</td><td><input type="email" id="email" name="email" pattern= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ placeholder="khusi@gmail.com"  onkeyup="validateForm()"></td>
+          
+        </tr>
+      </form>
+    </table>
+        <br>
+       <div>
+        <tr style="margin-left: 150px;"><td><button type="button"  id="creatbtn" >Create</button>
+               <button type="button"  id="readbtn">Read</button>
+               <button type="button"   id="updatebtn">Update</button>
+               <button type="button"  id="deletebtn">Delete</button></td>
+               <!-- <input type="reset"  id="resetbtn" value="Reset" ></button></td> -->
+            </tr> 
+        </div>
+            <br>
+            <table width:150px>
+                <tr>
+              <th>Eid</th>
+              <th>Ename</th>
+              <th>Edep</th>
+              <th>Esal</th>
+              <th>Eaddr</th>
+              <th>Ephone</th>
+              <th>Eemail</th>
+              <th >Edit</th>
+              <th  >Delete</th>
+            </tr>
+            <tbody  id="tbody">
+            <!-- <tr>
+                <td>A101</td>
+                <td>Radha Misra</td>
+                <td>CSIt</td>
+                <td>45767</td>
+                <td>Hydrabad</td>
+                <td>444445784</td>
+                <td>r@gmail.com</td>
+                <td colspan="3"><i class="fas fa-edit faedit"></i></td>
+                <td colspan="2"><i class="fas fa-trash fadel"></i></td>
+            </tr>
+
+            <tr>
+                <td>A102</td>
+                <td>kat</td>
+                <td>it</td>
+                <td>45967</td>
+                <td>Delhi</td>
+                <td>911115784</td>
+                <td>K@gmail.com</td>
+                <td colspan="3"><i class="fas fa-edit faedit"></i></td>
+                <td><i class="fas fa-trash fadel"></i></td>
+            </tr> -->
+          </tbody>
+          </table>
+
+           <script>
+          // validation 
+          function  validateForm()
+          {
+               // validation for email valid form
+            var emaireq=document.getElementById("email").value;
+            let button=document.getElementById("creatbtn");
+
+            button.disabled=true;
+            var epatrn= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emaireq);
+             
+           if(epatrn){
+                    // alert("valid input");
+                   return button.disabled =false;    
+                  }
+           else{
+            
+             return button.disabled = true;
+              
+           }
+          }
+           //valide for phone num
+            var mobreq=document.getElementById("ephone").value;
+             var mobptr= /^[0-9]{2}[0-9]{4}[0-9]{4}$/.test(mobreq);
+             let button=document.getElementById("creatbtn");
+
+            button.disabled=true;
+            if(mobptr){
+              return button.disabled =false;
+               
+            }
+            else{
+              
+              return button.disabled = true;
+            }
+             
+              //valide for sal num
+            var salreq=document.getElementById("esal").value;
+             var salptr= /^[0-9]*$/.test(salreq);
+             let button=document.getElementById("creatbtn");
+
+            button.disabled=true;
+            if(salptr){
+              return button.disabled =false;
+               
+            }
+            else{
+              
+              return button.disabled = true;
+            }
+        </script>
+       
+</body>
+</html>

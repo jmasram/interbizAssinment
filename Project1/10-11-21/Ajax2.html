@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   
+    <button onclick="ajaxFun()">Show</button>
+    <div id="show"></div>
+    <script>
+        function ajaxFun() {
+            const xhttps = new XMLHttpRequest();
+
+
+            xhttps.onload = function() {
+                document.getElementById("show").innerHTML = this.responseText;
+            }
+            xhttps.open("GET", "http://127.0.0.1:5500/10-11-21/AjaxHtml.html");
+            xhttps.setRequestHeader("Access-Control-Allow-Origin", "*");
+            xhttps.setRequestHeader("Access-Control-Allow-Credentials", "true");
+            xhttps.setRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+            xhttps.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+
+            xhttps.send();
+        }
+
+        // function surprise() {
+        //     const xhttp = new XMLHttpRequest();
+
+        //     xhttp.onload = function() {
+        //         // document.getElementById("pop").innerHTML = this.responseText;
+
+        //     }
+
+        //     xhttp.open("Post", "PopUpMe.js");
+        //     xhttp.send();
+        // }
+    </script>
+</body>
+</html>
