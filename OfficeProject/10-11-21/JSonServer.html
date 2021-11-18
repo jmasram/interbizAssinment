@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        const str={name:"json", age:20};
+        const str1=JSON.parse(str);
+        window.location ="json.txt" + str1;
+    </script> -->
+<!-- 
+<p id="demo"></p>
+
+  <script>
+   const myJSON = '{"name":"Json", "age":31, "city":"New York"}';
+   const myObj = JSON.parse(myJSON);
+   document.getElementById("demo").innerHTML = myObj.name;
+</script>
+
+<p id="demo1"></p>
+<script>
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = function() {
+      const myObj = JSON.parse(this.responseText);
+      document.getElementById("demo1").innerHTML = myObj.name;
+    }
+    xmlhttp.open("GET", "json.txt");
+    xmlhttp.send();
+    </script>
+      -->
+     <script>
+         const myJson =[{ name:"jaleshwari" ,city:"bsp"},{name:"sonalin", city:"rai"}];
+         const jsonstr=JSON.stringify(myJson);
+
+         localStorage.setItem("json1",jsonstr);
+         const arr=localStorage.getItem("json1");
+         const obj =JSON.parse(arr);
+     </script>
+</body>
+</html>

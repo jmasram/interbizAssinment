@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+    <style>
+        #id1{
+            color: brown;
+            text-align: center;
+            font-size: 30px;
+                       
+        }
+    </style>
+</head>
+<body>
+    <h2>Condition</h2>
+    <ol>
+        <li>if Condition</li>
+        <li>else Condition</li>
+        <li>else if Condition</li>
+        <li>Switch</li>
+    </ol>
+    <p id="id"></p>
+    <p id="id1"></p>
+
+    <script>
+        var time= new Date().getHours();
+        document.getElementById("id").innerHTML="Hours"+ " "+time;
+        
+        if(time<10)
+        {
+            document.getElementById("id1").innerHTML="Good Morning";
+        }
+        else if(time<17){
+            document.getElementById("id1").innerHTML="Good Day";
+        }
+        else if(time<20){
+            document.getElementById("id1").innerHTML="Good Evning";
+        }
+        else{
+            document.getElementById("id1").innerHTML="Good Night";
+        }
+
+    </script>
+
+    <h2>Switch Case</h2>
+      <p id="id3"></p>
+      <p id="id2"></p>
+    <script>
+        var day= new Date().getDay();
+        document.getElementById("id3").innerHTML="Weeknd"+" "+ day;
+
+        switch(day)
+        {
+            case 0:
+            document.getElementById("id2").innerHTML="Sunday";
+            break;
+            case 1:
+            document.getElementById("id2").innerHTML="Monday";
+            break;
+            case 2:
+            document.getElementById("id2").innerHTML="Tuesday";
+            break;
+            case 3:
+            document.getElementById("id2").innerHTML="Thrusday";
+            break;
+            case 4:
+            document.getElementById("id2").innerHTML="Friday";
+            break;
+            case 5:
+            document.getElementById("id2").innerHTML="Sturday";
+            break;
+        }
+    </script>
+
+    <h2>Loop</h2>
+    <ul>
+        <li>for Loop</li>
+        <li>for in</li>
+        <li>for of</li>
+        <li>while Loop</li>
+        <li>do while Loop</li>
+    </ul>
+    <h3>For Loop</h3>
+    <p>loops through a block of a number of times</p>
+    <p id="id4"></p>
+    <!-- <p id="id5"></p> -->
+
+    <script>
+         var array= [1,2,3,4,5,6,7,8,9,10];
+        for (let i = 0; i < array.length; i++) {
+            // document.getElementById("id5").innerHTML=array[i];
+            var element = array[i];
+            
+        }
+        
+        document.getElementById("id4").innerHTML=element;
+    </script>
+
+    <h3>For in Loop</h3>
+     <p>loops through a properties an object</p>
+     <p id="id5"></p>
+      <script>
+          var arr=[20,30,40,50,20];
+          let txt="";
+          for (const x in arr) {
+              txt+=" "+arr[x];
+          }
+          document.getElementById("id5").innerHTML=txt;
+              
+        </script>
+        <p id="id6"></p>
+        <script>
+             const arr1={name:"jaleshwari",lname:"masram",mobno:7828466039};
+             let text="";
+             for(let x in arr1)
+             {
+                 text +=" "+arr1[x];
+             }
+             document.getElementById("id6").innerHTML=text;
+        </script>
+
+        
+        
+</body>
+</html>

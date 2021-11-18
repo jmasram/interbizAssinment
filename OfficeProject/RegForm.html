@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <style>
+        body{
+            background-color: lightblue;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+     
+        function validatefrom(){
+          // validation for required
+            var fname=document.getElementById("fName").value;
+            if(fname == ""){
+                document.getElementById("fnamereq").style.display = "inline";
+            }
+            else{
+                document.getElementById("fnamereq").style.display = "none";
+            }
+
+            // validation for email
+            var emaireq=document.getElementById("email").value;
+          
+            if(emaireq == ""){
+                document.getElementById("emaireq").style.display = "inline";
+            }
+            else{
+                document.getElementById("emaireq").style.display = "none";
+            }
+
+            // validation for email valid form
+            var emaireq=document.getElementById("email").value;
+             var epatrn= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emaireq);
+              
+            if(epatrn){
+                
+                document.getElementById("emailvalform").style.display = "none";
+            }
+            else{
+              
+                document.getElementById("emailvalform").style.display = "inline";
+            }
+        }
+
+    </script>
+     <header><h1>Registration Form</h1></header>
+    <form >
+        <table>
+         <tr>
+             <td> <label for="fName" Name="fname">FirstName : </label></td>
+             <td><input type="text" id="fName" name="fname"/></td><td style="width:1px;"><sup style="color:red; display: none;" id="fnamereq">*</sup></td>
+             <td><label for="lName" name="lName">LastName:</label></td>
+             <td><p style="color:red; display: none;" id="lnamereq">*</p></td>
+             <td> <input type=" text" id="lName" name="lName"></td>
+          </tr>
+        
+          <tr>
+            <td><label for="date" name="date">DOB</label></td>
+            <td><input type="date" id="date" name="date" max="2020-01-01" min="1990-01-01"></td>
+           </tr>
+         
+         <tr>
+             <td><label for="gender" name="gender"> Gender</label></td>
+            <td><input type="radio" id="gender" name="gender">Female</td>
+            <td><input type="radio" id="gender" name="gender">Male</td>
+         </tr>
+        
+        <tr>
+            <td><label for="course">Choose Course</label></td>
+             <td>  <select name="course" id="course">
+            <option value="MCA">MCA</option>
+            <option value="BTECH">BTECH</option>
+            <option value="BCA">BCA</option>
+             </select></td>
+        </tr>
+        
+        <tr>
+           <td><label for="addre" name="addr"><b>Address</b></label></td>
+           <td> <textarea name="addr" id="addr" cols="5" rows="2"></textarea></td>
+        </tr>
+        
+        <tr>
+           <td><label for="mobno" name="mobno">MOBILE NUMBER</label></td>
+           <td> <input type="tel" name="mobno" placeholder="916-886-8683" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td></tr>
+        
+            <td><label for="email" name="email">Email</label></td>
+            <td> <input type="email" name="email" placeholder="k@.com" id="email"
+                pattern=" /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{3,20})(.[a-z]{2,8})?$/"><p style="color:red;display :none;" id="emaireq">*</p></td>
+            <td> <p style="color: red;display: none;" id="emailvalform">Email must be on valid form</p></td>
+        </tr>
+        
+         <tr>
+             <td><label for="img">Image</label></td>
+             <td> <input type="file" name="image" id="img"><br></td>
+         </tr>
+          <tr>
+            <td><input type="button" name="submit"  value="Submit" onclick="validatefrom()"></td>
+            <td><input type="reset"></td>
+        </tr>
+        
+    
+    
+    </table>
+    </form>
+</body>
+</html>

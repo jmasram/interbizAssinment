@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculate</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    
+  <h1>Age Calculate</h1>
+      <div>
+        
+     <table>
+      <tr><td>Enter your Date of Birth</td><td><input type="date" id="dob" value=""  max="2022-01-01" required></td></tr>
+      <tr><td></td></tr>
+      <tr><td>Age Calculater</td><td><button type="button" id="cal" onclick="fun()">Calculate</td></tr>
+      <tr><td><p id="Agecal"></p></td></tr> 
+     </table>
+    </div>  
+    
+
+       <script>
+      
+        
+           var cal_age=0;
+          function fun()
+          {
+            var birthdate = new Date(document.getElementById("dob").value);
+           var  birthday= birthdate.getDate();
+           var birthmonth= 1+birthdate.getMonth();
+           var birthyear=birthdate.getFullYear();
+          // console.log(document.getElementById("dob").value ="hello");
+
+           var current_date=new Date();
+           var current_day= current_date.getDate();
+           var  current_month= 1+current_date.getMonth();
+           var  current_year=current_date.getFullYear();
+          
+           var m = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        
+          // day 
+            if(birthday > current_day)
+            {
+              current_day=current_day +m[current_month-1];
+              current_month=current_month-1;
+            }
+            // document.getElementById("y1").innerHTML=birthday;
+           //month
+           if(birthmonth > current_month)
+            {
+              current_month=current_month+12;
+              current_year=current_year-1;
+            }
+
+           //year
+           var day=current_day-birthday;
+           
+           var month=current_month-birthmonth;
+            cal_age = current_year - birthyear;
+             document.getElementById("Agecal").innerHTML= "Your Age "+ cal_age +" Year  "+ month +" Month " +day +" Day";
+         
+          }
+          // //validation for date
+          // function fun2()
+          // {
+          //    const max=new Date(document.getElementById("dob").value)
+          //     const current_year=new Date.getFullYear();
+          //     atert(current_year);
+          //    if(max>current_year){
+          //        return true;
+          //                    }
+          //                    else{ return false;}
+              
+          // }
+          </script>
+      
+
+      <!-- document.getElementById("y1").innerHTML=current_day-birthdate;
+      var month="";
+        month =(current_month - birthmonth)+((cal_age)*12);
+      
+           var day=((cal_age)*365);
+        const result=cal_age;
+        document.getElementById("Agecal").innerHTML= "My Age "+ cal_age +" Month "+month +" Day " +day; -->
+       
+        
+</table>
+</body>
+</html>
