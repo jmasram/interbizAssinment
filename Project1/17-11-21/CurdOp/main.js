@@ -1,5 +1,5 @@
-import employeedb from 'http://127.0.0.1:5500/17-11-21/CurdOp/module.js';
-import { tableInsert ,getData,createEle} from 'http://127.0.0.1:5500/17-11-21/CurdOp/module.js';
+import employeedb from './module.js';
+import { tableInsert ,getData,createEle} from './module.js';
 
 let db=employeedb("Employeedb",{
     Employee:`++eid,ename,edep,esal,eaddr,ephone,email`
@@ -83,6 +83,7 @@ readbtn.onclick=table;
  
 function table(){
     const tbody=document.getElementById("tbody");
+     
     while(tbody.hasChildNodes())
     {
         tbody.removeChild(tbody.firstChild);

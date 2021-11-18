@@ -11,7 +11,7 @@
      <!-- Dexies file -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.0-rc.3/dexie.min.js" ></script>
     <!-- main-js file -->
-    <script src="http://127.0.0.1:5500/17-11-21/CurdOp/main.js" type="module"></script>
+    <script src="./main.js" type="module"></script>
      <!-- Css file -->
      <link rel="stylesheet" href="style1.css">
  
@@ -25,7 +25,7 @@
         <tr><td>EId</td><td><input type="text" id="eid" name="eid" value=""></td></tr>
         <tr><td>Ename</td><td><input type="text" id="ename" name="ename" required></td></tr>  
         <tr><td>Edep</td><td><input type="text" id="edep" name="edep"></td> </tr>
-        <tr><td>Esal</td><td><input type="text" id="esal" name="esal" onkeyup="validateForm()" pattern=/^[0-9]*$/></td></tr>
+        <tr><td>Esal</td><td><input type="text" id="esal" name="esal" onkeyup="validateForm()" pattern=/^[0-9]*$/ ></td></tr>
         <tr><td>Eaddr </td><td><input type="text" id="eaddr" name="eaddr"></td></tr>    
         <tr><td>Ephon </td><td><input type="tel" id="ephone" name="ephone" placeholder="91-2222-3333" onkeyup="validateForm()"></td></tr>        
         <tr><td>Eemail</td><td><input type="email" id="email" name="email" pattern= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ placeholder="khusi@gmail.com"  onkeyup="validateForm()"></td>
