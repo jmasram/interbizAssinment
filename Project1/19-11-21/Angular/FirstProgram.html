@@ -1,0 +1,33 @@
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+        <div ng-app="">
+            Enter your name: <input type="text" ng-model="name">
+            <p ng-bind="name"></p>
+            <p>My first Program: {{60+60}}</p>
+        </div>
+
+        <h1>AngularJS Application</h1>
+        <p>AngularJS modules define AngularJS application</p>
+        <p>AngularJS controllers control AngularJS application</p>
+        <p>The ng-app directive defines the application, the ng-controller directive defines the controller</p>
+
+        <div ng-app="AngularApp" ng-controller="myctrl">
+            First name: <input type="text" ng-model="firstname"><br>
+            Lastname: <input type="text" ng-model="lastname"><br>
+            <br>
+            Full Name: {{ firstname +" "+ lastname}}
+        </div>
+
+        
+     <script>
+         //Controller
+    var app = angular.module('AngularApp', []);
+        app.controller('myctrl', function($scope) {
+        $scope.firstname= "John";
+        $scope.lastname= "Doe";
+       });
+    </script>
+    
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>AngularJS Application</h1>
+    <p>AngularJS modules define AngularJS application</p>
+    <p>AngularJS controllers control AngularJS application</p>
+    <p>The ng-app directive defines the application, the ng-controller directive defines the controller</p>
+
+    <div ng-app="AngularApp" ng-controller="myctrl">
+        First name: <input type="text" ng-model="firstname"><br>
+        Lastname: <input type="text" ng-model="lastname"><br>
+        <br>
+        Full Name: {{ firstname +" "+ lastname}}
+    </div>
+
+    
+ <script>
+     //Controller
+var app = angular.module('AngularApp', []);
+    app.controller('myctrl', function($scope) {
+    $scope.firstname= "Jaleshwari";
+    $scope.lastname= " masram";
+   });
+</script>
+</body>
+</html>
