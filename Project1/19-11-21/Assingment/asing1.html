@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assingment</h1>
+   
+    <!-- <p id="id1"></p> -->
+
+    Eneter Target: <input type="number" id="target">
+    
+    <button type="button" onclick="fun()" >result</button>
+      
+    <p id="target"></p>
+    <p id="id2"></p>
+    <script>
+
+        //    var arr=[];
+        //   var size=3;
+        //   for(var j=0;j<size; j++){
+        //       arr[j]=prompt("Eneter a number "+(j+1))
+            
+        //   }
+        //   document.getElementById("id1").innerHTML=arr;
+
+        function fun(){
+           const arr=[3,2,4];
+ 
+         const target= document.getElementById("target").value;
+         
+        for( var i=0; i<arr.length; i++)
+        {
+            if((arr[i]+arr[i+1])==target)
+            {
+                document.getElementById("id2").innerHTML= "["+ arr.indexOf(arr[i]) +", "+ arr.indexOf(arr[i+1]) +"]";
+            //console.log(arr.indexOf(arr[i]) +" "+arr.indexOf(arr[i+1]));
+            }
+            
+        }
+    }
+    </script>
+</body>
+</html>
