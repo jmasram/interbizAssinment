@@ -10,35 +10,41 @@
     <h1>Assingment</h1>
     <script>
 
-       for(var i=1; i<=1000; i++)
-        {
-            var array=[i];
-           console.log(array);
-
-           var ele=array.map(fun)
-            var ele2="";
-           function fun(value,index,array)
-           {
-               ele2 += value;
+    
+        const array1 = [];
+         for(var i=1;i<1000;i++){
+      
+            array1.push(i);
            }
+//        console.log(array1);
 
-          console.log(ele2);
-        //  var even=array.filter(fun1);
-          
-        //   function fun1(value,index,array)
-        //   {
-        //       return value%2==0;
-        //   }
-        //   console.log(even);
+        //    var ele1=array1.map(fun)
+        //     var ele2="";
+        //    function fun(value,index,array)
+        //    {
+        //       return value +" ";
+        //    }
 
-           var total1=ele2.reduce(fun2);
+        //  console.log(ele1);
+        
+         
+        
+
+         var even=array1.filter(fun1); 
+        function fun1(value,index,array)
+           {
+               return value%2==0;
+           }
+           console.log(even);
+
+           var total1=even.reduce(fun2);
            function fun2(total,value,index,)
            {
                return total+value;
            }
            console.log(total1);
 
-        }
+        
             
          
 
