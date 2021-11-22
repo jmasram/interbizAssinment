@@ -1,0 +1,25 @@
+header{
+    text-align: center; 
+    background-color: grey;
+}
+nav{
+    text-align: right;
+     font-size: 30px;
+     background-color: black;
+}
+section{
+    background-color: gray;
+        height: 350px;
+}
+table
+{
+    background-color:darkgrey;
+    margin-left: 300px;
+    text-align: center;
+    width: 40%;
+}
+footer{
+    height: 40px;
+    color: blue;
+     background-color: rgb(22, 1, 1);
+}
