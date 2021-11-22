@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var arr=new Array(3);// three rows
+
+        for(var k=0; k<3;k++)
+        {
+            arr[k]=new Array(3);
+        }
+       
+
+        var start =12;
+            for(var k=1;k<=3; k++)
+            {
+                for(var j=1; j<=3;j++)
+                {
+                arr[i][j]=start;
+                start=start+1;
+                
+             }
+         }
+
+         for(var k=0;k<3; k++)
+            {
+                for(var j=0; j<3;j++)
+                {
+                       document.write(arr[i][j]+"  ");
+
+                }
+                // console.log("\n");
+                document.write("<br/>")
+                 
+            }
+        // document.write(arr[i][j])
+    </script>
+</body>
+</html>
