@@ -1,4 +1,5 @@
 header{
+<<<<<<< HEAD
     text-align: center; 
     background-color: grey;
 }
@@ -23,3 +24,16 @@ footer{
     color: blue;
      background-color: rgb(22, 1, 1);
 }
+=======
+  background-color: gray;
+}
+nav{
+  background-color: grey;
+  text-decoration: lightseagreen;
+
+}
+section{
+  background-color: lightblue;
+
+}
+>>>>>>> a76119341442ab913978e78e4cff177370c61869
