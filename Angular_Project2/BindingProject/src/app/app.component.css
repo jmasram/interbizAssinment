@@ -1,0 +1,30 @@
+header{
+  background-color: aliceblue;
+  color:rgb(9, 247, 227);
+  height: 50px;
+  text-align: center;
+  text-shadow: 2px;
+}
+nav{
+  background-color: rgb(147, 170, 192);
+  height: 40px;
+  font-size: 20px;
+
+
+}
+a{
+  text-decoration: none;
+  float: right;
+
+
+}
+section{
+  background-color: rgb(56, 145, 145);
+  height: 800px;
+  font-size: 25px;
+}
+footer{
+  background-color: rgb(33, 109, 175);
+  font-size: 25px;
+  height: 50px;
+}
