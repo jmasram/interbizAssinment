@@ -1,0 +1,75 @@
+<!-- Given an integer x, return true if x is palindrome integer.
+
+An integer is a palindrome when it reads the same backward as forward. For example, 121 is palindrome while 123 is not.
+
+ 
+
+Example 1:
+
+Input: x = 121
+Output: true
+
+Example 2:
+
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+
+Example 3:
+
+Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+
+Example 4:
+
+Input: x = -101
+Output: false
+
+note: don't use predefine functions -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enetr a Number<input type="text" id="id1">
+    <button onclick="fun()">Submit</button>
+
+    <script>
+        function fun()
+        {
+            var pali=document.getElementById("id1").value;
+            var palinumber=pali;
+            var count;
+             var store="";
+
+             if(pali>0)
+             {
+              while(pali>0)
+                {
+                count=pali%10;
+                pali=parseInt(pali/10);
+                store=store*10+count;
+               
+                }
+                if( palinumber==store){
+                 document.write("This is palindrome");
+                  }
+                 else{
+                 document.write("This is not palindrome");
+                 }
+            }
+
+            else{
+                document.write("This is not palindrome");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-import { Component ,OnChanges,OnInit } from '@angular/core';
+import { Component ,OnChanges,OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +21,10 @@ import { Component ,OnChanges,OnInit } from '@angular/core';
          myValue="Jaleshwari";
          name="Angular Project(InterPolation)";
          siteurl=window.location.href;
+
+         @Input()name1:String="";
+
+
       constructor()
      {
       console.log("constructor")
