@@ -1,0 +1,79 @@
+<!-- create a function that return the sum of the even elements of the array. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="id1"></p> -->
+    <input type="text" id="id1">
+    <button onclick="fun()">button</button>
+    <script>
+        
+        function fun(){
+       const array1 = document.getElementById("id1").value;
+        const array3=[];
+       for(var i=0;i<=array1; i++)
+       {
+           array3.push(i);
+          
+       }
+         document.write("Array=["+ array3 +"]");
+
+       var even =0;
+       for(var i=0;i<=array3.length; i++)
+       {
+         if(i%2==0)
+         {
+            even +=array3[i];
+         }  
+          
+       }
+           
+       document.write("Even number "+even);
+    }
+
+
+    var arr=[1,2,3,4,5,6,7,8,9,10];
+      function fun2(arr)
+    {
+      var even=0;
+      for(var i=0;i<=arr.length; i++)
+       {
+         if(arr[i]%2==0)
+         {
+         
+           even +=arr[i];
+         }  
+     //console.log(even);
+       }
+      return even
+    }
+    var sum=fun2(arr);
+  console.log(sum);
+
+
+
+  var str="asdfg";
+
+   function fun3(str){
+    
+  for( var i=0;i<=str.length-1;i++)
+        {
+            if(str[i]=='a')
+            {
+              return i
+            }
+        }
+      }
+  var eleSearch=fun3(str);
+   console.log(eleSearch)
+
+
+    </script>
+</body>
+</html>
