@@ -32,15 +32,15 @@ import { Component ,OnChanges,OnInit,Input } from '@angular/core';
 
 
 
-    // ngOnInit(): void {
-    // console.log(this.ngOnInit );
-    // console.log("ngOnInit");
-    // }
+    ngOnInit(): void {
+    console.log(this.ngOnInit );
+    console.log("ngOnInit");
+    }
 
-    //  ngOnChanges()
-    // {
-    // console.log(this.ngOnChanges +"ngOnChanges");
-    //  }
+     ngOnChanges()
+    {
+    console.log(this.ngOnChanges +"ngOnChanges");
+     }
 
 
 
