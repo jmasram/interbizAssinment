@@ -1,0 +1,57 @@
+<!-- Write a function that accepts a string and returns the count of each vowel. 
+
+eample 
+	input: "hello world"
+	output: { e:1 , o:2 } -->
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function vowel(input)
+			{
+				var count="";
+				var result ={};
+				var pair = "";  //flag
+               //  var count = 0;
+				for(var i=0;i<=input.length-1; i++)
+				{
+					if(input[i]=='a' || input[i]=='e' ||input[i]=='i'|| input[i]=='o'||input[i]=='u' )
+					{
+					   count+= input[i];
+					}
+				}
+				
+
+				for(var j=0; j<=count.length-1; j++)
+					   {
+						
+						  // console.log(count)
+					       if(result[count[j]])
+						   {
+
+					           result[count[j]]++;
+				             }
+					   else {
+                          result[count[j]]= 1;
+                         }
+						
+					}
+					return result;
+			
+				//return result;
+			}
+
+			var input="hello world"
+			var output=vowel(input);
+
+			console.log(output);
+		</script>
+	</body>
+	</html>
