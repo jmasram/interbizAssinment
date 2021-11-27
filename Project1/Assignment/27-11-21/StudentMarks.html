@@ -1,0 +1,104 @@
+<!-- given a range of marks for the student determine the grade for them 
+A+ -> 90-100
+A  -> 80-89
+
+B+ ->70-79
+
+B ->60-69
+
+C -> 50-59
+D  ->40-49
+
+F 30-39 
+
+write a function that takes student marks as input and return their grade
+
+note: make use of switch statement , -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="text" id="mark">
+     <input type="submit" onclick="studentgrade()">
+     
+    <script>
+      
+      
+
+
+       function myResult(mark){
+
+       
+     
+        var grade ="";
+        
+        //console.log(marks);
+        //var a, b,c,d,e,f;
+
+           if( marks>=90 && marks<=100)
+           {
+              grade += 'a';
+              console.log(grade);
+           }
+           else if(marks >=79 && marks<=89)
+           {
+              grade ='b'
+           }
+           else if(marks >=69 && marks<=79)
+           {
+             grade ='c'
+           }
+
+           else if(marks >=49 && marks<=69)
+           {
+             grade ='d'
+           }
+
+           else 
+           {
+             grade ='f'
+           }
+
+           switch(grade){
+             case 'a' :
+                  //  return "A+ Gread";
+                   return "A+";
+                 break;
+
+                 case 'b' :
+                   return "B";
+                      
+                 break;
+
+                 case 'c':
+                   return "C";
+                     
+                 break;
+
+                 case 'd':
+                      return "D";
+                   break;
+
+                   case 'f':
+                      return "F";
+                   break;
+
+                
+              }
+
+        }
+        var marks= 91;
+        var x= myResult(mark);
+        console.log(x);
+
+
+    </script>
+</body>
+</html>
