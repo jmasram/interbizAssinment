@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+    color: darkblue;
+    text-shadow: 2px;
+}
+
+body{
+    
+    background-color: lightblue;
+}
+
+table,tr,td{
+   
+   height: 20px;
+}
+/* td{
+    float: left;
+} */
+
+.div1{
+    margin-left: 500px;
+}
+
+#sub{
+    background-color: #cc6633;
+    height: 30px;
+    width: 100px;
+}
+#res
+{
+    background-color: green;
+    height: 30px;
+    width: 100px;
+}
+.p1{
+    color:red;
+    display: none;
+}

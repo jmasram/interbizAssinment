@@ -33,7 +33,7 @@ function validatefrom(){
       }
 
       //validation for phone number
-    var mobreq=document.getElementById("mobno").value;
+      var emaireq=document.getElementById("mobno").value;
     
     if(emaireq == ""){
         document.getElementById("mobreq").style.display = "inline";
@@ -43,10 +43,11 @@ function validatefrom(){
     }
 
   //   validation for phone valid form
-    //   var mobreq=document.getElementById("mobno").value;
+       var mobreq=document.getElementById("mobno").value;
        var mobptr= /^[0-9]{2}[0-9]{4}[0-9]{4}$/.test(mobreq);
         
-      if(mobptr){   
+      if(mobptr){
+          
           document.getElementById("mobvalform").style.display = "none";
       }
       else{
@@ -65,7 +66,7 @@ function validatefrom(){
       else{
           
           document.getElementById("gamereq").style.display = "none";
-      } 
+      }
        
       //validation for check box atleast one
       var checkreq=document.getElementsByName('foot');
@@ -83,10 +84,11 @@ function validatefrom(){
       }
        
       // //valid for radio button
+      
       var genreq=document.getElementsByName('gender');
         var genlen=genreq.length; 
 
-        for(var x=0; x<=genlen-1; x++){
+        for(var x=0; x<=genlen; x++){
           if( ( genreq[0]).checked == true || ( genreq[1]).checked == true ){
           
           document.getElementById("genderform").style.display = "none";

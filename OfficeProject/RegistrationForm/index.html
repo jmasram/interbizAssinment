@@ -4,16 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
     <title>Registration Form</title>
 </head>
 <body>
-     <h1>Registration Form</h1>
+
+  <div style="border :2px solid black">
+              <h1>Registration Form</h1>
+    <div class="div1">
+     
      <table>
-         <tr><td>Name</td><td><input type="text" id=name></td>
-            <td>Middel Name</td><td><input type="text" id="mname" name="mname"></td>
-            <td>Last Name</td><td><input type="text" id="lname" name="lname"></td>
-        </tr>
+         <!-- First name Second Name Lastename -->
+         <tr><td>Name</td><td><input type="text" id="fName"></td><td style="width:1px;"><sup style="color:red; display: none;" id="fnamereq">*</sup></td></tr>
+         <tr><td>Middel Name</td><td><input type="text" id="mname" name="mname"></td></tr>
+         <tr><td>Last Name</td><td><input type="text" id="lname" name="lname"></td></tr>
+       
+         <!-- Date of birth -->
+           <tr>
+            <td><label for="date" name="date">DOB</label></td>
+            <td><input type="date" id="date" name="date" max="2020-01-01" min="1990-01-01"></td>
+           </tr>
         <tr></tr>
+           <!-- Gender -->
+           
+           <tr >
+               
+             <td><label for="gender" name="gender"> Gender</label></td>
+             <td><input type="radio" id="gender" name="gender">Female
+             <input type="radio" id="gender" name="gender">Male</td>
+             <td><p style="color: red;display: none;" id="genderform">pleace Select One</p></td>
+            </tr>
+        
+            <!-- Select Course -->
+            <tr></tr>
+            <tr>
+                <td><label for="course">Choose Course</label></td>
+                 <td> <select name="course" id="course">
+                <option value="MCA">MCA</option>
+                <option value="BTECH">BTECH</option>
+                <option value="BCA">BCA</option>
+                 </select></td>
+            </tr>
+
+            <!-- select your favorites Game -->
+            <tr>
+                <td>Choose Favorite Game</td>
+            </tr>
+            <tr>    
+                <td></td>
+                <td><label for="game">Footbal</label><input type="checkbox"  id="game" name="foot" value=""><p class="p1" id="gamereq">*</p></td>
+                
+                <td><label for="game">Cricket</label><input type="checkbox"  id="game" name="foot" value=""></td>
+                 
+                <td><label for="game">Ches</label><input type="checkbox"  id="game" name="foot" value=""></td>
+                <td><p style="color: red;display: none;" id="gameform">choice game atleast one</p></td>
+    
+            </tr>
+              
+            <tr></tr>
+            <!-- Address -->
+              <tr>
+                <td><label for="addre" name="addr"><b>Address</b></label></td>
+                <td> <textarea name="addr" id="addr" cols="20" rows="3"></textarea></td>
+             </tr>
+       
+             <tr></tr>
+             <!-- Phone Number -->
+             <tr>
+                <td><label for="mobno" name="mobno">MOBILE NUMBER</label></td>
+                <td><input type="tel" name="mobno" placeholder="916-886-8683" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="mobno">
+                    <sup  style="color:red;display :none;" id="mobreq">*</sup></td>
+                  <td><p style="color: red;display: none;" id="mobvalform">mobile num must be valid</p></td>
+
+                </td>
+             </tr>
+            
+            
+             <!-- Email  -->
+             <tr></tr>
+            <tr><td><label for="email" name="email">Email</label></td>
+             <td> <input type="email" name="email" placeholder="k@.com" id="email">
+                <p style="color:red;display :none;" id="emaireq">*</p></td>
+             <td><p style="color: red;display: none;" id="emailvalform">Email must be on valid form</p></td>
+           </tr>
+         
+           <tr></tr>
+           <!-- Image  -->
+          <tr>
+              <td><label for="img">Image</label></td>
+              <td> <input type="file" name="image" id="img"><br></td>
+          </tr>
+          <tr></tr>
+              
+
+           <tr>
+            <td><td><input type="button" name="submit" id="sub"  value="Submit" onclick="validatefrom()">
+             <input type="reset" id="res"></td>
+         </tr>
+       
      </table>
+    </div>
+  </div>
 </body>
 </html>

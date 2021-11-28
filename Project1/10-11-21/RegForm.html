@@ -28,6 +28,16 @@
      
         function validatefrom(){
           // validation for required
+
+           // validation for required
+           var fname=document.getElementById("fName").value;
+            if(fname == ""){
+                document.getElementById("fnamereq").style.display = "inline";
+            }
+            else{
+                document.getElementById("fnamereq").style.display = "none";
+            }
+
             // validation for email
             var emaireq=document.getElementById("email").value;
           
