@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+<script>
+
+function myResult(marks){
+       let grade =marks;
+        switch(grade){
+              case grade:        
+              if( grade>=90 && grade<=100){
+                  return "A+";
+                  break;
+              }
+              case grade:
+              if(grade >=79 && grade<=89)
+              {
+                  return "B+";
+                  break;
+              }
+              case grade:
+              if(marks >=69 && marks<=79)
+              {
+                  return "C+";
+                  break;
+              }
+              case grade:
+               if(marks >=49 && marks<=69)
+               {
+                   return "D+";
+
+               }
+               case grade:
+               if(marks >=39 && marks<49)
+               {
+                   return "D";
+
+               }
+               
+             default: 
+             return "fail";
+           
+            }
+            }
+
+
+
+    var marks= 30;
+    var x= myResult(marks);
+    console.log(x);
+</script>
+</body>
+</html>
