@@ -19,39 +19,50 @@ function myResult(marks){
                   break;
               }
               case grade:
-              if(grade >=79 && grade<=89)
+              if(grade >=80 && grade<=89)
+              {
+                  return "A";
+                  break;
+              }
+              case grade:
+              if(marks >=70 && marks<=79)
               {
                   return "B+";
                   break;
               }
               case grade:
-              if(marks >=69 && marks<=79)
-              {
-                  return "C+";
-                  break;
-              }
-              case grade:
-               if(marks >=49 && marks<=69)
+               if(marks >=60 && marks<=69)
                {
-                   return "D+";
+                   return "B";
 
                }
                case grade:
-               if(marks >=39 && marks<49)
+               if(marks >=50 && marks<=59)
+               {
+                   return "C";
+
+               }
+               case grade:
+               if(marks >=40 && marks<=49)
                {
                    return "D";
 
                }
+               case grade:
+               if(marks >=0 && marks<=39)
+               {
+                   return "F";
+
+               }
+            //  default: 
+            //  return "fail";
                
-             default: 
-             return "fail";
-           
             }
             }
 
 
 
-    var marks= 30;
+    var marks= 100;
     var x= myResult(marks);
     console.log(x);
 </script>
