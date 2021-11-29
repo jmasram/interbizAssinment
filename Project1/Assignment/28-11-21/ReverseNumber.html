@@ -1,0 +1,40 @@
+<!-- write a function to reverse a number
+
+input 129 
+output 921
+
+input 10000 
+output 1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+       function reverse(input)
+       {
+           var count;
+           var store='';
+            
+            while(input>0){
+              count=input%10;
+              input =parseInt(input/10);
+              store =store *10 +count;
+
+               
+            }
+            return store;
+            }
+          
+     
+      var input=129;
+      var x=reverse(input);
+     console.log(x);
+  </script>
+    </body>
+</html>

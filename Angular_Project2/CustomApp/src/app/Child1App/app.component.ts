@@ -3,9 +3,13 @@ import { Component} from "@angular/core";
 @Component({
   selector:'app-top-bar',
   template:`<h1 color>Hello Angular </h1>
-             <h2>{{disp}}</h2>`
+             <h2>{{disp}}</h2>`,
+
+
 })
 export class Child1Component{
+
+
 
   public disp:String ="IC-Project";
   constructor(){

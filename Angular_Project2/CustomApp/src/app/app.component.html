@@ -1,9 +1,62 @@
 <h1 >Angular</h1>
-<p appHighlight>
+
+<!-- using Pipe Component -Build in -->
+<h4> Your BirthDay is {{ birthday | date }}</h4>
+<p>Your company name is {{ name1 | uppercase}} .This is Upper case using pipe Component</p>
+<P>{{name2 |lowercase}}</P>
+
+
+
+<p appHighlight uppercase>
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae non id!
 Aliquam ut placeat nisi blanditiis sit provident voluptatem
+</p>
 maxime amet repellendus dicta aliquid ex a, quia natus libero?
+
+<p >Chain pipes so that the output of one pipe becomes the input to the next.</p>
   <app-top-bar></app-top-bar>
   <ts-app  ></ts-app>
   <app-top-bar2></app-top-bar2>
-</p>
+
+<!-- <input [ngModel]="currentItem.name2" (ngModelChange)="setUppercaseName($event)" id="exa-ngModel"> -->
+<!-- Using Two way DataBindinding -->
+<label for="exa-ngModel">[(name1)]:</label>
+<input [ngModel]="name1" id="exa-ngModel">
+
+<p>Values:{{fname}}</p>
+<p>valid {{ctrl.valid}}</p>
+
+<label for="fname">First Name:</label>
+<input [ngModel]="fname" id="exa-ngModel" #ctrl="ngModel">
+<button (click)="setValues()">Show name</button>
+
+
+<!-- Using ngModel within a form -->
+<p>First name value: {{ first.value }}</p>
+<p>First name valid: {{ first.valid }}</p>
+<p>Form value: {{ f.value | json }}</p>
+<p>Form valid: {{ f.valid }}</p>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <input name="first" ngModel required #first="ngModel">
+    <input name="last" ngModel>
+    <button>Submit</button>
+
+</form>
+
+<!-- Using a standalone ngModel within a group  -->
+<form>
+  <input name="login" ngModel placeholder="Login">
+  <input type="checkbox" ngModel [ngModelOptions]="{standalone: true}"> Show more options?
+</form>
+<!-- form value: {login: ''} -->
+
+<form>
+  <my-custom-form-control name="Nancy" ngModel [ngModelOptions]="{name: 'user'}">
+  </my-custom-form-control>
+</form>
+
+<div>
+  <!-- <p>{{ custom.name }}</p> -->
+  <p>{{ n | custom }}</p>
+</div>

@@ -8,7 +8,9 @@ import { Child1Component }  from './Child1App/app.component';
 import {TopAppComponent}   from './TopApp/TSApp';
 import { CustComponent }  from './Child1App/app.component';
 import { Highlighlight }   from './highlight.directive';
-import {ChildDirective }  from './Child1App/drective'
+import {ChildDirective }  from './Child1App/drective';
+import { FormsModule } from '@angular/forms';
+import{  CustomPipe } from '../app/app.pipe'
 
 
 @NgModule({
@@ -18,11 +20,13 @@ import {ChildDirective }  from './Child1App/drective'
     TopAppComponent,
     CustComponent,
     Highlighlight,
-    ChildDirective
+    ChildDirective,
+    CustomPipe
 ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
