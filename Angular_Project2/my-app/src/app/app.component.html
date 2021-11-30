@@ -14,8 +14,8 @@
 
 <!-- Toolbar -->
 <div>
-<header style="text-align: center; background-color: lightblue; margin: 0px;"><h1>Welcome to {{title}}</h1></header>
-<nav style=" width: 100%; background-color: grey;font-size:30px; text-align: right;  margin: 0px; text-decoration: none;">
+<header><h1>Welcome to {{title}}</h1></header>
+<nav >
     <a href="#"> Home</a>
     <a href="#"> New</a>
     <a href="#"> </a>
@@ -23,13 +23,66 @@
     <a href="#"> FAQ</a>
     <a href="#"> Contect</a>
 </nav>
-<section style="  height: 800px;  background-image: linear-gradient(blue,rgb(23, 180, 233),rgb(98, 207, 240)); color: chocolate;">
+<section>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error perspiciatis asperiores ea eveniet totam amet quam accusamus?
      Quas illum delectus tenetur ea? Itaque quod voluptatibus ab sapiente inventore! Dolore, ab.</p>
+
+
 </section>
-<footer style="height: 40px; background: slategray; text-decoration: chocolate; text-align: center; font-size: 30px;">j@gmail.com</footer>
+<h2>{{chiledDataReceived}}</h2>
+<test (childStringData)="ReceiveData($event)"></test>
+<br>
+
+
+<div>
+    <p></p>
+</div>
+<div>
+  <h3>Select your favorite Cricketer</h3>
+  <input type="checkbox">Rohit Raina<br>
+  <input type="checkbox">MS Dhoni <br>
+  <input type="checkbox">Virat kohli<br>
+  <input type="checkbox">Hardik Pandya<br>
+</div>
+
+
+<div class="container">
+  <h2>UserData</h2>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" >
+     <div class="form-group">
+       <label>Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]=myName>{{myName}}
+     </div>
+
+     <div class="form-group">
+       <label>Email   </label>
+       <input type="text" class="form-control" name="email" ngModel>
+    </div>
+      <div ngModelGroup="Address">
+        <div class="form-group">
+          <label>Street   </label>
+           <input type="text" class="form-control" name="street" ngModel>
+        </div>
+        <div class="form-group">
+          <label> City     </label>
+           <input type="text" class="form-control" name="city" ngModel>
+        </div>
+        <div class="form-group">
+          <label>PostalC</label>
+           <input type="text" class="form-control" name="postalcode" ngModel>
+        </div>
+      </div>
+      <br>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<footer >j@gmail.com</footer>
 
 </div>
+
+
+
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
@@ -38,6 +91,5 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <router-outlet></router-outlet>
-=======
 
 

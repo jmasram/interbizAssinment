@@ -4,8 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChildAppComponent } from './child-app/child-app.component';
-import { FormsModule, ReactiveFormsModule ,MatCheckBox} from '@angular/forms';
-import { FormGroup } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -15,9 +14,8 @@ import { FormGroup } from '@angular/forms';
   imports: [
     NgModule,
     BrowserModule,
-    AppRoutingModule,
-    FormGroup,
-    ReactiveFormsModule,
+    AppRoutingModule
+
 
   ],
   providers: [],

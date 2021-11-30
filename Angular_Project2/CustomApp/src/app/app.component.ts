@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   title = 'CustomApp';
 
-  birthday="16121995";
+  birthday="19951216";
 
   name1:string="interbiz counsulting raipur";
 

@@ -6,7 +6,7 @@ import { Output, EventEmitter } from '@angular/core';
   templateUrl: './child-app.component.html',
   styleUrls: ['./child-app.component.css']
 })
-export class ChildAppComponent implements OnInit {
+export class ChildAppComponent {
 
   constructor() { }
 
@@ -14,11 +14,6 @@ export class ChildAppComponent implements OnInit {
 
   @Output() newItemEvent = new EventEmitter<string>();
 
-  addNewItem(value: string) {
-    this.newItemEvent.emit(value);
-  }
 
-  ngOnInit(): void {
-  }
 
 }

@@ -1,14 +1,24 @@
 import { Component } from '@angular/core';
+// import { Console } from 'console';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-<<<<<<< HEAD
   styleUrls: ['./app.component.css']
-=======
-  styles: ['h1{ color:red;}']
->>>>>>> a76119341442ab913978e78e4cff177370c61869
+
 })
 export class AppComponent {
   title = 'Jaleshwari Masram';
+  myName:string="marry";
+
+  chiledDataReceived: string ="";
+
+  ReceiveData(event:string){
+    console.log(event);
+    this.chiledDataReceived=event;
+  }
+
+  onSubmit(value: any){
+    console.log(value);
+  }
 }

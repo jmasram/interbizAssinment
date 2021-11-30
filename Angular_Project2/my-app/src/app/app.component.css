@@ -1,16 +1,19 @@
 header{
-<<<<<<< HEAD
-    text-align: center;
-    background-color: grey;
-}
+  text-align: center;
+   background-color: lightblue; }
+
 nav{
-    text-align: right;
-     font-size: 30px;
-     background-color: black;
+ width: 100%;
+  background-color:grey;
+  font-size:30px;
+   text-align: right;
+    text-decoration: none;
 }
+
 section{
-    background-color: gray;
-        height: 350px;
+   height: 800px;
+   background-image: linear-gradient(blue,rgb(23, 180, 233),rgb(98, 207, 240));
+    color: chocolate;
 }
 table
 {
@@ -20,20 +23,9 @@ table
     width: 40%;
 }
 footer{
-    height: 40px;
-    color: blue;
-     background-color: rgb(22, 1, 1);
+  height: 40px;
+   background: slategray;
+    text-decoration: chocolate;
+     text-align: center;
+  font-size: 30px;
 }
-=======
-  background-color: gray;
-}
-nav{
-  background-color: grey;
-  text-decoration: lightseagreen;
-
-}
-section{
-  background-color: lightblue;
-
-}
->>>>>>> a76119341442ab913978e78e4cff177370c61869
