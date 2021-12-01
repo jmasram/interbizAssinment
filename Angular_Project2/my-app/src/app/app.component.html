@@ -13,7 +13,7 @@
 
 
 <!-- Toolbar -->
-<div>
+
 <header><h1>Welcome to {{title}}</h1></header>
 <nav >
     <a href="#"> Home</a>
@@ -46,40 +46,51 @@
 </div>
 
 
-<div class="container">
+<div class="container-fluid d1">
   <h2>UserData</h2>
   <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" >
-     <div class="form-group">
-       <label>Name</label>
-        <input type="text" class="form-control" name="name" [(ngModel)]=myName>{{myName}}
-     </div>
+      <table>
+     <tr class="form-group">
+        <td><label>Name</label></td>
+        <td><input type="text" class="form-control" name="name" [(ngModel)]=myName  required minlength="4" #name="ngModel"></td><td>{{myName}}</td>
+        <div *ngIf="name.invalid && (name.dirty ||name.touched)" class="alert"></div>
+        <div *ngIf="name.errors?.['required']">Name is  required</div>
+        <div *ngIf="name.errors?.['minlength']">Name must be at least 4 Charecter Long</div>
+        <!-- <div *ngIf="name.errors?.['forbiddenName']">Name cannot be bob </div> -->
+     </tr>
 
-     <div class="form-group">
-       <label>Email   </label>
-       <input type="text" class="form-control" name="email" ngModel>
-    </div>
-      <div ngModelGroup="Address">
-        <div class="form-group">
-          <label>Street   </label>
-           <input type="text" class="form-control" name="street" ngModel>
-        </div>
-        <div class="form-group">
-          <label> City     </label>
-           <input type="text" class="form-control" name="city" ngModel>
-        </div>
-        <div class="form-group">
-          <label>PostalC</label>
-           <input type="text" class="form-control" name="postalcode" ngModel>
-        </div>
-      </div>
-      <br>
+      <tr class="form-group">
+       <td><label>Email</label></td>
+       <td><input type="email" class="form-control" name="email" ngModel  #email="ngModel" pattern="^[A-Za-z0-9+_.-]+@(.+)$"></td>
+       <div *ngIf="email.errors?.['pattern']">You have entered an invalid email address</div>
+      </tr>
+      <!-- <div ngModelGroup="Address"> -->
+        <tr class="form-group">
+          <td><label>Street</label></td>
+          <td> <input type="text" class="form-control" name="street" ngModel></td>
+        </tr>
+        <tr class="form-group">
+         <td> <label> City</label></td>
+          <td> <input type="text" class="form-control" name="city" ngModel></td>
+        </tr>
+        <tr class="form-group">
+           <td><label>PostalC</label></td>
+            <td><input type="text" class="form-control" name="postalcode" ngModel required></td>
+        </tr>
+      <!-- </div> -->
+          <br>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+      <tr> <td></td><td> <button type="submit" class="btn btn-primary">Submit</button></td></tr>
+    </table>
+    <br>
+    </form>
+
+
+
 </div>
 <footer >j@gmail.com</footer>
 
-</div>
+
 
 
 
