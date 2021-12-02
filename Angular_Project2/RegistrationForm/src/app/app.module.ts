@@ -8,13 +8,19 @@ import { RegistrationFormComponent } from './registration-form/registration-form
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { WebsiteComponent } from './website/website.component';
+import { LoginComponent } from './login/login.component';
+import { DonateComponent } from './donate/donate.component';
+import { TakeActionComponent } from './take-action/take-action.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationFormComponent,
     LoginFormComponent,
-    WebsiteComponent
+    WebsiteComponent,
+    LoginComponent,
+    DonateComponent,
+    TakeActionComponent
   ],
   imports: [
     BrowserModule,

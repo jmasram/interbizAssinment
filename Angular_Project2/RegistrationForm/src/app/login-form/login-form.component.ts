@@ -1,5 +1,6 @@
+import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login-form',
@@ -8,26 +9,32 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class LoginFormComponent implements OnInit {
 
+ loginForm:FormGroup;
 
-  loginForm=new FormGroup({
-    name:new FormControl(''),//we can use default value
-    password:new FormControl('ibz123')
-  })
   loginUser(){
     // this.loginForm.setControl.name:'kkkk';
     console.log(this.loginForm.value)
   }
 
 
-  updateName() {
-
+  constructor() {
+    this.loginForm=new FormGroup({
+      name:new FormControl('',[Validators.required]),//we can use default value
+      mname:new FormControl(''),
+      lname:new FormControl(''),
+      email:new FormControl(''),
+      mobno:new FormControl(''),
+      password:new FormControl('ibz123')
+    })
   }
 
-
-  constructor() { }
+  get name() {return this.loginForm.get('name');}
 
   ngOnInit(): void {
+  console.log(this.name);
   }
+
+
 
 
 
