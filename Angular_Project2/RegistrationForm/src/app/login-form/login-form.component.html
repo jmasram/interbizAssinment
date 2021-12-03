@@ -12,46 +12,62 @@
 <body>
 
 <div class="container">
-  <h2>Add User</h2>
+  <h2 >Add User</h2>
 
   <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
     <div class="form-group">
-      <label for="usr">FirstName: </label>
-      <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
-      <!-- <sup *ngIf="name.errors?.['required']">Name is  required</sup> -->
-y
+      <label >FirstName : </label>
+      <sup *ngIf="name && name.invalid && name.touched" style="color: red;">*</sup>
+      <input type="text" class="form-control" name="name" formControlName="name" placeholder="First Name">
+   <sup *ngIf="name?.errors?.['pattern']" class="invalid">Please Enter Alphabet</sup>
+ </div>
 
+    <div class="form-group">
+      <label>MiddleName</label>
+      <input type="text" class="form-control"  name="mname" formControlName="mname" placeholder="Middle Name" >
     </div>
 
     <div class="form-group">
-      <label for="usr">MiddelName</label>
-      <input type="text" class="form-control" id="usr" name="mname" formControlName="mname" >
-    </div>
+      <label>LastName:</label>
+      <sup *ngIf="lname && lname.invalid && lname.touched" class="invalid">*</sup>
+      <input type="text" class="form-control" name="lname" formControlName="lname" placeholder="Last Name">
 
-    <div class="form-group">
-      <label for="usr">LastName:</label>
-      <input type="text" class="form-control" id="usr" name="lname" formControlName="lname">
     </div>
 
 
 
     <div class="form-group">
-      <label>Email</label>
-      <input type="email" class="form-control" name="email"  pattern="^[A-Za-z0-9+_.-]+@(.+)$"  formControlName="email">
-       <!-- <div *ngIf="email.errors?.['pattern']">You have entered an invalid email address</div> -->
+      <label> Email : </label>
+      <sup *ngIf="email && email.invalid && email.touched" style="color: red;">*</sup>
+      <input type="email" class="form-control" name="email"   formControlName="email" placeholder="Email Id">
+       <sup *ngIf="email?.errors?.['pattern']" class="invalid">You have entered an invalid email address</sup>
   </div>
 
   <div class="form-group">
-    <label>Contect</label>
-    <input type="tel" class="form-control" name='mobno' formControlName="mobno" >
+    <label>Phone Number :</label>
+    <sup *ngIf="mobno && mobno.invalid && mobno.touched" class="invalid">*</sup>
+    <input type="tel" class="form-control" name='mobno' formControlName="mobno"  placeholder="(xxx-xxx-xxxx)">
+    <sup *ngIf="mobno?.errors?.['pattern']" class="invalid">You have entered an invalid phone Number</sup>
+
   </div>
+
+  <div class="form-group">
+    <label>Zipcode</label>
+    <sup *ngIf="zipcode && zipcode.invalid && zipcode.touched" class="invalid">*</sup>
+     <input type="text" class="form-control" name="zipcode" formControlName="zipcode"  placeholder="Zipcode">
+    <sup *ngIf="zipcode?.errors?.['pattern']" class="invalid">You have entered an invalid  Numbe</sup>
+ </div>
 
   <div class="form-group">
     <label for="pwd">Password:</label>
+    <sup *ngIf="password && password.invalid && password.touched" class="invalid">*</sup>
     <input type="password" class="form-control" id="pwd" name="password" formControlName="password">
+    <sup *ngIf="password?.errors?.['pattern']" class="invalid">You have selected one capital,one small,one spacial word,max 8</sup>
+
   </div>
 
   <button type="submit"  class="btn btn-primary">Submit</button>
+  <!-- [disabled]="loginForm.invalid" -->
   </form>
 </div>
 
