@@ -11,6 +11,8 @@ import { WebsiteComponent } from './website/website.component';
 import { LoginComponent } from './login/login.component';
 import { DonateComponent } from './donate/donate.component';
 import { TakeActionComponent } from './take-action/take-action.component';
+import { CheckboxAssignComponent } from './checkbox-assign/checkbox-assign.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { TakeActionComponent } from './take-action/take-action.component';
     WebsiteComponent,
     LoginComponent,
     DonateComponent,
-    TakeActionComponent
+    TakeActionComponent,
+    CheckboxAssignComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

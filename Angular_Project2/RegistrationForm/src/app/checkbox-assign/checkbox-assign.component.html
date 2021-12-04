@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricketer</title>
+</head>
+<body>
+  <div>
+    <p>{{virat.name}}</p>
+  </div>
+  <div class="container">
+    <h1>Cricketer Name</h1>
+    <form #f="ngForm">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="virat"  [ngModel]="virat"  value="checkedValue" #virat='ngModel' (onclick)=" onClick()"> Virat Kohli
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue"> MS Dhoni
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue"> Rohit Sharma
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue"> KR Rahul
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue"> Hardik Pandya
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue"> Rishabh Pant
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue"> Yuzvendra Chanhal
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">  Bhuvneshwar Kumar
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue"> Mohammed Shemi
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue"> Ravindra jadeja
+        </label>
+      </div>
+    </form>
+  </div>
+  <div>
+
+  </div>
+</body>
+</html>

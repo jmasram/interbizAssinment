@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Jaleshwari Masram';
-  myName:string="marry";
+  myName:string="jjjjvvv";
 
   chiledDataReceived: string ="";
 
