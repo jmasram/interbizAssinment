@@ -18,21 +18,10 @@
             <i class="fas fa-heartbeat " style="color: red; font-size: 30px;"> SAVE TIGER</i>
              <!-- navigation -->
             <ul class="nav nav-tabs" style="float: right;">
-                <li class="nav-item">
-                  <a class="nav-link active" routerLink="login">Log In</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="donate">Donate
-                  <router-outlet ></router-outlet>
-
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="takeaction">Take Action</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" routerLink="#">Manu</a>
-                </li>
+                <li class="nav-item"><a class="nav-link " routerLinkActive="active" routerLink="login" [routerLinkActiveOptions]="{exact:true}">Log In</a> </li>
+                <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="donate">Donate </a> </li>
+                <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="takeaction">Take Action</a></li>
+                <li class="nav-item"> <a class="nav-link disabled"  routerLinkActive="active" routerLink="#">Manu</a></li>
               </ul>
         </div>
 

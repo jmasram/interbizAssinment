@@ -2,10 +2,10 @@
   position: sticky;
 } */
 .footer{
-    position: sticky;
+    /* position: sticky; */
     left: 0;
     bottom: 0;
-    width: 100%;
+    /* width: 100%; */
     background-color: cornflowerblue;
     color: white;
     text-align: center;

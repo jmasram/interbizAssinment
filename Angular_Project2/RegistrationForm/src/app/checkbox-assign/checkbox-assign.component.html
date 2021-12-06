@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricketer</title>
+</head>
+<body>
+
+  <div class="container fluid">
+    <h1>Cricketer Name</h1>
+    <div class="row">
+        <div class="col-sm-6">
+          <form class="form-group">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input"    value="Virat Kohli"  (click)="onClick($event)" > Virat Kohli
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" value="Ms Dhoni" (click)="onClick($event)"> MS Dhoni
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input"  value="Rohit Sharma" (click)="onClick($event)" > Rohit Sharma
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input"  value="KR Rahul" (click)="onClick($event)"> KR Rahul
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" value="Hardik Pandya" (click)="onClick($event)"> Hardik Pandya
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input"  value="Rishabh Pant" (click)="onClick($event)"> Rishabh Pant
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input"  value="Yuzvendra Chanhal" (click)="onClick($event)"> Yuzvendra Chanhal
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" value="Bhuvneshwar Kumar" (click)="onClick($event)">  Bhuvneshwar Kumar
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input"  value="Mohammed Shemi" (click)="onClick($event)"> Mohammed Shemi
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" value="Ravindra jadeja" (click)="onClick($event)"> Ravindra jadeja
+        </label>
+      </div>
+    </form>
+      </div>
+  <div class="col-sm-6">
+    <h2>Your Favorite Crickter</h2>
+      <p *ngFor="let massage of massage">{{massage}}</p>
+    </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

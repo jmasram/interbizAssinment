@@ -11,6 +11,12 @@ import { WebsiteComponent } from './website/website.component';
 import { LoginComponent } from './login/login.component';
 import { DonateComponent } from './donate/donate.component';
 import { TakeActionComponent } from './take-action/take-action.component';
+import { CheckboxAssignComponent } from './checkbox-assign/checkbox-assign.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { Tiger1Component } from './donate/tiger1/tiger1.component';
+import { Tiger2Component } from './donate/tiger2/tiger2.component';
+import { Tiger3Component } from './donate/tiger3/tiger3.component';
+import { Tiger4Component } from './donate/tiger4/tiger4.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,13 @@ import { TakeActionComponent } from './take-action/take-action.component';
     WebsiteComponent,
     LoginComponent,
     DonateComponent,
-    TakeActionComponent
+    TakeActionComponent,
+    CheckboxAssignComponent,
+    PageNotFoundComponent,
+    Tiger1Component,
+    Tiger2Component,
+    Tiger3Component,
+    Tiger4Component
   ],
   imports: [
     BrowserModule,

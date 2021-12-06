@@ -52,10 +52,12 @@
       <table>
      <tr class="form-group">
         <td><label>Name</label></td>
-        <td><input type="text" class="form-control" name="name" [(ngModel)]=myName  required minlength="4" #name="ngModel"></td><td>{{myName}}</td>
-        <div *ngIf="name.invalid && (name.dirty ||name.touched)" class="alert"></div>
-        <div *ngIf="name.errors?.['required']">Name is  required</div>
-        <div *ngIf="name.errors?.['minlength']">Name must be at least 4 Charecter Long</div>
+        <td><input type="text" class="form-control" name="name" [(ngModel)]=myName  required minlength="4" maxlength="10" pattern="/^[A-Z]{1}[A-Za-z]$/" #name="ngModel"></td><td>{{myName.toUpperCase()}}</td>
+        <div *ngIf="name.invalid ">*</div>
+        <div *ngIf="name.dirty">dirty</div>
+        <div *ngIf="name.touched"class="alert">touched</div>
+        <!-- <div *ngIf="name.errors?.['required']">Name is  required</div>
+        <div *ngIf="name.errors?.['minlength']">Name must be at least 4 Charecter Long</div> -->
         <!-- <div *ngIf="name.errors?.['forbiddenName']">Name cannot be bob </div> -->
      </tr>
 
