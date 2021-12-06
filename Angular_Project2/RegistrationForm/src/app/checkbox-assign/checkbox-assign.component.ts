@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class CheckboxAssignComponent implements OnInit {
 
-  virat:String="Virat Kohli";
+
   constructor() {
 
   }
@@ -16,8 +16,20 @@ export class CheckboxAssignComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  onClick(){
-    console.log(this.virat);
+
+  msg:any="";
+  massage:string[]=[];
+
+  isChacked:boolean=true;
+  onClick(event:any){
+
+
+    this.msg=event.target.value;
+       this.massage.push(this.msg);
+
+
+
+  console.log(event);
   }
 
 }

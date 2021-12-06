@@ -52,7 +52,7 @@
       <table>
      <tr class="form-group">
         <td><label>Name</label></td>
-        <td><input type="text" class="form-control" name="name" [(ngModel)]=myName  required minlength="4" maxlength="10" pattern="/^[A]{1}[A-Za-z]$/" #name="ngModel"></td><td>{{myName.toUpperCase()}}</td>
+        <td><input type="text" class="form-control" name="name" [(ngModel)]=myName  required minlength="4" maxlength="10" pattern="/^[A-Z]{1}[A-Za-z]$/" #name="ngModel"></td><td>{{myName.toUpperCase()}}</td>
         <div *ngIf="name.invalid ">*</div>
         <div *ngIf="name.dirty">dirty</div>
         <div *ngIf="name.touched"class="alert">touched</div>
