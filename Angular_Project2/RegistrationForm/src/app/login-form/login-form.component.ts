@@ -26,7 +26,7 @@ export class LoginFormComponent implements OnInit {
       lname:new FormControl('',[Validators.required]),
       email:new FormControl('' ,[Validators.required,Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)]),
        mobno:new FormControl('',[Validators.required]),//Validators.pattern(/^(?=.*\d)(?=.*\w)(?=.*[@$!%*?&])[a-zA-Z\d@$!%*?&]$/) ]
-      zipcode:new FormControl('',[Validators.required,Validators.pattern(/^[0-9]{6}$/)]),
+      zipcode:new FormControl('',[Validators.required,Validators.pattern(/^[0-9]{6}$/), Validators.maxLength(6)]),
       password:new FormControl('',[Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[a-zA-Z\d@$!%*?&]{8,}$/)])
     })
     this.name?.valueChanges.subscribe((data)=>{

@@ -18,8 +18,8 @@
     <div class="form-group">
       <label >FirstName : </label>
       <sup *ngIf="name && name.invalid && name.touched" style="color: red;">*</sup>
-      <input type="text" class="form-control" name="name" formControlName="name" placeholder="First Name">
-   <sup *ngIf="name?.errors?.['pattern']" class="invalid">Please Enter Alphabet</sup>
+      <input type="text" class="form-control" name="name" formControlnameName="" placeholder="First Name">
+      <span *ngIf="name?.errors?.['pattern']" class="invalid">Please Enter Alphabet</span>
  </div>
 
     <div class="form-group">
