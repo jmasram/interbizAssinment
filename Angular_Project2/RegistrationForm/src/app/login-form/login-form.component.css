@@ -5,3 +5,6 @@
 .invalid{
   color: red;
 }
+.form-group{
+ margin-bottom: 2px;
+}
