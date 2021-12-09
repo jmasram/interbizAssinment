@@ -19,6 +19,9 @@ import { Tiger3Component } from './donate/tiger3/tiger3.component';
 import { Tiger4Component } from './donate/tiger4/tiger4.component';
 import { HomeComponent } from './home/home.component';
 import { routing1 } from './routing1';
+// import { routing2 } from './routing2';
+import {ProductComponent}  from './Tables/Product/product';
+import {  ManuComponent} from './Manu/manu';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import { routing1 } from './routing1';
     Tiger3Component,
     Tiger4Component,
     HomeComponent,
+    ProductComponent,
+    ManuComponent
 
   ],
   imports: [
@@ -43,7 +48,8 @@ import { routing1 } from './routing1';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    routing1
+    routing1,
+    // routing2
   ],
   providers: [],
   bootstrap: [AppComponent]

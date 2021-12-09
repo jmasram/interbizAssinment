@@ -3,25 +3,25 @@ import { HomeComponent } from './home/home.component'
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 import { WebsiteComponent } from './website/website.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 
-const route1:Routes[ {path:'path1',component:HomeComponent},
-                       { path:'path2' component:WebsiteComponent}
+const route1:Routes =[
+                      // {path:'',component:WebsiteComponent},
+                       { path: 'path1', component:RegistrationFormComponent},
+                       { path:'path2', component:LoginComponent}
 
-];
+
+                      ];
 
 @NgModule(
  {   imports:[
-      RouterModule.forRoot(route1)
- ],
-     declarations:[
+      RouterModule.forChild(route1)],
 
-     ],
+ exports:[RouterModule],
 
-providers:[],
-bootstrap:[AppComponent]
+
 
 })
 export class routing1{}

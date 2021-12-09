@@ -11,6 +11,8 @@ import { Tiger3Component } from './donate/tiger3/tiger3.component';
 import { Tiger4Component } from './donate/tiger4/tiger4.component';
 import { HomeComponent } from './home/home.component';
 import { UnsavedGuard } from './unsaved.guard';
+import { ProductComponent } from './Tables/Product/product';
+import { ManuComponent } from './Manu/manu';
 const routes: Routes = [
   { component: HomeComponent, path: '' },
   { component: LoginComponent, path: 'login' ,outlet:'login1'},
@@ -23,10 +25,13 @@ const routes: Routes = [
 
     ] },
 
+    {path:'manu', children:[{path:'',component:ManuComponent},
+                     {path:"table", component:ProductComponent},
+
+  ]}
 
 
-
-  { path:'' , redirectTo:'',pathMatch:"full"},
+  // { path:'' , redirectTo:'',pathMatch:"full"},
     // { path: '**', component:PageNotFoundComponent},
 ];
 
