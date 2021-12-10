@@ -1,1 +1,22 @@
 <p>take-action works!</p>
+<p>{{msg}}</p>
+<br>
+<br>
+<h1>Food Name:</h1>
+<table class="table table-striped table-dark">
+  <tr>
+    <th >NAME</th>
+    <th>DISH</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let f of foods">
+      <td>{{f.name}}</td>
+      <td>{{f.emoji}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<button class="btn btn-dark"  (click)="alertMassage()" >See More..{{emoji1}}</button>
+
+

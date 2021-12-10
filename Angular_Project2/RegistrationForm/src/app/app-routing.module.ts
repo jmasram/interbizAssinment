@@ -13,9 +13,10 @@ import { HomeComponent } from './home/home.component';
 import { UnsavedGuard } from './unsaved.guard';
 import { ProductComponent } from './Tables/Product/product';
 import { ManuComponent } from './Manu/manu';
+import { FoodComponentApp } from './Tables/Food/food';
 const routes: Routes = [
   { component: HomeComponent, path: '' },
-  { component: LoginComponent, path: 'login' ,outlet:'login1'},
+  { component: LoginComponent, path: 'login'},
   { component: TakeActionComponent, path: 'takeaction'},
   {  path: 'donate',  children:[{path:'', component: DonateComponent},
                                {path:'tiger1' ,component:Tiger1Component},
@@ -27,6 +28,7 @@ const routes: Routes = [
 
     {path:'manu', children:[{path:'',component:ManuComponent},
                      {path:"table", component:ProductComponent},
+                     {path:"food" , component:FoodComponentApp}
 
   ]}
 

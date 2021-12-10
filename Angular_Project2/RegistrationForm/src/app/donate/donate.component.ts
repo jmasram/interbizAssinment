@@ -11,5 +11,7 @@ export class DonateComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  alertMassage(){
+    alert("Welcome to SaveTiger");
+  }
 }

@@ -1,0 +1,9 @@
+.div1{
+  background-color: aliceblue;
+  text-align: center;
+  width: 400px;
+  height: 250px;
+   margin-left: 700px;
+   margin-top: 10px;
+   position: fixed;
+}

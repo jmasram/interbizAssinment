@@ -22,6 +22,10 @@ import { routing1 } from './routing1';
 // import { routing2 } from './routing2';
 import {ProductComponent}  from './Tables/Product/product';
 import {  ManuComponent} from './Manu/manu';
+import { AppService } from './Service/app.service';
+import { __values } from 'tslib';
+import { FoodComponentApp } from './Tables/Food/food';
+import { CustomService } from './Service/app.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,8 @@ import {  ManuComponent} from './Manu/manu';
     Tiger4Component,
     HomeComponent,
     ProductComponent,
-    ManuComponent
+    ManuComponent,
+    FoodComponentApp
 
   ],
   imports: [
@@ -51,7 +56,7 @@ import {  ManuComponent} from './Manu/manu';
     routing1,
     // routing2
   ],
-  providers: [],
+  providers: [AppService,CustomService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

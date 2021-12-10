@@ -12,4 +12,7 @@ export class Tiger1Component implements OnInit {
   ngOnInit(): void {
   }
 
+  alertMassage(){
+    alert("Welcome to Donate");
+  }
 }
