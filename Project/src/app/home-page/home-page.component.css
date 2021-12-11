@@ -1,0 +1,9 @@
+.pre1{
+  color: rgb(134, 134, 150); float: right;
+}
+.pre2{
+      color: rgb(49, 49, 138); float: right;
+}
+.pre2:hover{
+  cursor: pointer;
+}

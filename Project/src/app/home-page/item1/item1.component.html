@@ -1,6 +1,30 @@
 <p>item1 works!</p>
 
+<!-- form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <div class="form-group">
+      <label >FirstName : </label>
+      <sup *ngIf="name && name.invalid && name.touched" style="color: red;">*</sup>
+      <input type="text" class="form-control" name="name" formControlnameName="" placeholder="First Name">
+      <span *ngIf="name?.errors?.['pattern']" class="invalid">Please Enter Alphabet</span>
+ </div> -->
 
+ <div class="div1">
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+     <div class="form-group">
+       <label>ItemId </label>
+        <input type="text" formControlName="itemid"    id="itemid">
+     </div>
+     <div class="form-group">
+         <label >IName</label>
+         <input type="text" formControlName="itemname"  id="itemname">
+     </div>
+    <div><button type="submit" [disabled]="productForm.invalid" class="btn btn-primary">Add Item</button></div>
+
+</form>
+</div>
+
+<br>
+<br>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -11,24 +35,29 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+
+
+       <tr>
+         <td>{{iId.itemid}}</td>
+         <td>{{iId.itemname}}</td>
+         <td><i class="fas fa-edit " style="color: #339af0;"></i></td>
+         <td><i class="fas fa-trash" style="color: #ff6b6b;"></i></td>
+       </tr>
+
+    <tr *ngFor="let p of iId">
+           <td>{{p}}</td>
+           <td>{{p}}</td>
+           <td><i class="fas fa-edit " style="color: #339af0;" ></i></td>
+           <td><i class="fas fa-trash" style="color: #ff6b6b;" (click)="removeItem()"></i></td>
+   </tr>
+<!--
+      <th >1</th>
+      <td>Mark</td> -->
+
+
+
   </tbody>
 </table>
 
+
+<!-- <p>{{iId.itemid}}{{iId.itemname}}</p> -->

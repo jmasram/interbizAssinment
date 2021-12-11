@@ -6,10 +6,15 @@ import { Item1Component } from './home-page/item1/item1.component';
 import { Item2Component } from './home-page/item2/item2.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 const routes: Routes = [
-  { path:'' ,component:LoginPageComponent},
-  {path:'login', component:HomePageComponent},
+  // { path:'' ,component:LoginPageComponent},
   {path:'item1', component:Item1Component},
   {path:'item2', component:Item2Component}
+  // {path:' ',children:[
+  //            {path:'', component:HomePageComponent}
+  //            , {path:'item1', component:Item1Component},
+  //              {path:'item2', component:Item2Component}
+  // ]},
+
 
 ];
 

@@ -7,18 +7,20 @@
 <div class="container-fluid ">
    <div  class ="div1">
   <h2 style="font-size: 50px; color:aquamarine; "><i class="fab fa-product-hunt"></i></h2>
-    <form action="">
+    <form  #loginform="ngForm" (onsubmit)="onSubmit(loginform.value)">
 
-        <div class="form-group"><label style="color: rgb(22, 143, 224);"> Name</label>
-         <input type="text" placeholder="Name">
+        <div class="form-group">
+          <label style="color: rgb(22, 143, 224);"> Name</label>
+          <input type="text" class="form-control-inline" placeholder="Name" name="name" ngModel #name="ngModel">
        </div>
 
           <div class="form-group">
-              <label style="color: rgb(22, 143, 224);"> Pword </label>
-              <input type="password" placeholder="Password">
+              <label style="color: rgb(22, 143, 224);" > Pword </label>
+              <input type="password"  class="form-control-inline" name="pwd" placeholder="Password" ngModel #pwd="ngModel">
            </div>
-         <div > <button class="btn btn-primary" routerLink="login">Login</button></div>
-     </form>
+           <button class="btn btn-primary"   type="submit">Login</button>
+         <!-- [disabled]="loginform.invalid" -->
+        </form>
     </div>
     </div>
 

@@ -1,0 +1,17 @@
+.div1{
+text-align: center;
+ background-color: #899299;
+  width: 300px;
+  height: 200px;
+  margin-left:800px
+
+}
+#itemid{
+margin-top: 30px;
+width: 230px;
+}
+
+#itemname{
+  margin-top: 10px;
+  width: 230px;
+}
