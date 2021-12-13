@@ -1,5 +1,7 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
+import { empObj } from 'src/app/Interfaces/employee';
 
 @Component({
   selector: 'app-employee-register',
@@ -8,20 +10,44 @@ import { FormGroup,FormControl,Validators } from '@angular/forms';
 })
 export class EmployeeRegisterComponent implements OnInit {
 
-  empForm:FormGroup;
-  constructor() {
-    this.empForm=new FormGroup({
-     eId : new FormControl('',[Validators.required]),
-     ename:new FormControl('',[Validators.required]),
-     esal:new FormControl('',[Validators.required]),
-     emob:new FormControl('',[Validators.required,Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)]),
-     email:new FormControl('',[Validators.required,Validators.pattern('/^[7-9]{2}-[0-9]{4}-[0-9]{4}$/')]),
-     eaddr:new FormControl('')
-   });
+  empObj:empObj;
 
-   }
+  constructor(){
+    this.empObj=new empObj();           //initilization
+  }
+
 
   ngOnInit(): void {
+  }
+
+   getNewId(){
+     debugger;
+    const oldData=localStorage.getItem('empList');
+    if(oldData!==null){
+      const empList=JSON.parse(oldData);
+      return empList.length+1;
+
+    }
+    else{
+      return 1;
+    }
+  }
+  addEmp(){
+    debugger;
+        const letestData=this.getNewId();
+        this.empObj.empId=letestData;
+        const oldData=localStorage.getItem('empList');
+        if(oldData!==null)
+        {
+          const empList=JSON.parse(oldData)
+          empList.push(this.empObj);
+          localStorage.setItem('empList',JSON.stringify(empList));
+        }
+        else{
+          const empArr=[];
+          empArr.push(this.empObj);
+          localStorage.setItem('empList',JSON.stringify(empArr));
+        }
   }
 
 }

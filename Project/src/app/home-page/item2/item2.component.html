@@ -1,1 +1,37 @@
 <p>item2 works!</p>
+<form [formGroup]="empForm" >
+
+  <div class="form-group">
+      <label>EId</label>
+      <input type="text" class="form-control"  name="eid" formControlName="eid" [(ngModel)]="empObj.empId" placeholder="employee id" >
+    </div>
+
+
+  <div class="form-group">
+      <label >Name : </label>
+      <input type="text"  name="ename" formControlnameName="ename"  [(ngModel)]="empObj.ename" placeholder="Employee Name">
+ </div>
+
+
+    <div class="form-group">
+      <label>SALARY:</label>
+      <input type="text" class="form-control" name="esal" formControlName="esal" [(ngModel)]="empObj.esal" placeholder="Employee Salary"></div>
+
+      <div class="form-group">
+          <label>Phone Number :</label>
+          <input type="tel" class="form-control" name='emob' formControlName="emob" [(ngModel)]="empObj.emob" placeholder="(xxx-xxx-xxxx)">
+      </div>
+
+  <div class="form-group">
+      <label> Email : </label>
+       <input type="email" class="form-control" name="email"   formControlName="email" [(ngModel)]="empObj.email" placeholder="Email Id">
+   </div>
+
+
+ <div class="form-group">
+  <label>EId</label>
+  <input type="text" class="form-control"  name="eaddr" formControlName="eaddr" [(ngModel)]="empObj.eaddr" placeholder="employee ADDRESS" >
+</div>
+
+
+ <button type="submit" [disabled]="empForm.invalid" class="btn btn-primary" >Add</button>

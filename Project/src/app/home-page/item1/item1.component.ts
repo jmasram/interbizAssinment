@@ -43,3 +43,4 @@ export class Item1Component implements OnInit {
     localStorage.removeItem('product');
   }
 }
+

@@ -9,10 +9,18 @@
 <body>
 
   <div class="container fluid">
-    <h1>Cricketer Name</h1>
+      <br>
+      <br>
     <div class="row">
         <div class="col-sm-6">
+          <h2>Cricketer Name</h2>
           <form class="form-group">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="Ravindra jadeja" (click)="onClick($event)"> Select All
+              </label>
+            </div>
+
       <div class="form-check">
         <label class="form-check-label">
           <input type="checkbox" class="form-check-input"    value="Virat Kohli"  (click)="onClick($event)" > Virat Kohli
@@ -63,10 +71,11 @@
           <input type="checkbox" class="form-check-input" value="Ravindra jadeja" (click)="onClick($event)"> Ravindra jadeja
         </label>
       </div>
+
     </form>
       </div>
   <div class="col-sm-6">
-    <h2>Your Favorite Crickter</h2>
+    <h2>Select Your Favorite Crickter</h2>
       <p *ngFor="let m of massage">{{m}}</p>
     </div>
     </div>

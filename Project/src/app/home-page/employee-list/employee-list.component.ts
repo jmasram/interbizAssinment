@@ -8,14 +8,32 @@ import { empObj } from 'src/app/Interfaces/employee';
 })
 export class EmployeeListComponent implements OnInit {
 
-  
 
-  emplist:empObj[];
-  constructor() { 
-    this.emplist=[];
+
+  empList:empObj[];
+  constructor() {
+    this.empList=[];
   }
 
   ngOnInit(): void {
+  debugger;
+    const data=localStorage.getItem('empList');
+    if (data!==null) {
+      this.empList=JSON.parse(data); //Fatch Data
+    }
+  }
+
+  delete(empId:any){
+    debugger;
+
+    const oldData=localStorage.getItem('empList');
+    if(oldData!==null)
+    {
+      const empList=JSON.parse(oldData)
+      empList.splice(empList.findIndex((a:any)=>a.empId== empId),1);
+      localStorage.setItem('empList',JSON.stringify(empList));
+    }
+
   }
 
 }

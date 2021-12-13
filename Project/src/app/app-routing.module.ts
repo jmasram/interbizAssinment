@@ -16,13 +16,13 @@ const routes: Routes = [
   // ,{path:'', component:HomePageComponent}
   ,{path:'emplist',component:EmployeeListComponent},
   {path:'empAdd', component:EmployeeRegisterComponent},
-  { path:'empUpdate', component:EmployeeUpdateComponent}
+  { path:'empUpdate/:empId', component:EmployeeUpdateComponent},
 
-  // {path:' ',children:[
-  //            {path:'', component:HomePageComponent}
-  //            , {path:'item1', component:Item1Component},
-  //              {path:'item2', component:Item2Component}
-  // ]},
+   {path:' home',children:[
+             {path:'', component:HomePageComponent}
+             , {path:'item1', component:Item1Component},
+               {path:'item2', component:Item2Component}
+  ]},
 
 
 ];

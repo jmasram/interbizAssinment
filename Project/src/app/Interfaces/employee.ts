@@ -1,10 +1,10 @@
 export class empObj{
     empId?:number;
-    ename?:string;
-    esal?:number;
-    emob?:number;
+    ename:any;
+    esal:any;
+    emob:any;
     email:any;
-    addr?:string;
+    eaddr:any;
 
 
 }
