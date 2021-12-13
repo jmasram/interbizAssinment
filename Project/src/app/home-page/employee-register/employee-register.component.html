@@ -1,0 +1,51 @@
+
+  <!-- <th>EId</th>
+  <th>ENAME</th>
+  <th>SALARY</th>
+  <th>MOBILE NUMBER</th>
+  <TH>EMAIL</TH>
+  <TH>ADDRESS</TH>
+  <th>EDIT</th>
+  <th>DELETE</th> -->
+
+  <div class="container">
+<form [formGroup]="empForm" >
+
+    <div class="form-group">
+        <label>EId</label>
+        <input type="text" class="form-control"  name="eid" formControlName="eid" placeholder="employee id" >
+      </div>
+
+
+    <div class="form-group">
+        <label >Name : </label>
+        <input type="text" class="form-control" name="ename" formControlnameName="ename" placeholder="Employee Name">
+   </div>
+  
+  
+      <div class="form-group">
+        <label>SALARY:</label>
+        <input type="text" class="form-control" name="esal" formControlName="esal" placeholder="Employee Salary"></div>
+
+        <div class="form-group">
+            <label>Phone Number :</label>
+            <input type="tel" class="form-control" name='emob' formControlName="emob"  placeholder="(xxx-xxx-xxxx)">
+        </div>
+  
+    <div class="form-group">
+        <label> Email : </label>
+         <input type="email" class="form-control" name="email"   formControlName="email" placeholder="Email Id">
+     </div>
+  
+  
+   <div class="form-group">
+    <label>EId</label>
+    <input type="text" class="form-control"  name="eaddr" formControlName="eaddr" placeholder="employee ADDRESS" >
+  </div>
+
+    
+   <button type="submit" [disabled]="empForm.invalid" class="btn btn-primary">Add</button>
+
+</form>
+</div>  
+

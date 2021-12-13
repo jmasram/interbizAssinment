@@ -1,19 +1,36 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <div class="container-fluid">
 
-    <div class="jumbotron">
-       <h1>Product <pre class="fas fa-sign-out-alt pre1"> </pre> <pre class="fas fa-share-alt pre2">  </pre></h1>
-
-    </div>
-
-
-    <ul class="nav-tab">
-      <li class="nav-item"><a class="nav-link "   routerLinkActive="active" routerLink="item1">Item</a> </li>
-      <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="item2">Item</a> </li>
-
-    </ul>
-
+  <div class="page-header">
+    <h1 style="color:indianred; box-shadow: inset; text-shadow: 30px;">CurdOperation</h1>      
+  </div>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">EmployeeDetails</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a routerLink="emplist">List</a></li>
+            <li><a routerLink="empAdd">Add</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      
+    
     <router-outlet></router-outlet>
 </div>
 
