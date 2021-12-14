@@ -17,58 +17,58 @@
           <form class="form-group">
             <div class="form-check">
               <label class="form-check-label">
-                <input type="checkbox" class="form-check-input" value="Ravindra jadeja" (click)="onClick($event)"> Select All
+                <input type="checkbox" class="form-check-input"    [checked]="isChacked" (click)="addAll($event)"> Select All
               </label>
             </div>
 
       <div class="form-check">
         <label class="form-check-label">
-          <input type="checkbox" class="form-check-input"    value="Virat Kohli"  (click)="onClick($event)" > Virat Kohli
+          <input type="checkbox" class="form-check-input"    value="Virat Kohli"  [checked]="isChacked"  (click)="onClick($event)"   > Virat Kohli
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input type="checkbox" class="form-check-input" value="Ms Dhoni" (click)="onClick($event)"> MS Dhoni
+          <input type="checkbox" class="form-check-input" value="Ms Dhoni" [checked]="isChacked" (click)="onClick($event)"> MS Dhoni
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input type="checkbox" class="form-check-input"  value="Rohit Sharma" (click)="onClick($event)" > Rohit Sharma
+          <input type="checkbox" class="form-check-input"  value="Rohit Sharma"  [checked]="isChacked" (click)="onClick($event)" > Rohit Sharma
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input type="checkbox" class="form-check-input"  value="KR Rahul" (click)="onClick($event)"> KR Rahul
+          <input type="checkbox" class="form-check-input"  value="KR Rahul" [checked]="isChacked" (click)="onClick($event)"> KR Rahul
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input type="checkbox" class="form-check-input" value="Hardik Pandya" (click)="onClick($event)"> Hardik Pandya
+          <input type="checkbox" class="form-check-input" value="Hardik Pandya"  [checked]="isChacked" (click)="onClick($event)"> Hardik Pandya
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input type="checkbox" class="form-check-input"  value="Rishabh Pant" (click)="onClick($event)"> Rishabh Pant
+          <input type="checkbox" class="form-check-input"  value="Rishabh Pant" [checked]="isChacked" (click)="onClick($event)"> Rishabh Pant
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input type="checkbox" class="form-check-input"  value="Yuzvendra Chanhal" (click)="onClick($event)"> Yuzvendra Chanhal
+          <input type="checkbox" class="form-check-input"  value="Yuzvendra Chanhal" [checked]="isChacked" (click)="onClick($event)"> Yuzvendra Chanhal
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input type="checkbox" class="form-check-input" value="Bhuvneshwar Kumar" (click)="onClick($event)">  Bhuvneshwar Kumar
+          <input type="checkbox" class="form-check-input" value="Bhuvneshwar Kumar" [checked]="isChacked" (click)="onClick($event)">  Bhuvneshwar Kumar
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input type="checkbox" class="form-check-input"  value="Mohammed Shemi" (click)="onClick($event)"> Mohammed Shemi
+          <input type="checkbox" class="form-check-input"  value="Mohammed Shemi"  [checked]="isChacked" (click)="onClick($event)"> Mohammed Shemi
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input type="checkbox" class="form-check-input" value="Ravindra jadeja" (click)="onClick($event)"> Ravindra jadeja
+          <input type="checkbox" class="form-check-input" value="Ravindra jadeja" [checked]="isChacked" (click)="onClick($event)"> Ravindra jadeja
         </label>
       </div>
 
@@ -77,6 +77,7 @@
   <div class="col-sm-6">
     <h2>Select Your Favorite Crickter</h2>
       <p *ngFor="let m of massage">{{m}}</p>
+      <p></p>
     </div>
     </div>
 

@@ -20,16 +20,35 @@ export class CheckboxAssignComponent implements OnInit {
   msg:any="";
   massage:string[]=[];
 
-  isChacked:boolean=true;
+  isChacked:boolean=false;
+
   onClick(event:any){
 
 
-    this.msg=event.target.value;
-       this.massage.push(this.msg);
+     if(event.target.checked){
+        this.msg=event.target.value;
+        this.massage.push(this.msg);
+     }
+     else{
+      this.msg=event.target.value;
+      this.massage.splice(this.msg);
+     }
 
+  }
 
+  addAll(event:any){
 
-  console.log(event);
+    if(event.target.checked){
+      this.msg=event.target.value;
+      this.massage.push(this.msg);
+     }
+
+     else{
+      this.msg=event.target.value;
+      this.massage.splice(this.msg);
+     }
+
+         console.log(event);
   }
 
 }

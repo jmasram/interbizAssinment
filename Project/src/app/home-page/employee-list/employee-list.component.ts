@@ -20,6 +20,7 @@ export class EmployeeListComponent implements OnInit {
     const data=localStorage.getItem('empList');
     if (data!==null) {
       this.empList=JSON.parse(data); //Fatch Data
+
     }
   }
 
