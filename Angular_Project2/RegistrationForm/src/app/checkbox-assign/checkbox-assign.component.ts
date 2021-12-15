@@ -38,7 +38,10 @@ export class CheckboxAssignComponent implements OnInit {
 
   addAll(event:any){
 
-    if(event.target.checked){
+
+
+
+    if(!event.target.checked){
       this.msg=event.target.value;
       this.massage.push(this.msg);
      }
@@ -48,7 +51,7 @@ export class CheckboxAssignComponent implements OnInit {
       this.massage.splice(this.msg);
      }
 
-         console.log(event);
+        console.log(event);
   }
 
 }

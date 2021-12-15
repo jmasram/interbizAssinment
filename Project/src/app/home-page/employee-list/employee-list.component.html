@@ -10,6 +10,7 @@
         <tr>
           <th>EId</th>
           <th>ENAME</th>
+          <th>HOBBY</th>
           <th>GENDER</th>
           <th>SALARY</th>
           <th>MOBILE NUMBER</th>
@@ -23,7 +24,8 @@
           <tr *ngFor="let x of empList; let i=index">
             <td>{{i+1}}</td>
             <td>{{x.ename}}</td>
-            <td>{{x.gender}}</td> 
+            <td>{{x.hobby}}</td>
+            <td >{{x.gender}}</td>
             <td>{{x.esal}}</td>
             <td>{{x.emob}}</td>
             <td>{{x.email}}</td>

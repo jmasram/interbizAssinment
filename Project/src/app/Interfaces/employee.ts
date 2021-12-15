@@ -3,7 +3,9 @@ export class empObj{
     ename:any;
     male:any;
     female:any;
-    gender:any;
+    // gender:any=[gender:'male',gender:'female'];
+    gender:any=[];
+    hobby:any;
     esal:any;
     emob:any;
     email:any;

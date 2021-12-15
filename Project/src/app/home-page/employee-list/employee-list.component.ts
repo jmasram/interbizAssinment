@@ -16,7 +16,7 @@ export class EmployeeListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  debugger;
+  // debugger;
     const data=localStorage.getItem('empList');
     if (data!==null) {
       this.empList=JSON.parse(data); //Fatch Data
@@ -25,7 +25,7 @@ export class EmployeeListComponent implements OnInit {
   }
 
   delete(empId:any){
-    debugger;
+    // debugger;
 
     const oldData=localStorage.getItem('empList');
     if(oldData!==null)
