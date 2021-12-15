@@ -19,6 +19,34 @@
         <label>NAME</label>
         <input type="text" class="form-control"  name="ename" [(ngModel)]="empObj.ename" placeholder="employee name" >
         </div>
+         
+        <div class="form-group">
+           <label >GENDER</label> 
+          <div class="form-check-inline" style="margin-left:20px ;">
+            <input type="radio" class="form-check-input" [(ngModel)]="empObj.male" [value]="male" name="gender">MALE
+          </div>
+      
+        <div class="form-check-inline" style="margin-left:10px ;">
+          <input type="radio" class="form-check-input" [(ngModel)]="empObj.female"  [value]="female" name="gender" >FEMALE
+        </div>
+      </div>
+  
+      <div class="form-group" >
+          <label>HOBBY </label>
+          <div class="form-check-inline" style="margin-left:20px ;">
+             <input type="checkbox" class="form-check-input" id="check1" name="vehicle1" value="something" checked>GAMMING
+          </div>
+      <div class="form-check-inline" style="margin-left:5px ;">
+      
+          <input type="checkbox" class="form-check-input" id="check2" name="vehicle2" value="something">READING
+      
+      </div>
+      <div class="form-check-inline"  style="margin-left:5px ;">
+        
+          <input type="checkbox" class="form-check-input" disabled>TRAVLING
+      
+      </div>
+    </div>
 
       <div class="form-group">
           <label>SALARY</label>
@@ -37,8 +65,11 @@
       <div class="form-group">
                 <label>ADDRESS</label>
                 <input type="text" class="form-control"  name="eaddr" [(ngModel)]="empObj.eaddr" placeholder="employee Address" >
-       </div>
-              <button type="submit" class="btn btn-primary btn-xl btn-block" (click)="addEmp()">Add Employee Details</button>
-  </form>
-</div>
+       </div >
+         <div class="div2">
+              <button type="submit" class="btn btn-primary btn-lg " (click)="addEmp()" style="margin-right:20px ;">ADD </button>
+              <button type="button" class="btn btn-danger btn-lg"> CANCEL</button>        
+            </div>
+            </form>
+
 
