@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { empObj } from 'src/app/Interfaces/employee';
 
 @Component({
@@ -11,7 +12,7 @@ export class EmployeeListComponent implements OnInit {
 
 
   empList:empObj[];
-  constructor() {
+  constructor(private router:Router) {
     this.empList=[];
   }
 
@@ -34,6 +35,8 @@ export class EmployeeListComponent implements OnInit {
       empList.splice(empList.findIndex((a:any)=>a.empId== empId),1);
       localStorage.setItem('empList',JSON.stringify(empList));
     }
+    alert('Delete Successfully!')
+    this.router.navigateByUrl('/emplist');
 
   }
 

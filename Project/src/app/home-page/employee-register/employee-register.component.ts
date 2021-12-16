@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { empObj } from 'src/app/Interfaces/employee';
 
 @Component({
@@ -12,7 +13,7 @@ export class EmployeeRegisterComponent implements OnInit {
 
   empObj:empObj;
 
-  constructor(){
+  constructor( private router:Router){
     this.empObj=new empObj();           //initilization
   }
 
@@ -51,6 +52,10 @@ export class EmployeeRegisterComponent implements OnInit {
           empArr.push(this.empObj);
           localStorage.setItem('empList',JSON.stringify(empArr));
         }
+          alert('Register Successfully');
+        this.router.navigateByUrl('/emplist');
+
+
   }
 
 
@@ -58,6 +63,10 @@ export class EmployeeRegisterComponent implements OnInit {
       const empList:any=[];
        this.empObj.hobby=empList.filter((x:any)=>x.isselected==true).map((x:any)=>x.name)
 
+  }
+
+  cancleBtn(){
+    this.router.navigateByUrl('/emplist');
   }
 
 

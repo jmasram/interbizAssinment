@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { empObj } from 'src/app/Interfaces/employee';
 
 @Component({
@@ -11,7 +11,7 @@ export class EmployeeUpdateComponent implements OnInit {
 
   empObj:empObj;
 
-  constructor( private routes:ActivatedRoute){
+  constructor( private routes:ActivatedRoute, private router:Router){
     debugger;
     this.empObj=new empObj();           //initilization
     this.routes.params.subscribe((res)=>{this.empObj.empId=res['empId']});
@@ -50,6 +50,7 @@ export class EmployeeUpdateComponent implements OnInit {
       }
 
     }
+   
   }
 
   updateEmp(){
@@ -64,5 +65,7 @@ export class EmployeeUpdateComponent implements OnInit {
           empList.push(this.empObj);
           localStorage.setItem('empList',JSON.stringify(empList));
         }
+        alert('Updated SuccessFully!')
+        this.router.navigateByUrl('/emplist');
   }
 }

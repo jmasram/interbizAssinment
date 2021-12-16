@@ -21,8 +21,8 @@
         </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let x of empList; let i=index">
-            <td>{{i+1}}</td>
+          <tr *ngFor="let x of empList; ">
+            <td>{{x.empId}}</td>
             <td>{{x.ename}}</td>
             <td>{{x.hobby}}</td>
             <td >{{x.gender}}</td>
