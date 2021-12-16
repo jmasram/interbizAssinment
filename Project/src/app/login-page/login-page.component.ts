@@ -16,9 +16,10 @@ export class LoginPageComponent implements OnInit {
   }
 
   onSubmit(loginform:NgForm){
+    debugger;
     console.log(loginform.value);
 
     const loginData=new LoginData(loginform.value.email,loginform.value.pwd);
-    this.auth.authenticate(loginData) ; 
+    this.auth.authenticate(loginData) ;
   }
 }

@@ -60,8 +60,25 @@ export class EmployeeRegisterComponent implements OnInit {
 
 
     onClick(event:any){
+      // debugger
       const empList:any=[];
-       this.empObj.hobby=empList.filter((x:any)=>x.isselected==true).map((x:any)=>x.name)
+      //  this.empObj.hobby=empList.filter((x:any)=>x.isChecked==true).map((x:any)=>x.name)
+
+
+
+        if(event.target.checked){
+          this.msg=event.target.value;
+          console.log(this.msg);
+          this.empObj=empList.push(this.msg);
+          console.log(this.empObj);
+        }
+        else{
+         this.msg=event.target.value;
+         this.massage.splice(this.msg);
+        }
+
+
+
 
   }
 

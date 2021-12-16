@@ -11,6 +11,7 @@ import { Item2Component } from './home-page/item2/item2.component';
 import { EmployeeListComponent } from './home-page/employee-list/employee-list.component';
 import { EmployeeRegisterComponent } from './home-page/employee-register/employee-register.component';
 import { EmployeeUpdateComponent } from './home-page/employee-update/employee-update.component';
+import { NavborComponent } from './home-page/navbor/navbor.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EmployeeUpdateComponent } from './home-page/employee-update/employee-up
     Item2Component,
     EmployeeListComponent,
     EmployeeRegisterComponent,
-    EmployeeUpdateComponent
+    EmployeeUpdateComponent,
+    NavborComponent
   ],
   imports: [
     BrowserModule,

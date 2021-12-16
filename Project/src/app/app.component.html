@@ -1,33 +1,6 @@
 <!-- <app-login-page></app-login-page> -->
-<!-- <home-page></home-page> -->
+<home-page></home-page>
+<!-- <app-navbor></app-navbor> -->
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-
-<nav class="navbar navbar-expend-md bg-dark navbar-dark" *ngIf="auth.isAuthenticated">
-       <a class="navbar-brand" routerLink="home">LoginApp</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link"  routerLink="emplist">Employee List</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  routerLink="empAdd">Add Employee</a>
-        </li>
-        <li class="nav-item"  routerLink="item1">
-          <a class="nav-link" >ADD List</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" routerLink="item2" >Add</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <router-outlet></router-outlet>
-  

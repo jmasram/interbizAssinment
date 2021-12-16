@@ -11,4 +11,12 @@
 .page-header{
   margin:0px;
 }
+.navbar{
+  height: 80%;
+  width: 10%;
+  position: fixed;
+}
 
+.jumbotron{
+  margin: 0px;
+}

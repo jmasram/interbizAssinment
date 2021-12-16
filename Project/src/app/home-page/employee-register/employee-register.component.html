@@ -1,14 +1,8 @@
 
-  <!-- <th>EId</th>
-  <th>ENAME</th>
-  <th>SALARY</th>
-  <th>MOBILE NUMBER</th>
-  <TH>EMAIL</TH>
-  <TH>ADDRESS</TH>
-  <th>EDIT</th>
-  <th>DELETE</th> -->
-
-  <div class="container-fluid">
+<br>
+<br>
+<br>
+  <div class="container">
   <form #EmployeeForm="ngForm"  >
     <div class="form-group">
       <label>EId</label>
@@ -17,58 +11,64 @@
 
       <div class="form-group">
         <label>NAME</label>
-        <input type="text" class="form-control"  name="ename" [(ngModel)]="empObj.ename" placeholder="employee name" required #ename="ngModel">
-        <span *ngIf="ename.errors?.['required']" style="color:red ;">Name is  required</span>
+         <sup *ngIf="ename.invalid && (ename.dirty ||ename.touched)" class="red">*</sup>
+        <input type="text" class="form-control"  name="ename" [(ngModel)]="empObj.ename"  placeholder="employee name" required #ename="ngModel">
+        <span *ngIf="ename.errors?.['required']" style="color:red ;">Please fill Name</span>
+        <!-- <span *ngIf="ename.errors?.['pattern']" style="color:red ;">Invalid Name!</span> -->
         </div>
 
+
+          <!-- CheckBox for Hobbies
+      <div class="form-group" >
+        <label>HOBBY </label>
+        <div class="form-check-inline" style="margin-left:20px ;">
+           <input type="checkbox" class="form-check-input"   [(ngModel)]="empObj" [checked]=" isChacked" value="photography" (ngSubmit)="onClick($event)" >PHOTOGRAPHY
+        </div>
+       <div class="form-check-inline" style="margin-left:5px ;">
+         <input type="checkbox" class="form-check-input"   [(ngModel)]="empObj.hobby" value="reading" >READING
+      </div>
+        <div class="form-check-inline"  style="margin-left:5px ;">
+          <input type="checkbox" class="form-check-input"    [(ngModel)]="empObj.hobby" value="traveling">TRAVELING
+         </div>
+  </div> -->
 
         <!-- Radio button for Gender -->
         <div class="form-group">
            <label >GENDER</label>
           <div class="form-check-inline" style="margin-left:20px ;">
-            <input type="radio" class="form-check-input" [(ngModel)]="empObj.gender" value="MALE" name="gender">MALE
+            <input type="radio" class="form-check-input" [(ngModel)]="empObj.gender" value="MALE" name="gender" required>MALE
           </div>
 
         <div class="form-check-inline" style="margin-left:10px ;">
-          <input type="radio" class="form-check-input" [(ngModel)]="empObj.gender"  value="FEMALE" name="gender" >FEMALE
+          <input type="radio" class="form-check-input" [(ngModel)]="empObj.gender"  value="FEMALE" name="gender" required>FEMALE
         </div>
       </div>
 
-    <!-- CheckBox for Hobbies -->
-      <div class="form-group" >
-          <label>HOBBY </label>
-          <div class="form-check-inline" style="margin-left:20px ;">
-             <input type="checkbox" class="form-check-input"   [(ngModel)]="empObj.hobby" checked="isChecked" value="photography" (click)="onClick($event)" >PHOTOGRAPHY
-          </div>
-         <div class="form-check-inline" style="margin-left:5px ;">
-           <input type="checkbox" class="form-check-input"   [(ngModel)]="empObj.hobby" value="reading" >READING
-        </div>
-          <div class="form-check-inline"  style="margin-left:5px ;">
-            <input type="checkbox" class="form-check-input"    [(ngModel)]="empObj.hobby" value="traveling">TRAVELING
-           </div>
-    </div>
+
 
     <!-- Salary -->
       <div class="form-group">
           <label>SALARY</label>
-          <input type="text" class="form-control"  name="esal" [(ngModel)]="empObj.esal" placeholder="employee salary" >
+          <input type="text" class="form-control"  name="esal" [(ngModel)]="empObj.esal" placeholder="employee salary"  pattern="\d+" #esal="ngModel">
+          <div *ngIf="esal.errors?.['pattern']" class="red">Invalid Enter</div>
        </div>
 
       <div class="form-group">
             <label>MOBILE NUMBER</label>
-            <input type="text" class="form-control"  name="emob" [(ngModel)]="empObj.emob" placeholder="employee mobile number" #emob="ngModel" >
+                <sup *ngIf="emob.invalid && (emob.dirty ||emob.touched)" class="red">*</sup>
+                <input type="text" class="form-control"  name="emob" [(ngModel)]="empObj.emob" placeholder="employee mobile number" #emob="ngModel" required pattern="[7-9]{2}[0-9]{8}" >
             <div *ngIf="emob.errors?.['pattern']" class="red">You have entered an invalid number</div>
       </div>
       <div class="form-group">
               <label>EMAIL</label>
-              <input type="text" class="form-control"  name="email" [(ngModel)]="empObj.email" placeholder="employee email" #email="ngModel" pattern="^[A-Za-z0-9+_.-]+@(.+)$" >
+              <input type="text" class="form-control"  name="email" [(ngModel)]="empObj.email" placeholder="employee email" #email="ngModel" pattern="^[A-Za-z0-9+_.-]+@(.+)$" required >
               <div *ngIf="email.errors?.['pattern']" class="red">You have entered an invalid email address</div>
 
       </div>
 
       <div class="form-group">
                 <label>ADDRESS</label>
-                <input type="text" class="form-control"  name="eaddr" [(ngModel)]="empObj.eaddr" placeholder="employee Address" >
+                <input type="text" class="form-control"  name="eaddr" [(ngModel)]="empObj.eaddr" placeholder="employee Address" required >
        </div >
          <div class="div2">
               <button type="submit" class="btn btn-primary btn-lg " (click)="addEmp()" style="margin-right:20px ;" [disabled]="EmployeeForm.invalid">ADD </button>

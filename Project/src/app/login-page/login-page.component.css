@@ -9,19 +9,25 @@
 } */
 
 .div1{
-  margin: 20rem auto;
-  width: 30rem;
-  background-color: aliceblue;
+  margin: 200px auto;
+  width: 400px;
+
   text-align: center;
 
-  height: 250px;
+
 
 }
+.card{ background-color: rgb(195, 205, 214);
+  height: 280px;}
 h2{
   font-size: 50px;
-   color:aquamarine; 
+   color:aquamarine;
 }
 input{
-  width: 180px;
-  margin: 5px;
+  font-size: 15px;
+  width: 250px;
+  margin-top: 20px;
+}
+h2{
+  color:rgb(81, 140, 216);
 }

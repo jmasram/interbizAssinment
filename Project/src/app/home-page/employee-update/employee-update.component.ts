@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { empObj } from 'src/app/Interfaces/employee';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-employee-update',
@@ -50,7 +51,7 @@ export class EmployeeUpdateComponent implements OnInit {
       }
 
     }
-   
+
   }
 
   updateEmp(){
