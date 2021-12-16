@@ -1,4 +1,4 @@
-.div1{
+/* .div1{
   background-color: aliceblue;
   text-align: center;
   width: 400px;
@@ -6,4 +6,22 @@
    margin-left: 700px;
    margin-top: 10px;
    position: fixed;
+} */
+
+.div1{
+  margin: 20rem auto;
+  width: 30rem;
+  background-color: aliceblue;
+  text-align: center;
+
+  height: 250px;
+
+}
+h2{
+  font-size: 50px;
+   color:aquamarine; 
+}
+input{
+  width: 180px;
+  margin: 5px;
 }

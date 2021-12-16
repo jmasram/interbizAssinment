@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm,NgModel } from '@angular/forms';
+import { AuthenticationService } from '../authentication/authentication.service';
+import { LoginData } from '../model/loginDetails';
 
 @Component({
   selector: 'app-login-page',
@@ -8,12 +10,15 @@ import { NgForm,NgModel } from '@angular/forms';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth:AuthenticationService) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(value:any){
-    console.log(value);
+  onSubmit(loginform:NgForm){
+    console.log(loginform.value);
+
+    const loginData=new LoginData(loginform.value.email,loginform.value.pwd);
+    this.auth.authenticate(loginData) ; 
   }
 }
