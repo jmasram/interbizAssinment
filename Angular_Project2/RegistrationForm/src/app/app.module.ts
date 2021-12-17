@@ -26,6 +26,7 @@ import { AppService } from './Service/app.service';
 import { __values } from 'tslib';
 import { FoodComponentApp } from './Tables/Food/food';
 import { CustomService } from './Service/app.service';
+import { ExmpleObeserableComponent } from './exmple-obeserable/exmple-obeserable.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CustomService } from './Service/app.service';
     HomeComponent,
     ProductComponent,
     ManuComponent,
-    FoodComponentApp
+    FoodComponentApp,
+    ExmpleObeserableComponent
 
   ],
   imports: [

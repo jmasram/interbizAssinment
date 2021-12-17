@@ -11,10 +11,12 @@
 .page-header{
   margin:0px;
 }
-.navbar{
+ .navbar{
+
   height: 80%;
   width: 10%;
-  position: fixed;
+
+   /* background-color: rgb(77, 83, 83); */
 }
 
 .jumbotron{

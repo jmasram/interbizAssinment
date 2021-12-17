@@ -43,6 +43,7 @@ export class EmployeeUpdateComponent implements OnInit {
       const currentData=empList.find((m:any) => m.empId ==this.empObj.empId);
       if(currentData!==undefined){
         this.empObj.ename=currentData.ename;
+        this.empObj.gender=currentData.gender;
         this.empObj.esal=currentData.esal;
         this.empObj.emob=currentData.emob;
         this.empObj.email=currentData.email;

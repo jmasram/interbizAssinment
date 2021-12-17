@@ -15,9 +15,9 @@
           <div class="form-group">
             <label>NAME</label>
              <sup *ngIf="ename.invalid && (ename.dirty ||ename.touched)" class="red">*</sup>
-            <input type="text" class="form-control"  name="ename" [(ngModel)]="empObj.ename" pattern="[a-z]" placeholder="employee name" required #ename="ngModel">
+            <input type="text" class="form-control"  name="ename" [(ngModel)]="empObj.ename" placeholder="employee name" required #ename="ngModel">
             <span *ngIf="ename.errors?.['required']" style="color:red ;">Please fill Name</span>
-            <span *ngIf="ename.errors?.['pattern']" style="color:red ;">Invalid Name!</span>
+            <!-- <span *ngIf="ename.errors?.['pattern']" style="color:red ;">Invalid Name!</span> -->
             </div>
 
 
