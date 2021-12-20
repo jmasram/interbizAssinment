@@ -68,6 +68,6 @@ export class EmployeeUpdateComponent implements OnInit {
           localStorage.setItem('empList',JSON.stringify(empList));
         }
         alert('Updated SuccessFully!')
-        this.router.navigateByUrl('/emplist');
+        this.router.navigateByUrl('/home');
   }
 }

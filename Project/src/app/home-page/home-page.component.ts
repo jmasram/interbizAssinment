@@ -12,13 +12,13 @@ export class HomePageComponent implements OnInit {
   constructor(public auth:AuthenticationService) {}
 
   ngOnInit(): void {
-    // $(document).ready(function () {
-    
-    //   $('#sidebarCollapse').on('click', function () {
-    //       $('#sidebar').toggleClass('active');
-    //   });
-      
-    //   });
+    $(document).ready(function () {
+
+      $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+      });
+
+      });
   }
 
 

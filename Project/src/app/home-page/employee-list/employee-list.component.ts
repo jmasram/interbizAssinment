@@ -36,7 +36,7 @@ export class EmployeeListComponent implements OnInit {
       localStorage.setItem('empList',JSON.stringify(empList));
     }
     alert('Delete Successfully!')
-    this.router.navigateByUrl('/emplist');
+    this.router.navigateByUrl('/home');
 
   }
 

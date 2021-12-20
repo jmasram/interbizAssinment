@@ -10,10 +10,11 @@ import { AppService } from "src/app/Service/app.service";
 export class FoodComponentApp{
 
   foods:any[]=[];
-  constructor(private msgService:AppService){}// Using Service
+  constructor(private obser:AppService){}// Using Service  private msgService:AppService
 
   ngOnInit(){
 
-    this.foods=this.msgService.food;
+    // this.foods=this.msgService.food;
+    this.obser.foods().subscribe(foodData =>this.foods =foodData);
   }
 }

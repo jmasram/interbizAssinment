@@ -27,6 +27,7 @@ import { __values } from 'tslib';
 import { FoodComponentApp } from './Tables/Food/food';
 import { CustomService } from './Service/app.service';
 import { ExmpleObeserableComponent } from './exmple-obeserable/exmple-obeserable.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ExmpleObeserableComponent } from './exmple-obeserable/exmple-obeserable
     FormsModule,
     ReactiveFormsModule,
     routing1,
+    HttpClientModule
     // routing2
   ],
   providers: [AppService,CustomService],

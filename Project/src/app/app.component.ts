@@ -13,14 +13,14 @@ export class AppComponent {
   constructor(public auth:AuthenticationService){}
 
   ngOnInit(){
-    debugger;
-     $(document).ready(function () {
-    
-      $('#sidebarCollapse').on('click', function () {
-          $('#sidebar').toggleClass('active');
-      });
-      
-      });
+
+    //  $(document).ready(function () {
+
+    //   $('#sidebarCollapse').on('click', function () {
+    //       $('#sidebar').toggleClass('active');
+    //   });
+
+    //   });
   }
-  
+
 }
