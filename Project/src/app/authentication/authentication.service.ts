@@ -13,7 +13,7 @@ export class AuthenticationService {
 
   constructor(private router:Router) { }
   authenticate(loginData:LoginData):boolean{
-    debugger;
+    // debugger;
     if(this.checkCredential(loginData)){
       this.isAuthenticated=true;
       this.router.navigate(['home'])

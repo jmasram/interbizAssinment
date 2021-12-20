@@ -10,7 +10,7 @@ import { empObj } from 'src/app/Interfaces/employee';
 export class EmployeeListComponent implements OnInit {
 
 
-
+  checked:boolean=true;
   empList:empObj[];
   constructor(private router:Router) {
     this.empList=[];

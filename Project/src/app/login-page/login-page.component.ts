@@ -4,7 +4,7 @@ import { AuthenticationService } from '../authentication/authentication.service'
 import { LoginData } from '../model/loginDetails';
 
 @Component({
-  selector: 'app-login-page',
+  selector: 'login-page',
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css']
 })
@@ -16,7 +16,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   onSubmit(loginform:NgForm){
-    debugger;
+    // debugger;
     console.log(loginform.value);
 
     const loginData=new LoginData(loginform.value.email,loginform.value.pwd);

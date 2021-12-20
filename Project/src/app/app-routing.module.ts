@@ -15,8 +15,11 @@ const routes: Routes = [
   {path:'item2', component:Item2Component},
   {path:'home', component:HomePageComponent},
   {path:'emplist',component:EmployeeListComponent},
-  {path:'empAdd', component:EmployeeRegisterComponent},
+  
+      {path:'empAdd', component:EmployeeRegisterComponent},
   { path:'empUpdate/:empId', component:EmployeeUpdateComponent},
+  
+  
 
   //  {path:' home',children:[
   //            {path:'', component:HomePageComponent}

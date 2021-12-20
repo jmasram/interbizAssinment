@@ -2,8 +2,8 @@
 <br>
 <br>
 <br>
-<div class="container">
-    <table class="table table-striped table-dark table-hover">
+<div class="container-fluid">
+    <table class="table table-striped  table-hover">
       <thead>
         <!-- empId?:number;
         empname?:string;
@@ -14,7 +14,7 @@
         <tr>
           <th>EId</th>
           <th>ENAME</th>
-          <!-- <th>HOBBY</th> -->
+          <th>HOBBY</th>
           <th>GENDER</th>
           <th>SALARY</th>
           <th>MOBILE NUMBER</th>
@@ -28,7 +28,7 @@
           <tr *ngFor="let x of empList; ">
             <td>{{x.empId}}</td>
             <td>{{x.ename}}</td>
-            <!-- <td>{{x.hobby}}</td> -->
+            <td >{{x.hobby}}</td>
             <td >{{x.gender}}</td>
             <td>{{x.esal}}</td>
             <td>{{x.emob}}</td>

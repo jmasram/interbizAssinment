@@ -2,7 +2,7 @@
 <br>
 <br>
 <br>
-  <div class="container">
+  <div class="container-fluid">
   <form #EmployeeForm="ngForm"  >
     <div class="form-group">
       <label>EId</label>
@@ -18,11 +18,11 @@
         </div>
 
 
-          <!-- CheckBox for Hobbies
+          <!-- CheckBox for Hobbies -->
       <div class="form-group" >
         <label>HOBBY </label>
-        <div class="form-check-inline" style="margin-left:20px ;">zxcccxz
-           <input type="checkbox" class="form-check-input"   [(ngModel)]="empObj" [checked]=" isChacked" value="photography" (ngSubmit)="onClick($event)" >PHOTOGRAPHY
+        <div class="form-check-inline" style="margin-left:20px ;">
+           <input type="checkbox" class="form-check-input"   [(ngModel)]="empObj.hobby" [checked]=" isChacked" (change)="filterResults($event)" value="photography">PHOTOGRAPHY
         </div>
        <div class="form-check-inline" style="margin-left:5px ;">
          <input type="checkbox" class="form-check-input"   [(ngModel)]="empObj.hobby" value="reading" >READING
@@ -30,7 +30,7 @@
         <div class="form-check-inline"  style="margin-left:5px ;">
           <input type="checkbox" class="form-check-input"    [(ngModel)]="empObj.hobby" value="traveling">TRAVELING
          </div>
-  </div> -->
+  </div>
 
         <!-- Radio button for Gender -->
         <div class="form-group">

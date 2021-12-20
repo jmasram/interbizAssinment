@@ -57,14 +57,26 @@ export class EmployeeRegisterComponent implements OnInit {
 
 
   }
+  filterResults(event:any){
+    alert('checkbox');
+   debugger;
+   const ms=[];
+   if(event.target.checked){
+     ms.push(event.target.value);
+    console.log(ms);
+   }
+   else{
+     console.log('hi');
+   }
 
+  }
 
     onClick(event:any){
       // debugger
-      const empList:any=[];
+      
       //  this.empObj.hobby=empList.filter((x:any)=>x.isChecked==true).map((x:any)=>x.name)
 
-
+      const empList:any=[];
 
         if(event.target.checked){
           this.msg=event.target.value;

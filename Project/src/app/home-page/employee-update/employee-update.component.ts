@@ -19,18 +19,18 @@ export class EmployeeUpdateComponent implements OnInit {
   }
 
 
-   getNewId(){
-     debugger;
-    const oldData=localStorage.getItem('empList');
-    if(oldData!==null){
-      const empList=JSON.parse(oldData);
-      return empList.length+1;
+  //  getNewId(){
+  //    debugger;
+  //   const oldData=localStorage.getItem('empList');
+  //   if(oldData!==null){
+  //     const empList=JSON.parse(oldData);
+  //     return empList.length+1;
 
-    }
-    else{
-      return 1;
-    }
-  }
+  //   }
+  //   else{
+  //     return 1;
+  //   }
+  // }
 
 
   ngOnInit(): void {
@@ -57,8 +57,8 @@ export class EmployeeUpdateComponent implements OnInit {
 
   updateEmp(){
     debugger;
-        const letestData=this.getNewId();
-        this.empObj.empId=letestData;
+        // const letestData=this.getNewId();
+        // this.empObj.empId=letestData;
         const oldData=localStorage.getItem('empList');
         if(oldData!==null)
         {
