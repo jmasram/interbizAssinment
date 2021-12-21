@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/authentication/authentication.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-navbor',
@@ -8,9 +9,16 @@ import { AuthenticationService } from 'src/app/authentication/authentication.ser
 })
 export class NavborComponent implements OnInit {
 
-  constructor(public auth:AuthenticationService) { }
+
+  constructor(public auth:AuthenticationService) {}
 
   ngOnInit(): void {
-  }
+    $(document).ready(function () {
 
+      $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+      });
+
+      });
+  }
 }

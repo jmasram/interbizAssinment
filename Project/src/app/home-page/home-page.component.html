@@ -1,5 +1,4 @@
-
- <!-- *ngIf="auth.isAuthenticated" -->
+<!-- *ngIf="auth.isAuthenticated" -->
 
 
 <div class="container-fluid">
@@ -10,8 +9,9 @@
         <nav id="sidebar">
            <div class="sidebar-header"><h3>Employee Details</h3> </div>
               <ul class="list-unstyled components">
-               <li><a class="nav-link" routerLink="emplist">Employee List</a></li>
-               <li><a class="nav-link"  routerLink="empAdd">Add Employee</a></li>
+                <!-- <button  (click)="showComponent()"><home-page *ngIf="show"></home-page></button> -->
+               <li ><a class="nav-link" routerLink="/emplist">Employee List</a></li>
+               <li><a class="nav-link"  routerLink="/empAdd">Add Employee</a></li>
            </ul>
          </nav>
         <div id="content">
@@ -24,14 +24,14 @@
              </div>
            </nav>
            </div>
-           <div class="container-fluid">
-            <router-outlet></router-outlet>
-         </div>
+
 
 
       </div>
 
 
-
+      <div class="container">
+        <router-outlet></router-outlet>
+     </div>
   <!-- <router-outlet></router-outlet> -->
  </div>

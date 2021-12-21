@@ -11,6 +11,7 @@ export class HomePageComponent implements OnInit {
 
   constructor(public auth:AuthenticationService) {}
 
+  show:boolean=false;
   ngOnInit(): void {
     $(document).ready(function () {
 
@@ -21,6 +22,8 @@ export class HomePageComponent implements OnInit {
       });
   }
 
-
+  showComponent(){
+    this.show = true;
+  }
 
 }

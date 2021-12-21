@@ -25,12 +25,12 @@ export class AuthenticationService {
   }
 
   private checkCredential(loginData:LoginData):boolean{
-    debugger;
+    // debugger;
     return this.checkEmail(loginData.getEmail()) && this.checkpwd(loginData.getPwd());
   }
 
   private checkEmail(email:string):boolean{
-    debugger;
+    // debugger;
     return email===this.user.getEmail();
   }
 

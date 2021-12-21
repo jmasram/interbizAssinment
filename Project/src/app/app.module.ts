@@ -12,6 +12,7 @@ import { EmployeeListComponent } from './home-page/employee-list/employee-list.c
 import { EmployeeRegisterComponent } from './home-page/employee-register/employee-register.component';
 import { EmployeeUpdateComponent } from './home-page/employee-update/employee-update.component';
 import { NavborComponent } from './home-page/navbor/navbor.component';
+import { routing1 } from './routing1';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NavborComponent } from './home-page/navbor/navbor.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    routing1
   ],
   providers: [],
   bootstrap: [AppComponent]

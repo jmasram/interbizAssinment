@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { empObj } from 'src/app/Interfaces/employee';
 
 @Component({
-  selector: 'employee-list',
+  selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
   styleUrls: ['./employee-list.component.css']
 })
@@ -38,8 +38,8 @@ export class EmployeeListComponent implements OnInit {
      this.ngOnInit();
      alert('Delete Successfully!')
     //  this.router.navigateByUrl('/emplist');
-
+  
   }
-
+  
 
 }

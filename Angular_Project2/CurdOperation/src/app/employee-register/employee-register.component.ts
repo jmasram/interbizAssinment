@@ -41,8 +41,6 @@ export class EmployeeRegisterComponent implements OnInit {
         // const letestData=this.getNewId();
         // this.empObj.empId=letestData;
         const oldData=localStorage.getItem('empList');
-        console.log(oldData?.search(empObj.name));
-                // if(oldData.){}
         if(oldData!==null)
         {
           const empList=JSON.parse(oldData)
@@ -55,7 +53,7 @@ export class EmployeeRegisterComponent implements OnInit {
           localStorage.setItem('empList',JSON.stringify(empArr));
         }
           alert('Register Successfully');
-        this.router.navigateByUrl('/emplist');
+        this.router.navigateByUrl('/home/emplist');
 
 }
   filterResults(event:any){
