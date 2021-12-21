@@ -35,9 +35,11 @@ export class EmployeeListComponent implements OnInit {
       empList.splice(empList.findIndex((a:any)=>a.empId== empId),1);
       localStorage.setItem('empList',JSON.stringify(empList));
     }
-    alert('Delete Successfully!')
-    this.router.navigateByUrl('/home');
-
+     this.ngOnInit();
+     alert('Delete Successfully!')
+    //  this.router.navigateByUrl('/emplist');
+  
   }
+  
 
 }

@@ -37,7 +37,7 @@ export class EmployeeRegisterComponent implements OnInit {
   //   }
   // }
   addEmp(){
-    // debugger;
+    debugger;
         // const letestData=this.getNewId();
         // this.empObj.empId=letestData;
         const oldData=localStorage.getItem('empList');
@@ -55,8 +55,7 @@ export class EmployeeRegisterComponent implements OnInit {
           alert('Register Successfully');
         this.router.navigateByUrl('/home/emplist');
 
-
-  }
+}
   filterResults(event:any){
     // alert('checkbox');
    debugger;
