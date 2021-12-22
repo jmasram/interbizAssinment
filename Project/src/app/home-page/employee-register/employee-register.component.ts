@@ -14,20 +14,34 @@ export class EmployeeRegisterComponent implements OnInit {
   empObj:empObj;
 
   constructor( private router:Router){
-    this.empObj=new empObj();           //initilization
+    this.empObj=new empObj(); //initilization
+
+  // this.getLastStoredItem();
+
   }
 
   msg:any="";
   massage:string[]=[];
   isChacked:boolean=false;
 
+
   ngOnInit(): void {
+
   }
      getLastStoredItem(){
-       const s:any=[];
+       const s:[]=[];
+
        const oldData=localStorage.getItem('empList');
+       if(oldData!==null){
+        const empList=JSON.parse(oldData);
+        const emp=empList[empList.length-1].empId;
+      //  console.log(emp);
+       return emp;
+
+      }
        console.log(oldData);
-      // console.log( oldData.lastIndexOf());
+
+
      }
 
 
@@ -36,9 +50,14 @@ export class EmployeeRegisterComponent implements OnInit {
     const oldData=localStorage.getItem('empList');
     if(oldData!==null){
       const empList=JSON.parse(oldData);
-      const emp=this.getLastStoredItem();
-      return empList.length+1;
-
+      const emp=empList[empList.length-1].empId;
+      console.log(emp);
+      if(empList.length+1 == emp){
+      return  emp+1;
+      }
+      else{
+         return empList.length+1;
+      }
     }
     else{
       return 1;
@@ -49,8 +68,7 @@ export class EmployeeRegisterComponent implements OnInit {
         const letestData=this.getNewId();
         this.empObj.empId=letestData;
         const oldData=localStorage.getItem('empList');
-        console.log(oldData?.search(empObj.name));
-                // if(oldData.){}
+
         if(oldData!==null)
         {
           const empList=JSON.parse(oldData)

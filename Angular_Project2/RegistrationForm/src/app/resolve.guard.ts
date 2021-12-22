@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ResolveGuard implements CanActivate {
-  canActivate()
+  canActivate( route:ActivatedRouteSnapshot, state:RouterStateSnapshot)
     {
     return true;
   }

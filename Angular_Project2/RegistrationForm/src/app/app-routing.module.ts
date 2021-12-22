@@ -15,10 +15,11 @@ import { ProductComponent } from './Tables/Product/product';
 import { ManuComponent } from './Manu/manu';
 import { FoodComponentApp } from './Tables/Food/food';
 import { CheckboxAssignComponent } from './checkbox-assign/checkbox-assign.component';
+import { ResolveGuard } from './resolve.guard';
 const routes: Routes = [
   { component: HomeComponent, path: '' },
   { component: LoginComponent, path: 'login'},
-  { component: TakeActionComponent, path: 'takeaction'},
+  { component: TakeActionComponent, path: 'takeaction' ,canActivate:[ResolveGuard]},
   {  path: 'donate',  children:[{path:'', component: DonateComponent},
                                {path:'tiger1' ,component:Tiger1Component},
                                { path:'tiger2',component:Tiger2Component},
