@@ -23,23 +23,31 @@ export class EmployeeRegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+     getLastStoredItem(){
+       const s:any=[];
+       const oldData=localStorage.getItem('empList');
+       console.log(oldData);
+      console.log( s.lastIndexOf('empList.empid'));
+     }
 
-  //  getNewId(){
-  //   //  debugger;
-  //   const oldData=localStorage.getItem('empList');
-  //   if(oldData!==null){
-  //     const empList=JSON.parse(oldData);
-  //     return empList.length+1;
 
-  //   }
-  //   else{
-  //     return 1;
-  //   }
-  // }
+   getNewId(){
+     debugger;
+    const oldData=localStorage.getItem('empList');
+    if(oldData!==null){
+      const empList=JSON.parse(oldData);
+      const emp=this.getLastStoredItem();
+      return empList.length+1;
+
+    }
+    else{
+      return 1;
+    }
+  }
   addEmp(){
     debugger;
-        // const letestData=this.getNewId();
-        // this.empObj.empId=letestData;
+        const letestData=this.getNewId();
+        this.empObj.empId=letestData;
         const oldData=localStorage.getItem('empList');
         console.log(oldData?.search(empObj.name));
                 // if(oldData.){}
