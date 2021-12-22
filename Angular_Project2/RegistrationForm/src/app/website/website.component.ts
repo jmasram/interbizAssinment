@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-website',
@@ -7,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WebsiteComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
-
+  show:boolean=false;
   ngOnInit(): void {
+    $(document).ready(function () {
+
+      $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+      });
+
+      });
+  }
+
+  showComponent(){
+    this.show = true;
   }
 
 }

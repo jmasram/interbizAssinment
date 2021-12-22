@@ -1,0 +1,33 @@
+/* .div1{
+  background-color: aliceblue;
+  text-align: center;
+  width: 400px;
+  height: 250px;
+   margin-left: 700px;
+   margin-top: 10px;
+   position: fixed;
+} */
+
+.div1{
+  margin: 200px auto;
+  width: 400px;
+
+  text-align: center;
+
+
+
+}
+.card{ background-color: rgb(195, 205, 214);
+  height: 280px;}
+h2{
+  font-size: 50px;
+   color:aquamarine;
+}
+input{
+  font-size: 15px;
+  width: 250px;
+  margin-top: 20px;
+}
+h2{
+  color:rgb(81, 140, 216);
+}

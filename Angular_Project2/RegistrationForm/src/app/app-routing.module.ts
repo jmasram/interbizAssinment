@@ -16,6 +16,8 @@ import { ManuComponent } from './Manu/manu';
 import { FoodComponentApp } from './Tables/Food/food';
 import { CheckboxAssignComponent } from './checkbox-assign/checkbox-assign.component';
 import { ResolveGuard } from './resolve.guard';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
 const routes: Routes = [
   { component: HomeComponent, path: '' },
   { component: LoginComponent, path: 'login'},
@@ -33,7 +35,11 @@ const routes: Routes = [
                      {path:"food" , component:FoodComponentApp},
                      {path:"checkbox",component:CheckboxAssignComponent}
 
-  ]}
+  ]},
+
+  {path:'emplist',component:EmployeeListComponent},
+  {path:'empAdd', component:EmployeeRegisterComponent},
+  // { path:'empUpdate/:empId', component:EmployeeUpdateComponent},
 
 
   // { path:'' , redirectTo:'',pathMatch:"full"},

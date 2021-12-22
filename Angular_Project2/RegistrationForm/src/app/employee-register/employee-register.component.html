@@ -1,0 +1,67 @@
+
+<br>
+<br>
+<br>
+  <div class="container">
+  <form #EmployeeForm="ngForm"  >
+    <!-- <div class="form-group">
+       <label>EId</label>
+      <input type="text" class="form-control"  name="empId" [(ngModel)]="empObj.empId" placeholder="employee id" #empId="ngModel" >
+      </div>  -->
+
+      <div class="form-group">
+        <label>NAME</label>
+         <sup *ngIf="ename.invalid && (ename.dirty ||ename.touched)" class="red">*</sup>
+        <input type="text" class="form-control"  name="ename" [(ngModel)]="empObj.ename"  placeholder="employee name" required #ename="ngModel">
+        <span *ngIf="ename.errors?.['required']" style="color:red ;">Please fill Name</span>
+        <!-- <span *ngIf="ename.errors?.['pattern']" style="color:red ;">Invalid Name!</span> -->
+        </div>
+
+
+
+        <!-- Radio button for Gender -->
+        <div class="form-group">
+           <label >GENDER</label>
+          <div class="form-check-inline" style="margin-left:20px ;">
+            <input type="radio" class="form-check-input" [(ngModel)]="empObj.gender" value="MALE" name="gender" required>MALE
+          </div>
+
+        <div class="form-check-inline" style="margin-left:10px ;">
+          <input type="radio" class="form-check-input" [(ngModel)]="empObj.gender"  value="FEMALE" name="gender" required>FEMALE
+        </div>
+      </div>
+
+
+
+    <!-- Salary -->
+      <div class="form-group">
+          <label>SALARY</label>
+          <input type="text" class="form-control"  name="esal" [(ngModel)]="empObj.esal" placeholder="employee salary"  pattern="\d+" #esal="ngModel">
+          <div *ngIf="esal.errors?.['pattern']" class="red">Invalid Enter</div>
+       </div>
+
+      <div class="form-group">
+            <label>MOBILE NUMBER</label>
+                <sup *ngIf="emob.invalid && (emob.dirty ||emob.touched)" class="red">*</sup>
+                <input type="text" class="form-control"  name="emob" [(ngModel)]="empObj.emob" placeholder="employee mobile number" #emob="ngModel" required pattern="[5-9]{1}[0-9]{9}" >
+            <div *ngIf="emob.errors?.['pattern']" class="red">You have entered an invalid number</div>
+      </div>
+      <div class="form-group">
+              <label>EMAIL</label>
+              <input type="text" class="form-control"  name="email" [(ngModel)]="empObj.email" placeholder="employee email" #email="ngModel" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+[.][a-z]{2,}$" required >
+              <div *ngIf="email.errors?.['pattern']" class="red">You have entered an invalid email address</div>
+
+      </div>
+
+      <div class="form-group">
+                <label>ADDRESS</label>
+                <input type="text" class="form-control"  name="eaddr" [(ngModel)]="empObj.eaddr" placeholder="employee Address" required >
+       </div >
+         <div class="div2">
+              <button type="submit" class="btn btn-primary btn-lg " (click)="addEmp()" style="margin-right:20px ;" [disabled]="EmployeeForm.invalid">ADD </button>
+
+              <button type="button" class="btn btn-danger btn-lg" (click)="cancleBtn()"> CANCEL</button>
+            </div>
+            </form>
+
+
