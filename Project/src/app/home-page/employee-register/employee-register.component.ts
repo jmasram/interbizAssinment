@@ -27,7 +27,7 @@ export class EmployeeRegisterComponent implements OnInit {
        const s:any=[];
        const oldData=localStorage.getItem('empList');
        console.log(oldData);
-      console.log( s.lastIndexOf('empList.empid'));
+      // console.log( oldData.lastIndexOf());
      }
 
 
