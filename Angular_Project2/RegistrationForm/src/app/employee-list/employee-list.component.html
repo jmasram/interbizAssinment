@@ -1,12 +1,10 @@
-<!-- <br>
 <br>
 <br>
-<br> -->
-<div class="jumbotron" >
-  <h1>Employee <i class="fas fa-users" ></i></h1>
-</div>
+<br>
+<br>
 
-<div class="container">
+
+<div class="container ">
     <table class="table table-striped  table-hover">
       <thead>
         <!-- empId?:number;
@@ -38,8 +36,8 @@
             <td>{{x.emob}}</td>
             <td>{{x.email}}</td>
             <td> {{x.eaddr}}</td>
-            <td><i class="fas fa-edit " style="color: #339af0;" ></i></td>
-            <!-- [routerLink]="['/empUpdate',x.empId]" -->
+            <td><i class="fas fa-edit " style="color: #339af0;"  [routerLink]="['/empUpdate',x.empId]"></i></td>
+            <!-- -->
             <!-- [routerLink]="['/empUpdate',x.empId]" -->
             <td><i class="fas fa-trash" style="color: #ff6b6b;" (click)="delete(x.empId)"></i></td>
 

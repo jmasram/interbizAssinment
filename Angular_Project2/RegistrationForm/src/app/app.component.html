@@ -1,7 +1,11 @@
-<app-website></app-website> 
+
+ <div class="container-fluid" *ngIf="auths.isAuthenticated">
+   <app-website  ></app-website>
+  </div>
+
+<router-outlet></router-outlet>
 <!-- <app-registration-form></app-registration-form> -->
 
 <!-- <app-login-form></app-login-form> -->
-<br>
-<br>
+
 <!-- <app-checkbox-assign></app-checkbox-assign> -->

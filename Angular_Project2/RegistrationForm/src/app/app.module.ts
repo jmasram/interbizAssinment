@@ -26,8 +26,13 @@ import { AppService } from './Service/app.service';
 import { __values } from 'tslib';
 import { FoodComponentApp } from './Tables/Food/food';
 import { CustomService } from './Service/app.service';
-import { ExmpleObeserableComponent } from './exmple-obeserable/exmple-obeserable.component';
+import { ExmpleObeserableComponent as ExampleObeserableComponent } from './exmple-obeserable/exmple-obeserable.component';
 import {HttpClientModule} from '@angular/common/http';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
+
+import { LoginPageComponent } from './login-page/login-page.component';
+import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 
 @NgModule({
   declarations: [
@@ -48,8 +53,11 @@ import {HttpClientModule} from '@angular/common/http';
     ProductComponent,
     ManuComponent,
     FoodComponentApp,
-    ExmpleObeserableComponent
-
+    ExampleObeserableComponent,
+    EmployeeListComponent,
+    EmployeeRegisterComponent,
+    EmployeeUpdateComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

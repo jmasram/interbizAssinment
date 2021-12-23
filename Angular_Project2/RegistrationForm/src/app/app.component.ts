@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './authentication/authentication.service';
 
 
 @Component({
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'RegistrationForm';
  useValue= '🌺';
+ constructor(public auths:AuthenticationService){}
 }

@@ -1,7 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { empObj } from 'src/app/Interfaces/employee';
 
 @Component({
@@ -13,11 +14,11 @@ export class EmployeeRegisterComponent implements OnInit {
 
   empObj:empObj;
 
-  constructor( private router:Router){
+  constructor( private router:Router,private routes:ActivatedRoute){
     this.empObj=new empObj(); //initilization
 
   // this.getLastStoredItem();
-
+  this.routes.params.subscribe((res)=>{this.empObj.empId=res['empId']});
   }
 
   msg:any="";

@@ -18,8 +18,11 @@ import { CheckboxAssignComponent } from './checkbox-assign/checkbox-assign.compo
 import { ResolveGuard } from './resolve.guard';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
+import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 const routes: Routes = [
-  { component: HomeComponent, path: '' },
+  { component: HomeComponent, path: 'home' },
+  {component:WebsiteComponent,path:'web'},
   { component: LoginComponent, path: 'login'},
   { component: TakeActionComponent, path: 'takeaction' ,canActivate:[ResolveGuard]},
   {  path: 'donate',  children:[{path:'', component: DonateComponent},
@@ -37,9 +40,10 @@ const routes: Routes = [
 
   ]},
 
+  {path:'',component: LoginPageComponent},
   {path:'emplist',component:EmployeeListComponent},
   {path:'empAdd', component:EmployeeRegisterComponent},
-  // { path:'empUpdate/:empId', component:EmployeeUpdateComponent},
+  { path:'empUpdate/:empId', component:EmployeeUpdateComponent},
 
 
   // { path:'' , redirectTo:'',pathMatch:"full"},

@@ -58,7 +58,7 @@
                 <input type="text" class="form-control"  name="eaddr" [(ngModel)]="empObj.eaddr" placeholder="employee Address" required >
        </div >
          <div class="div2">
-              <button type="submit" class="btn btn-primary btn-lg " (click)="addEmp()" style="margin-right:20px ;" [disabled]="EmployeeForm.invalid">ADD </button>
+              <button type="submit" class="btn btn-primary btn-lg addbtn" (click)="addEmp()"  [disabled]="EmployeeForm.invalid">ADD </button>
 
               <button type="button" class="btn btn-danger btn-lg" (click)="cancleBtn()"> CANCEL</button>
             </div>

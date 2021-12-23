@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { empObj } from 'src/app/Interfaces/employee';
 
 @Component({
@@ -13,9 +13,9 @@ export class EmployeeRegisterComponent implements OnInit {
 
   empObj:empObj;
 
-  constructor( private router:Router){
+  constructor( private router:Router, private routes:ActivatedRoute){
     this.empObj=new empObj(); //initilization
-
+    this.routes.params.subscribe((res)=>{this.empObj.empId=res['empId']});
   // this.getLastStoredItem();
 
   }
@@ -26,6 +26,24 @@ export class EmployeeRegisterComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+    debugger;
+    const oldData=localStorage.getItem('empList');
+    if(oldData!==null)
+    {
+      const empList=JSON.parse(oldData);
+      const currentData=empList.find((m:any) => m.empId ==this.empObj.empId);
+      if(currentData!==undefined){
+        this.empObj.ename=currentData.ename;
+        this.empObj.gender=currentData.gender;
+        this.empObj.esal=currentData.esal;
+        this.empObj.emob=currentData.emob;
+        this.empObj.email=currentData.email;
+        this.empObj.eaddr=currentData.eaddr;
+
+      }
+
+    }
 
   }
      getLastStoredItem(){
@@ -58,6 +76,7 @@ export class EmployeeRegisterComponent implements OnInit {
       else{
          return empList.length+1;
       }
+      //return empList.length+1;
     }
     else{
       return 1;
@@ -84,6 +103,33 @@ export class EmployeeRegisterComponent implements OnInit {
         this.router.navigateByUrl('/emplist');
 
 }
+
+
+updateEmp(){
+  debugger;
+      const oldData=localStorage.getItem('empList');
+      if(oldData!==null)
+      {
+        const empList=JSON.parse(oldData)
+        empList.splice(empList.findIndex((a:any)=>a.empId== this.empObj.empId),1);
+        empList.push(this.empObj);
+        localStorage.setItem('empList',JSON.stringify(empList));
+      }
+      alert('Updated SuccessFully!')
+      this.router.navigateByUrl('/emplist');
+}
+
+
+
+
+
+
+
+
+
+
+
+
   filterResults(event:any){
     // alert('checkbox');
    debugger;

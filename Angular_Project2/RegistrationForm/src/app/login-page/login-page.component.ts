@@ -10,7 +10,7 @@ import { LoginData } from '../model/loginDetails';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor(private auth:AuthenticationService) { }
+  constructor(private auths:AuthenticationService) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +20,6 @@ export class LoginPageComponent implements OnInit {
     console.log(loginform.value);
 
     const loginData=new LoginData(loginform.value.email,loginform.value.pwd);
-    this.auth.authenticate(loginData) ;
+    this.auths.authenticate(loginData) ;
   }
 }

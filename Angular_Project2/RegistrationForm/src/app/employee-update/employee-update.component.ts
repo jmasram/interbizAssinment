@@ -57,6 +57,8 @@ export class EmployeeUpdateComponent implements OnInit {
 
   updateEmp(){
     debugger;
+        // const letestData=this.getNewId();
+        // this.empObj.empId=letestData;
         const oldData=localStorage.getItem('empList');
         if(oldData!==null)
         {
