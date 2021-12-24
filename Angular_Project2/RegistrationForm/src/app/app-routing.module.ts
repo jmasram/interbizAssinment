@@ -21,12 +21,13 @@ import { EmployeeRegisterComponent } from './employee-register/employee-register
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AuthsGuard } from './guards/auths.guard';
+import { LifeCycleHook } from './Tables/Emplyoyee/employee';
 const routes: Routes = [
   { component: HomeComponent, path: 'home' ,canActivate:[AuthsGuard]},
-  {component:WebsiteComponent,path:'web'},
+  {component:WebsiteComponent,path:'web', canActivate:[AuthsGuard]},
   { component: LoginComponent, path: 'login'},
-  { component: TakeActionComponent, path: 'takeaction' ,canActivate:[ResolveGuard]},
-  {  path: 'donate',  children:[{path:'', component: DonateComponent},
+  { component: TakeActionComponent, path: 'takeaction' ,canActivate:[ResolveGuard,AuthsGuard]},
+  {  path: 'donate', canActivate:[ResolveGuard,AuthsGuard], children:[{path:'', component: DonateComponent},
                                {path:'tiger1' ,component:Tiger1Component},
                                { path:'tiger2',component:Tiger2Component},
                                { path:'tiger3', component:Tiger3Component},
@@ -34,10 +35,11 @@ const routes: Routes = [
 
     ] },
 
-    {path:'manu', children:[{path:'',component:ManuComponent},
+    {path:'manu',canActivate:[AuthsGuard], children:[{path:'',component:ManuComponent},
                      {path:"table", component:ProductComponent},
                      {path:"food" , component:FoodComponentApp},
-                     {path:"checkbox",component:CheckboxAssignComponent}
+                     {path:"checkbox",component:CheckboxAssignComponent},
+                     {path:"emp" ,component:LifeCycleHook}
 
   ]},
 

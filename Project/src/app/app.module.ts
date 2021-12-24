@@ -13,6 +13,8 @@ import { EmployeeRegisterComponent } from './home-page/employee-register/employe
 import { EmployeeUpdateComponent } from './home-page/employee-update/employee-update.component';
 import { NavborComponent } from './home-page/navbor/navbor.component';
 import { routing1 } from './routing1';
+import { StudentsComponent } from './home-page/students/students.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,14 +26,16 @@ import { routing1 } from './routing1';
     EmployeeListComponent,
     EmployeeRegisterComponent,
     EmployeeUpdateComponent,
-    NavborComponent
+    NavborComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    routing1
+    routing1,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
