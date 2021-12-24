@@ -11,4 +11,6 @@ export class AppComponent {
   title = 'RegistrationForm';
  useValue= '🌺';
  constructor(public auths:AuthenticationService){}
+
+ 
 }

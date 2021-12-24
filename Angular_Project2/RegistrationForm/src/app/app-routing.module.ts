@@ -20,8 +20,9 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { AuthsGuard } from './guards/auths.guard';
 const routes: Routes = [
-  { component: HomeComponent, path: 'home' },
+  { component: HomeComponent, path: 'home' ,canActivate:[AuthsGuard]},
   {component:WebsiteComponent,path:'web'},
   { component: LoginComponent, path: 'login'},
   { component: TakeActionComponent, path: 'takeaction' ,canActivate:[ResolveGuard]},
@@ -40,10 +41,10 @@ const routes: Routes = [
 
   ]},
 
-  {path:'',component: LoginPageComponent},
-  {path:'emplist',component:EmployeeListComponent},
-  {path:'empAdd', component:EmployeeRegisterComponent},
-  { path:'empUpdate/:empId', component:EmployeeUpdateComponent},
+  {path:'',component: LoginPageComponent },
+  {path:'emplist',component:EmployeeListComponent, canActivate:[AuthsGuard]},
+  {path:'empAdd', component:EmployeeRegisterComponent, canActivate:[AuthsGuard]},
+  { path:'empUpdate/:empId', component:EmployeeUpdateComponent,canActivate:[AuthsGuard]},
 
 
   // { path:'' , redirectTo:'',pathMatch:"full"},

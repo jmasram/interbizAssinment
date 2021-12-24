@@ -38,4 +38,10 @@ private checkpwd(pwd:String):boolean{
   debugger;
   return pwd === this.user.getPwd();
 }
+
+  logout()
+  {
+    this.isAuthenticated=false;
+    this.router.navigate(['']);
+  }
 }

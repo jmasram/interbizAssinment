@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
 import * as $ from 'jquery';
+import { AuthenticationService } from '../authentication/authentication.service';
 
 @Component({
   selector: 'app-website',
@@ -9,7 +10,7 @@ import * as $ from 'jquery';
 })
 export class WebsiteComponent implements OnInit {
 
-  constructor() {}
+  constructor(private auths:AuthenticationService) {}
 
   show:boolean=false;
   ngOnInit(): void {
@@ -24,6 +25,10 @@ export class WebsiteComponent implements OnInit {
 
   showComponent(){
     this.show = true;
+  }
+
+  logout(){
+    this.auths.logout();
   }
 
 }
