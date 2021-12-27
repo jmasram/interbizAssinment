@@ -54,9 +54,32 @@
         <td>{{x.JavaScript}}</td>
         <td>{{x.Angular}}</td>
         <td>{{x.c+x.Html+x.Css+x.JavaScript+x.Angular}}</td>
-        <td *ngIf="70<80 && 80<100"  [ngStyle]="{'background-color':true? 'green' : 'red' }">{{(x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5  }}</td>
-        <td ></td>
+        <!-- <td *ngIf=" 70<=100  else 10<=70"  [ngStyle]="{'background-color':true? 'green' : 'red' }">{{(x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5  }}</td> -->
+        <!-- *ngswitch="a" -->
+            
+              <!-- <td *ngSwitchCase='First' [ngStyle]="{'background-color':'green'}"
+              >{{(x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5  }}</td> 
+              <td *ngSwitchCase='Second' [ngStyle]="{'background-color':'blue'}"
+              >{{(x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5  }}</td>  
+              <td *ngSwitchCase='Fail' [ngStyle]="{'background-color':'red'}"
+              >{{(x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5  }}</td> 
+              -->
+
+              <!-- <td ng-class="((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)>=60 &&(x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5) <=100 ? 'bg-primary':( (x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5) >=10 &&(x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5) <=60 ? 'bg-danger')">{{(x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5 }} </td> -->
+              
+              <!-- <td [ngClass]="{'green':60<=100}">{{(x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5 }}</td> -->
+              
+              
+           <td [ngClass]="{'green':((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)<=100,'blue':((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)<=59,'red':((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)<=39}">{{(x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5 }}</td>
+             
+           <!-- <td *ngIf="((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)>=60 && ((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)<=100 ? 'FirstDivison'" ></td> -->
+
+              <!-- <td [ngClass]="{'msg1':((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)<=100}">{{Last}}</td>    -->
+
+              <td [ngClass]="{'msg1':((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)>=60 && ((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)<=100,'msg2':((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)>=40 && ((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)<=59,'msg3':((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)>=1 && ((x.c+x.Html+x.Css+x.JavaScript+x.Angular)/5)<=39}"></td>
     </tr>
+     
+
 
 
   </tbody>
@@ -66,3 +89,5 @@
     student@yopemail.in
   </div>
   </div>
+
+  <!-- <p class="msg1">First Division  </p> -->

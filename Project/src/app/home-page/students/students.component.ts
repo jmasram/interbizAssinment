@@ -14,22 +14,18 @@ export class StudentsComponent implements OnInit {
    stuDetails:any;
    result:any;
    stu:any[]=[];
+   op:any;
 
    isActiveProject=true;
   //  total:any=[];
-
+  
+   Last:String="Devision";
+  variable:any;
   ngOnInit(): void {
     debugger;
    this.ob.students().subscribe(StudentData => this.stuDetails=StudentData);
+  // console.log(thi);
 
-  }
-
-
-
-  total(){
-   debugger;
-
-    console.log(this.result);
   }
 
 }

@@ -10,6 +10,25 @@ th{
   font-size: large;
 }
 
-.color{
+.green{
+  background-color: rgb(52, 219, 46);
+}
+.blue{
   background-color: blue;
+}
+
+.red{
+  background-color:red;
+}
+
+.msg1::before{
+  content:"First";
+}
+
+.msg2::before{
+  content:"Second";
+}
+
+.msg3::before{
+  content:"Fail";
 }
