@@ -10,6 +10,18 @@ ul{
   list-style-type:none;
 }
 
-.p1{
-  float:right;
+.float1{
+  margin-left: 150px;
+}
+.divcenter{
+  margin-left: 350px;
+}
+.bgcolor{
+  background-image: linear-gradient(to bottom left, blue,red);
+}
+
+.iconAdd{
+  background-color: red;
+  color: aliceblue;
+  border-radius: 20px;
 }

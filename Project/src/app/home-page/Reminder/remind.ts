@@ -17,6 +17,7 @@ export interface DialogData {
 export class CardApp {
 
   today=new Date();
+  day=new Date();
 
   task: any = {
     name: 'Indeterminate',
@@ -74,6 +75,8 @@ export class CardApp {
     });
   }
 }
+
+
 @Component({
   selector: 'dialog-overview-example-dialog',
   templateUrl: 'dialog.html',

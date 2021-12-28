@@ -1,14 +1,24 @@
-<div class="container">
-<mat-card class="example-card">
+<div class="container bgcolor" >
+  <br>
+<mat-card class="example-card divcenter" >
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{ today |date  }}</mat-card-title>
-    <mat-card-subtitle >12 Task</mat-card-subtitle>
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <mat-card-title>{{ day | date:'EEEE'   }}</mat-card-title>
+    <mat-card-title>{{ today |date   }}</mat-card-title>
 
+    
+
+    <div class="example-button-container float1">
+      <mat-card-subtitle >12 Task</mat-card-subtitle>
+      <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" class=" iconAdd">
+        <mat-icon >add</mat-icon>
+      </button>
+      <hr>
+    </div>
 
   </mat-card-header>
   <!-- <img mat-card-image src=".\assets\image\pizza.jpg" alt="Photo of a Shiba Inu"> -->
-
+<!-- 
   <ol>
     <li>
       <mat-form-field appearance="fill">
@@ -22,17 +32,10 @@
     <li *ngIf="animal">
       You chose: <i>{{animal}}</i>
     </li>
-  </ol>
+  </ol> -->
 
   <mat-card-content>
-    <div class="example-button-container">
-      <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" class="p1">
-        <mat-icon>plus_one</mat-icon>
-      </button>
-    </div>
-
-
-<section class="example-section">
+   <section class="example-section">
   <span class="example-list-section">
     <ul style="list-style-type:none;">
       <li *ngFor="let subtask of task.subtasks">
@@ -52,4 +55,5 @@
     <button mat-button>SHARE</button>
   </mat-card-actions> -->
 </mat-card>
+<br>
 </div>
