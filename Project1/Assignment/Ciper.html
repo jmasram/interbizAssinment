@@ -1,0 +1,66 @@
+variable name samesame mt rakna
+
+
+
+
+
+using System;
+
+namespace Ceaser_chipher1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String input = "ZaB";
+            char[] in_char_arr = input.ToCharArray();
+            int len = in_char_arr.Length;
+            char[] out_char_arr = new char[len];
+
+            
+            for (int i=0;i<len;i++) {
+                if(char.IsUpper(in_char_arr[i]))
+                    out_char_arr[i] = (char)(((((in_char_arr[i] +3)-'A')%26)+'A'));
+                else
+                    out_char_arr[i] = (char)(((((in_char_arr[i] + 3) - 'a') % 26) +'a'));
+            }
+
+            Console.WriteLine(out_char_arr);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+arr1  = HBC
+
+(char)  (((char+key)-'A')%26) +'A') 
+  ((((H+3)-'A')%26) + 'A')
+
+
+
+(char)(((((arr1[0] + 3)-'A')%26)+'A'))
+
+(((72+3)-65)%26)+65
+
+((75-65)%26)+65
+(10%26)+65
+10+65=75
+
+bb= A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+cc= D E F G H I J K L M N O P Q R S T U V W X Y Z A B C 
+   0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 ........25
+output[];
+
+
+ arr1  = HBC
+  outpput= K
+
+arr1[1]==bb[1]
+output[1]=cc[1]
