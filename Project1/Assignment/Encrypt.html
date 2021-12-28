@@ -7,14 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    String input = "ZaB";
-    char[] in_char_arr = input.ToCharArray();
-    int len = in_char_arr.Length;
-    char[] out_char_arr = new char[len];
+  
     <script>
-          var str= "ZAB";
-          var length=str.length;
-          
+        debugger;
+       var char=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+        var char2=['D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A','B','C'];
+
+        var result=[];
+        
+        var arr="ZAB";
+        for(var i=0 ; i<arr.length; i++)
+        {
+            for(var j=0; j<=char.length; j++)
+            {
+              if(arr[i]==char[j])
+              {
+                result.push(char2[j])
+             }
+         }
+        }
+
+        console.log(result.join(""));
     </script>
+
 </body>
 </html>

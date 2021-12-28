@@ -11,6 +11,8 @@ import { Item2Component } from './home-page/item2/item2.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { NavborComponent } from './home-page/navbor/navbor.component';
 import { StudentsComponent } from './home-page/students/students.component';
+import { AngularMaterialExample } from './home-page/AngularMaterial/angularmaterial';
+import { CardApp } from './home-page/Reminder/remind';
 const routes: Routes = [
   { path:'' ,component:LoginPageComponent},
   {path:'item1', component:Item1Component},
@@ -25,7 +27,10 @@ const routes: Routes = [
   {path:'emplist',component:EmployeeListComponent},
   {path:'empAdd', component:EmployeeRegisterComponent},
   { path:'empUpdate/:empId', component:EmployeeUpdateComponent},
-  {path:'stu', component:StudentsComponent}
+  {path:'stu', component:StudentsComponent},
+  {path:'angmat', component:AngularMaterialExample},
+  {path:'rem', component:CardApp},
+
 
 
 ];

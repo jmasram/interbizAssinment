@@ -15,6 +15,20 @@ import { NavborComponent } from './home-page/navbor/navbor.component';
 import { routing1 } from './routing1';
 import { StudentsComponent } from './home-page/students/students.component';
 import {HttpClientModule} from '@angular/common/http';
+import { AngularMaterialExample } from './home-page/AngularMaterial/angularmaterial';
+
+// Angular Material
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatCardModule} from '@angular/material/card';
+import { CardApp, DialogOverviewExampleDialog } from './home-page/Reminder/remind';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +41,12 @@ import {HttpClientModule} from '@angular/common/http';
     EmployeeRegisterComponent,
     EmployeeUpdateComponent,
     NavborComponent,
-    StudentsComponent
+    StudentsComponent,
+    AngularMaterialExample,
+    CardApp,
+    DialogOverviewExampleDialog
+
+
   ],
   imports: [
     BrowserModule,
@@ -35,7 +54,20 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     routing1,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatBadgeModule,
+    MatNativeDateModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatIconModule,
+   MatDialogModule,
+
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
