@@ -28,7 +28,7 @@
 
       <li *ngFor="let subtask of task.subtasks">
         <mat-checkbox [(ngModel)]="subtask.completed"
-                      [color]="subtask.color"
+                    [color]="subtask.color"
                       (ngModelChange)="updateAllComplete()">
           {{subtask.name }}
           <!-- {{time | date:'h:mm'}} -->
