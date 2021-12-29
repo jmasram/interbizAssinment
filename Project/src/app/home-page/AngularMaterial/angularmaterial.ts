@@ -1,11 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
-import { Observable } from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
-
-/**
- * @title Simple autocomplete
- */
 @Component({
   selector: 'autocomplete-simple-example',
   templateUrl: 'angularmaterial.html',
@@ -21,22 +15,6 @@ export class AngularMaterialExample {
   toggleB() {
     this.hidden = !this.hidden;
   }
-
-  // filteredOptions!: Observable<string[]>;
-
-  // ngOnInit() {
-  //   this.filteredOptions = this.myControl.valueChanges.pipe(
-  //     startWith(''),
-  //     map(value => this._filter(value)),
-  //   );
-  // }
-
-  // private _filter(value: string): string[] {
-  //   const filterValue = value.toLowerCase();
-
-  //   return this.options.filter(option => option.toLowerCase().includes(filterValue));
-  // }
-
 
 
 
@@ -74,4 +52,14 @@ export class AngularMaterialExample {
     }
     this.task.subtasks.forEach((t:any) => (t.completed = completed));
   }
+
+
+  // Using mat-expension
+  step = 1;
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  panelOpenState = false;
+
 }

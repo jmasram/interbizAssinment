@@ -137,3 +137,6 @@ footer{
   margin-top: 600px;
   text-align: center;
 }
+.floaticon{
+  float: right;
+}

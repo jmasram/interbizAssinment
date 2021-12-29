@@ -1,0 +1,12 @@
+<div mat-dialog-content>
+  <mat-card-header>{{month| date:'MMMM'}}</mat-card-header>
+  <p>What's your Next Event?</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Tasks</mat-label>
+    <input matInput [(ngModel)]="data.event1">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-stroked-button color="primary" mat-dialog-close>No Thanks</button>
+  <button mat-stroked-button [mat-dialog-close]="data.event1" cdkFocusInitial>Ok</button>
+</div>

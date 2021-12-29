@@ -1,0 +1,98 @@
+<style>
+    input{
+        padding:5px 20px;
+        width:40%;
+        font-size:20px;
+    }
+    input:focus{
+        outline:none;
+    }
+
+    button{
+        width:40%;
+        padding: 20px 0;
+        margin-top : 20px;
+    }
+
+</style>
+
+<div align="center">
+    <input type="text">
+    <br>
+    <button onclick='handleclick("encrypt")'>Encrypt</button>
+        <div style="margin-top:100px;"></div>
+    <input type="text">
+    <br>
+    <button onclick='handleclick("decrypt")'>Decrypt</button>
+
+    <div id="root">
+        
+    
+    </div>
+</div>
+
+<script>
+    const input = document.getElementsByTagName("input")[0]
+    const input2 = document.getElementsByTagName("input")[1]
+    const root = document.getElementById("root")
+
+    let alpha = [ "a", "b", 
+    "c", "d", "e", "f", 
+    "g", "h", "i", "j", 
+    "k", "l", "m", "n", 
+    "o", "p", "q", "r", 
+    "s", "t", "u", "v", 
+    "w", "x", "y", "z" ]
+
+    function encrypt(str, operation)
+    {
+        let arr = str.split("");
+
+
+
+        // console.log(arr);
+        if(operation == "encrypt")
+        {
+            arr = arr.map(elem => {
+
+            elem = elem.toLowerCase()
+            // console.log(alpha.indexOf(elem))
+            
+            return alpha[(alpha.indexOf(elem) + 3) > 25 ? (alpha.indexOf(elem) + 3) - 26 : (alpha.indexOf(elem) + 3)]
+
+        });
+
+
+        }
+
+        else if(operation == "decrypt")
+        {
+            arr = arr.map(elem => {
+
+            elem = elem.toLowerCase()
+
+            return alpha[(alpha.indexOf(elem) - 3) < 0 ? (alpha.indexOf(elem) - 3) + 26 : (alpha.indexOf(elem) - 3)]
+
+            })
+
+        }
+
+        // console.log(arr.join())
+
+        return (operation == "encrypt" ? "Encrypted text: " : "Decrypted Text: ") + arr.join("")
+
+    }
+
+
+    function handleclick(param){
+        if(param == "encrypt")
+        root.innerHTML = `<h2>${encrypt(input.value, param)}</h2>`
+
+        else if(param == 'decrypt')
+        root.innerHTML = `<h2>${encrypt(input2.value, param)}</h2>`
+
+    }
+
+
+
+</script>

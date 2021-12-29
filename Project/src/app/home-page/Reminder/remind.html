@@ -3,52 +3,50 @@
 <mat-card class="example-card divcenter" >
   <mat-card-header>
     <!-- <div mat-card-avatar class="example-header-image"></div> -->
-    <mat-card-title>{{ day | date:'EEEE'   }}</mat-card-title>
-    <mat-card-title>{{ today |date   }}</mat-card-title>
+    <mat-card-title>{{ day | date:'EEEE d'  }}</mat-card-title>
+    <mat-card-title>{{ today |date:'MMMM  '   }}</mat-card-title>
 
-    
+
 
     <div class="example-button-container float1">
       <mat-card-subtitle >12 Task</mat-card-subtitle>
-      <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" class=" iconAdd">
+      <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" class=" iconAdd" (click)="openDialog()">
         <mat-icon >add</mat-icon>
       </button>
-      <hr>
+      <mat-divider></mat-divider>
+
     </div>
 
   </mat-card-header>
-  <!-- <img mat-card-image src=".\assets\image\pizza.jpg" alt="Photo of a Shiba Inu"> -->
-<!-- 
-  <ol>
-    <li>
-      <mat-form-field appearance="fill">
-        <mat-label>What's your name?</mat-label>
-        <input matInput [(ngModel)]="name">
-      </mat-form-field>
-    </li>
-    <li>
-      <button mat-raised-button (click)="openDialog()">Pick one</button>
-    </li>
-    <li *ngIf="animal">
-      You chose: <i>{{animal}}</i>
-    </li>
-  </ol> -->
+  <br>
+  <br>
 
   <mat-card-content>
    <section class="example-section">
   <span class="example-list-section">
-    <ul style="list-style-type:none;">
+    <ul>
+
       <li *ngFor="let subtask of task.subtasks">
         <mat-checkbox [(ngModel)]="subtask.completed"
                       [color]="subtask.color"
                       (ngModelChange)="updateAllComplete()">
-          {{subtask.name}}
+          {{subtask.name }}
+          <!-- {{time | date:'h:mm'}} -->
+
         </mat-checkbox>
+        <mat-divider [inset]="true"></mat-divider>
       </li>
     </ul>
   </span>
 </section>
 
+
+    <ul>
+      <li *ngIf="event1">
+        <mat-checkbox>{{event1 }}</mat-checkbox>
+        <mat-divider [inset]="true"></mat-divider>
+
+    </ul>
   </mat-card-content>
   <!-- <mat-card-actions>
     <button mat-button>LIKE</button>

@@ -1,8 +1,9 @@
 import {Component,Inject} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Dialog1Component } from './dialog1/dialog1.component';
 
 export interface DialogData {
-  animal: string;
+  event1: string;
   name: string;
 }
 
@@ -18,6 +19,7 @@ export class CardApp {
 
   today=new Date();
   day=new Date();
+  time=new Date();
 
   task: any = {
     name: 'Indeterminate',
@@ -40,54 +42,30 @@ export class CardApp {
     this.allComplete = this.task.subtasks != null && this.task.subtasks.every((t:any) => t.completed);
   }
 
-  someComplete(): boolean {
+  // someComplete(): boolean {
+  //   debugger;
+  //   if (this.task.subtasks == null) {
+  //     return false;
+  //   }
+  //   return this.task.subtasks.filter((t:any) => t.completed).length > 0 && !this.allComplete;
+  // }
+
+
+
+  constructor(public dialog:MatDialog){}
+  event1: string='';
+  event2:any=[];
+  openDialog():void{
     debugger;
-    if (this.task.subtasks == null) {
-      return false;
-    }
-    return this.task.subtasks.filter((t:any) => t.completed).length > 0 && !this.allComplete;
+      const dialogData=this.dialog.open(Dialog1Component,{width: '250px' ,data:{event1: this.event1}});
+      // console.log(dialogData);
+
+      dialogData.afterClosed().subscribe(res => { console.log('The dialog was closed');
+
+      this.event1 =res;
+
+    })
   }
 
-  setAll(completed: boolean) {
-    debugger;
-    this.allComplete = completed;
-    if (this.task.subtasks == null) {
-      return;
-    }
-    this.task.subtasks.forEach((t:any) => (t.completed = completed));
-  }
-
-
-  animal: string='';
-  name: string='';
-
-  constructor(public dialog: MatDialog) {}
-
-  openDialog(): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '250px',
-      data: {name: this.name, animal: this.animal},
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
-    });
-  }
 }
 
-
-@Component({
-  selector: 'dialog-overview-example-dialog',
-  templateUrl: 'dialog.html',
-})
-export class DialogOverviewExampleDialog {
-  constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
-  ) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-}

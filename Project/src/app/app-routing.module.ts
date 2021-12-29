@@ -9,7 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { Item1Component } from './home-page/item1/item1.component';
 import { Item2Component } from './home-page/item2/item2.component';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { NavborComponent } from './home-page/navbor/navbor.component';
+import { NavborComponent } from './home-page/navbar/navbor.component';
 import { StudentsComponent } from './home-page/students/students.component';
 import { AngularMaterialExample } from './home-page/AngularMaterial/angularmaterial';
 import { CardApp } from './home-page/Reminder/remind';
