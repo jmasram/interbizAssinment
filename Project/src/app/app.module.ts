@@ -34,6 +34,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSelectModule} from '@angular/material/select';
+
 
 const material=[ MatAutocompleteModule,
   MatFormFieldModule,
@@ -47,7 +49,8 @@ const material=[ MatAutocompleteModule,
  MatButtonModule,
  MatDividerModule,
  MatExpansionModule,
- MatGridListModule
+ MatGridListModule,
+ MatSelectModule
 ]
 
 

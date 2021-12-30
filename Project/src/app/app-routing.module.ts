@@ -16,7 +16,7 @@ import { CardApp } from './home-page/Reminder/remind';
 const routes: Routes = [
   { path:'' ,component:LoginPageComponent},
   {path:'item1', component:Item1Component},
-  {path:'item2', component:Item2Component},
+
   // {path:'home',children:[{path:'', component:HomePageComponent},
   // {path:'emplist',component:EmployeeListComponent},
   // {path:'empAdd', component:EmployeeRegisterComponent},
@@ -30,7 +30,7 @@ const routes: Routes = [
   {path:'stu', component:StudentsComponent},
   {path:'angmat', component:AngularMaterialExample},
   {path:'rem', component:CardApp},
-
+  {path:'item2', component:Item2Component},
 
 
 ];

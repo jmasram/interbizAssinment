@@ -3,7 +3,7 @@
 <mat-card class="example-card divcenter" >
   <mat-card-header>
     <!-- <div mat-card-avatar class="example-header-image"></div> -->
-    <mat-card-title>{{ day | date:'EEEE d'  }}</mat-card-title>
+    <mat-card-title (ngModel)="day">{{ day | date:'EEEE, d'  }}</mat-card-title>
     <mat-card-title>{{ today |date:'MMMM  '   }}</mat-card-title>
 
 

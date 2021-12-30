@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+          
+       function mat(matrix){
+            var msg='';
+            // debugger;
+           for( var i=0; i<=matrix.length;i++)
+            {
+               for(var j=0;j<=matrix.length; j++){
+
+                    if(matrix[i][j]==matrix[i][j+1]){
+                      msg="equal"
+                    }
+                    else if(matrix[i][j]==matrix[i][j+1]){   msg="equal"}
+                    // else{
+                    //     msg+= "not equal"
+                    // }
+                }
+                
+                return msg;
+            }
+            
+        }
+
+        var matrix=[[2,2,2,3],
+                    [2,26,2],
+                    [6,1,2]];
+        
+                    console.log(matrix);
+        var x= mat(matrix);
+        console.log(x);
+
+
+
+
+
+
+            //               // first row 
+            //               if((matrix[i][i]==matrix[i][i+1] && matrix[i][i+1]==matrix[i][+2])){
+            //     return "equal"
+            //    }
+
+            //    // second row 
+            // else if((matrix[i+1][i]==matrix[i+1][i+1] && matrix[i][i+1]==matrix[i+1][i+2])){
+            //     return "equal"
+            //    }
+
+            //  // third row 
+            // else if((matrix[i+2][i]==matrix[i+2][i+1] && matrix[i+2][i+1]==matrix[i+2][i+2])){
+            //     return "equal"
+            //    }
+
+            //  // first column 
+            // else if((matrix[i][i]==matrix[i+1][i] && matrix[i+1][i]==matrix[i+2][i])){
+            //      return "equal"
+            //      }
+
+            //     // second column 
+            //      else if((matrix[i+1][i]==matrix[i+1][i+1] && matrix[i+1][i+1]==matrix[i+2][i+1])){
+            //       return "equal"
+            //          }
+
+            //         // third column 
+            //       else if((matrix[i+2][i]==matrix[i+1][i+2] && matrix[i+1][i+2]==matrix[i+2][i+2])){
+            //        return "equal"
+            //     }
+
+            //          // diagonal
+            //      else if((matrix[i][i]==matrix[i+1][i+1] && matrix[i+1][i+1]==matrix[i+2][i+2])){
+            //          return "equal"
+            //           }
+
+            //         else if((matrix[i][i+2]==matrix[i+1][i+1] && matrix[i+1][i+1]==matrix[i][i+2])){
+            //             return "equal"
+            //         }
+
+            //        else{ return "not equal" }
+            //       }
+
+                               // first row 
+        //  if((matrix[0][0]==matrix[0][1] && matrix[0][1]==matrix[0][2])){
+        //     console.log("equal");
+        // }
+        //  // second row 
+        // else if((matrix[1][0]==matrix[1][1] && matrix[0][1]==matrix[1][2])){
+        //     console.log("equal");
+        // }
+        //  // third row 
+       
+        // else if((matrix[2][0]==matrix[2][1] && matrix[2][1]==matrix[2][2])){
+        //     console.log("equal");
+        // }
+        // // first column 
+        // else if((matrix[0][0]==matrix[1][0] && matrix[1][0]==matrix[2][0])){
+        //     console.log("equal");
+        // }
+        //  // second column 
+        // else if((matrix[1][0]==matrix[1][1] && matrix[1][1]==matrix[2][1])){
+        //     console.log("equal");
+        // }
+        //  // third column 
+        // else if((matrix[2][0]==matrix[1][2] && matrix[1][2]==matrix[2][2])){
+        //     console.log("equal");
+        // }
+
+        // // diagonal
+        // else if((matrix[0][0]==matrix[1][1] && matrix[1][1]==matrix[2][2])){
+        //     console.log("equal");
+        // }
+
+        // else if((matrix[0][2]==matrix[1][1] && matrix[1][1]==matrix[0][2])){
+        //     return "equal"
+        // }
+
+        // else{
+        //     console.log("not equal");
+        // }
+      
+    </script>
+</body>
+</html>

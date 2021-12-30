@@ -4,7 +4,7 @@ import { Dialog1Component } from './dialog1/dialog1.component';
 
 export interface DialogData {
   event1: string;
-  name: string;
+  day: string;
 }
 
 /**
@@ -42,22 +42,12 @@ export class CardApp {
     this.allComplete = this.task.subtasks != null && this.task.subtasks.every((t:any) => t.completed);
   }
 
-  // someComplete(): boolean {
-  //   debugger;
-  //   if (this.task.subtasks == null) {
-  //     return false;
-  //   }
-  //   return this.task.subtasks.filter((t:any) => t.completed).length > 0 && !this.allComplete;
-  // }
-
-
-
-  constructor(public dialog:MatDialog){}
+ constructor(public dialog:MatDialog){}
   event1: string='';
   event2:any=[];
   openDialog():void{
     debugger;
-      const dialogData=this.dialog.open(Dialog1Component,{width: '250px' ,data:{event1: this.event1}});
+      const dialogData=this.dialog.open(Dialog1Component,{width: '250px' ,data:{event1: this.event1 ,day:this.day}});
       // console.log(dialogData);
 
       dialogData.afterClosed().subscribe(res => { console.log('The dialog was closed');

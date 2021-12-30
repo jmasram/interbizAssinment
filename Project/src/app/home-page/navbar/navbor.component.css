@@ -1,0 +1,23 @@
+.example-card {
+  margin-top: 50px;
+  margin-left: 580px;
+  max-width: 900px;
+  background-color: aliceblue;
+}
+.headTitle{
+  color:rgb(43, 137, 226);
+  margin-left: 180px;
+  font-size: 30px;
+  text-shadow: 0 0 2px #FF0000, 0 0 2px #0000FF;
+  padding: 5px;
+}
+.contentP{
+  padding: 35px;
+}
+.pading{
+  margin-left: 80px;
+
+}
+.btnFloat{
+  float: right;
+}
