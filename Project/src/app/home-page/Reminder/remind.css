@@ -25,3 +25,13 @@ ul{
   color: aliceblue;
   border-radius: 20px;
 }
+.marginLeft{
+  margin-left: 5px;
+  text-align: end;
+}
+.color1{
+  color: blue;
+}
+.color2{
+  color:red;
+}

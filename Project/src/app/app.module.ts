@@ -35,6 +35,14 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatRadioModule}  from '@angular/material/radio';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSliderModule} from '@angular/material/slider';
+
 
 
 const material=[ MatAutocompleteModule,
@@ -50,7 +58,14 @@ const material=[ MatAutocompleteModule,
  MatDividerModule,
  MatExpansionModule,
  MatGridListModule,
- MatSelectModule
+ MatSelectModule,
+ MatPaginatorModule,
+ MatProgressBarModule,
+ MatProgressSpinnerModule,
+ MatRadioModule,
+ MatSidenavModule,
+ MatSlideToggleModule,
+ MatSliderModule
 ]
 
 

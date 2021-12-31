@@ -2,7 +2,10 @@
   margin-top: 50px;
   margin-left: 580px;
   max-width: 900px;
-  background-color: aliceblue;
+  background-color: rgb(193, 219, 243);
+}
+.borderDouble{
+  border-style: solid;
 }
 .headTitle{
   color:rgb(43, 137, 226);
@@ -20,4 +23,8 @@
 }
 .btnFloat{
   float: right;
+  color: #0000FF;
+}
+.color1{
+  color: #0000FF;
 }

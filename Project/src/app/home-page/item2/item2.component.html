@@ -1,14 +1,131 @@
 
 
-<mat-grid-list  cols="4" rowHeight="50px">
 
-  <mat-grid-tile colspan="4"  class="color1" > <mat-grid-tile-header>Hello</mat-grid-tile-header></mat-grid-tile>
-  <mat-grid-tile colspan="3" rowspan="1" class="color1">
 
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="2" class="color2">2</mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1" class="color3">3</mat-grid-tile>
-  <mat-grid-tile colspan="2" rowspan="1" class="color4">4</mat-grid-tile>
-  <mat-grid-tile colspan="4" rowspan="1" class="color1"> <mat-grid-tile-footer>test@gmail.com</mat-grid-tile-footer></mat-grid-tile>
 
-</mat-grid-list>
+<div class="container">
+
+  <mat-drawer-container  class="example-container"  autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" >
+      <p>Auto resizing sidenav</p>
+      <p *ngIf="showFiller">this is sidebar</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>Toggle</button>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">Toggle Sidenav</button>
+    </div>
+  </mat-drawer-container>
+
+
+    <div class="row">
+      <div class="col">
+        <mat-grid-list  cols="4" rowHeight="50px">
+
+          <mat-grid-tile colspan="4"  class="color1" > <mat-grid-tile-header><title>Grid</title> </mat-grid-tile-header></mat-grid-tile>
+          <mat-grid-tile colspan="3" rowspan="1" class="color1">
+
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1" rowspan="3" class="color2">2</mat-grid-tile>
+          <mat-grid-tile colspan="1" rowspan="1" class="color3">3</mat-grid-tile>
+          <mat-grid-tile colspan="2" rowspan="1" class="color4" ></mat-grid-tile>
+
+
+        <mat-grid-tile colspan="3" rowspan="1" class="color1">
+          <!-- <p> Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+            Component to provide navigation between paged information. Displays the size of the current page, user-selectable options to change that size, what items are being shown, and navigational button to go to the previous or next page.
+          </p> -->
+          <mat-paginator
+          (page)="handlePageEvent($event)"
+          [length]="length"
+          [pageSize]="pageSize"
+          [showFirstLastButtons]="showFirstLastButtons"
+          [pageSizeOptions]="pageSizeOptions"
+          [pageIndex]="pageIndex"
+          aria-label="Select page">
+
+        </mat-paginator>
+
+        </mat-grid-tile>
+          <mat-grid-tile colspan="4" rowspan="1" class="color1"> <mat-grid-tile-footer>test@gmail.com</mat-grid-tile-footer></mat-grid-tile>
+
+        </mat-grid-list>
+      </div>
+    </div>
+    <br>
+    <br>
+   <mat-divider></mat-divider>
+     <br><br>
+    <div class="row">
+      <div class="col">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title><h1>Progress Bar</h1></mat-card-title>
+          </mat-card-header>
+           <mat-card-content>
+            <mat-card-title>Progress Bar-'determinate'</mat-card-title>
+            <mat-progress-bar made="determinate" value="20"> </mat-progress-bar><br>
+             <mat-progress-bar made="determinate" value="50" color="warn"></mat-progress-bar><br>
+             <mat-progress-bar made="determinate" value="100" color="accent"></mat-progress-bar><br><br>
+
+             <mat-card-title>Progress Bar-'buffer'</mat-card-title><br>
+             <mat-progress-bar mode="buffer" color="warn"></mat-progress-bar><br>
+              <mat-divider></mat-divider>
+
+             <mat-card-title>Progress Bar- 'Indeterminate'</mat-card-title><br>
+             <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar><br>
+
+             <mat-divider></mat-divider>
+             <mat-card-title>Progress Bar-'Query' =>indicate pre loading before the actual loading start</mat-card-title><br>
+             <mat-progress-bar mode="query" color=""></mat-progress-bar><br>
+              <mat-divider></mat-divider>
+
+              <mat-card-title>Progress-Spinner</mat-card-title><br>
+              <mat-spinner color="warn"></mat-spinner>
+              <mat-progress-spinner mode="indeterminate"></mat-progress-spinner><br><br>
+              <mat-divider></mat-divider>
+
+              <br>
+
+              <mat-card-title>Radio-Button</mat-card-title><br>
+                <mat-radio-group [(ngModel)]="favoriteFestival">
+                    <mat-radio-button *ngFor="let fastival of fastivals" [value]="fastival" labelPosition="before">{{fastival}}</mat-radio-button>
+                </mat-radio-group>
+
+                <div>Your favorite fastival is:{{favoriteFestival}}</div><br><mat-divider></mat-divider><br>
+
+                <mat-card-title>SlideToggle</mat-card-title><br>
+                <mat-slide-toggle>on/off</mat-slide-toggle><br><mat-divider></mat-divider><br>
+
+                <mat-card-title>Slider</mat-card-title><br>
+                <mat-slider  min="1" max="10" step="2" vertical>x</mat-slider>
+           </mat-card-content><br><br>
+           <mat-card-footer>Progess@yopemail.com</mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+</div>
+
+
+
+
